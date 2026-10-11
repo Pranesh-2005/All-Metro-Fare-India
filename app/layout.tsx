@@ -63,6 +63,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
   icons: { icon: "/favicon.ico" },
+  verification: { google: "9c9WJrB6k1_0JHlUx3V8JNS7B5t4OGt8asr9IeJZhkM" },
   formatDetection: { telephone: false, email: false, address: false },
 };
 
