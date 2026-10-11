@@ -1,0 +1,171 @@
+{
+  "id": "jaipur",
+  "name": "Jaipur Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-01-31"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "jmrc",
+      "name": "Jaipur Metro Rail Corporation",
+      "shortName": "JMRC",
+      "color": "#e5338c",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 5,
+            "fare": 15
+          },
+          {
+            "max": 8,
+            "fare": 25
+          },
+          {
+            "max": 999,
+            "fare": 30
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-01-31",
+        "confidence": "verified",
+        "sourceUrl": "https://transport.rajasthan.gov.in/content/dam/transport/metro/Passenger%20Information/MetroFares/Notification%20of%20%20Fare%20Revision%20%20Effective%20from%2031.01.2025.pdf",
+        "note": "By stations (Pink Line). From JMRC's official fare-revision notification (rajasthan.gov.in). Smart card 10% off."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "pink-line",
+      "operator": "jmrc",
+      "name": "Pink Line",
+      "color": "#e5338c",
+      "stations": [
+        "Q20311991",
+        "Q20717371",
+        "Q28180449",
+        "Q28180440",
+        "Q28180437",
+        "Q28180430",
+        "Q28180425",
+        "Q28180421",
+        "Q28180413",
+        "Q28180408",
+        "Q28180399"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q20311991",
+      "name": "Badi Chaupar",
+      "coord": [
+        75.826814,
+        26.92296
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20717371",
+      "name": "Chhoti Chaupar",
+      "coord": [
+        75.81845,
+        26.92471
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180399",
+      "name": "Mansarovar",
+      "coord": [
+        75.75,
+        26.879444444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180408",
+      "name": "New Aatish Market",
+      "coord": [
+        75.764722222,
+        26.880277777
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180413",
+      "name": "Vivek Vihar",
+      "coord": [
+        75.768611111,
+        26.888888888
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180421",
+      "name": "Shyam Nagar",
+      "coord": [
+        75.770555555,
+        26.896666666
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180425",
+      "name": "Ram Nagar",
+      "coord": [
+        75.774722222,
+        26.901944444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180430",
+      "name": "Civil Lines",
+      "coord": [
+        75.781388888,
+        26.909722222
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180437",
+      "name": "Railway",
+      "coord": [
+        75.79,
+        26.918611111
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180440",
+      "name": "Sindhi Camp",
+      "coord": [
+        75.799722222,
+        26.9225
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28180449",
+      "name": "Chandpole",
+      "coord": [
+        75.8075,
+        26.926388888
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

@@ -1,0 +1,674 @@
+{
+  "id": "hyderabad",
+  "name": "Hyderabad Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-05-17"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "hmrl",
+      "name": "Hyderabad Metro Rail",
+      "shortName": "HMRL",
+      "color": "#e2231a",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 12
+          },
+          {
+            "max": 4,
+            "fare": 18
+          },
+          {
+            "max": 6,
+            "fare": 30
+          },
+          {
+            "max": 9,
+            "fare": 40
+          },
+          {
+            "max": 12,
+            "fare": 50
+          },
+          {
+            "max": 15,
+            "fare": 55
+          },
+          {
+            "max": 18,
+            "fare": 60
+          },
+          {
+            "max": 21,
+            "fare": 66
+          },
+          {
+            "max": 24,
+            "fare": 70
+          },
+          {
+            "max": 999,
+            "fare": 75
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-05-17",
+        "confidence": "verified",
+        "sourceUrl": "https://ltmetro.com/fare-chart-hyderabad-metro-rail/",
+        "note": "Token/QR fares from L&TMRHL's official Fare Fixation Committee press release (15 May 2025). Smart card 10% off."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "red-line",
+      "operator": "hmrl",
+      "name": "Red Line",
+      "color": "#e2231a",
+      "stations": [
+        "Q58814838",
+        "Q58814872",
+        "Q81820840",
+        "Q81724990",
+        "Q81640785",
+        "Q81483949",
+        "Q81406369",
+        "Q56701860",
+        "Q83859784",
+        "Q62860405",
+        "Q63346685",
+        "Q83718950",
+        "Q85846368",
+        "Q83886076",
+        "Q85770033",
+        "Q58814848",
+        "Q56701862",
+        "Q83175963",
+        "Q83008743",
+        "Q82698806",
+        "Q82532536",
+        "Q82256850",
+        "Q82064377",
+        "Q83283577",
+        "Q85773083",
+        "Q84250421",
+        "Q58814840"
+      ]
+    },
+    {
+      "id": "blue-line",
+      "operator": "hmrl",
+      "name": "Blue Line",
+      "color": "#0062cc",
+      "stations": [
+        "Q58814837",
+        "Q56701859",
+        "Q83554384",
+        "Q83637027",
+        "Q84028775",
+        "Q64038090",
+        "Q108874431",
+        "Q85518572",
+        "Q63250572",
+        "Q56701862",
+        "Q84301996",
+        "Q84499965",
+        "Q84358120",
+        "Q84567224",
+        "Q58814859",
+        "Q58814860",
+        "Q83788029",
+        "Q56701857",
+        "Q58814861",
+        "Q83491622",
+        "Q63250628",
+        "Q83407689",
+        "Q83377016"
+      ]
+    },
+    {
+      "id": "green-line",
+      "operator": "hmrl",
+      "name": "Green Line",
+      "color": "#00a650",
+      "stations": [
+        "Q108874543",
+        "Q58814859",
+        "Q108874730",
+        "Q84766563",
+        "Q84890478",
+        "Q108874753",
+        "Q108874757",
+        "Q108874763",
+        "Q108874559",
+        "Q56701860"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q56701857",
+      "name": "Tarnaka",
+      "coord": [
+        78.5285575,
+        17.4282927
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q56701859",
+      "name": "Hitec City",
+      "coord": [
+        78.38314,
+        17.44901
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q56701860",
+      "name": "MG Bus",
+      "coord": [
+        78.486129,
+        17.3799934
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q56701862",
+      "name": "Ameerpet",
+      "coord": [
+        78.4445936,
+        17.4356877
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814837",
+      "name": "Synchrony Raidurg",
+      "coord": [
+        78.3772,
+        17.44219
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814838",
+      "name": "Vasavi LB Nagar",
+      "coord": [
+        78.5479686,
+        17.3496988
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814840",
+      "name": "Miyapur",
+      "coord": [
+        78.3730055,
+        17.496526
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814848",
+      "name": "Punjagutta",
+      "coord": [
+        78.4512194,
+        17.4285221
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814859",
+      "name": "Parade Ground",
+      "coord": [
+        78.4974928,
+        17.4432371
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814860",
+      "name": "Secunderabad East",
+      "coord": [
+        78.505382,
+        17.4359612
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814861",
+      "name": "Habsiguda",
+      "coord": [
+        78.5405362,
+        17.4201961
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q58814872",
+      "name": "Victoria Memorial",
+      "coord": [
+        78.5438612,
+        17.3621032
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62860405",
+      "name": "Gandhi Bhavan",
+      "coord": [
+        78.4731023,
+        17.3860794
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q63250572",
+      "name": "Taruni Madhura Nagar",
+      "coord": [
+        78.4391404,
+        17.4369368
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q63250628",
+      "name": "Stadium",
+      "coord": [
+        78.554193,
+        17.4074328
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q63346685",
+      "name": "Nampally",
+      "coord": [
+        78.47016,
+        17.39222
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q64038090",
+      "name": "Apollo Hospitals Jubilee Hills Check Post",
+      "coord": [
+        78.41371,
+        17.42819
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q81406369",
+      "name": "Malakpet",
+      "coord": [
+        78.49393,
+        17.37718
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q81483949",
+      "name": "New Market",
+      "coord": [
+        78.5021307,
+        17.3730073
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q81640785",
+      "name": "Musarambagh",
+      "coord": [
+        78.5110749,
+        17.3712554
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q81724990",
+      "name": "Dilsukhnagar",
+      "coord": [
+        78.5250702,
+        17.3685387
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q81820840",
+      "name": "Chaitanyapuri",
+      "coord": [
+        78.5357829,
+        17.3682882
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q82064377",
+      "name": "Dr. B. R. Ambedkar Balanagar",
+      "coord": [
+        78.4178123,
+        17.4769386
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q82256850",
+      "name": "Moosapet",
+      "coord": [
+        78.42612,
+        17.47188
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q82532536",
+      "name": "Indian Oil Bharat Nagar",
+      "coord": [
+        78.4278693,
+        17.463997
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q82698806",
+      "name": "Erragadda",
+      "coord": [
+        78.4329199,
+        17.4566705
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83008743",
+      "name": "ESI Hospital metro station (Hyderabad)",
+      "coord": [
+        78.4372687,
+        17.4474675
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83175963",
+      "name": "S.R. Nagar",
+      "coord": [
+        78.44073,
+        17.44312
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83283577",
+      "name": "Kukatpally",
+      "coord": [
+        78.409369,
+        17.4851155
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83377016",
+      "name": "Nagole",
+      "coord": [
+        78.5586866,
+        17.3907735
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83407689",
+      "name": "Uppal",
+      "coord": [
+        78.5599082,
+        17.3999688
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83491622",
+      "name": "NGRI",
+      "coord": [
+        78.54634,
+        17.41483
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83554384",
+      "name": "Durgam Cheruvu",
+      "coord": [
+        78.38758,
+        17.44293
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83637027",
+      "name": "Madhapur",
+      "coord": [
+        78.400483333,
+        17.437244444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83718950",
+      "name": "Assembly",
+      "coord": [
+        78.470797222,
+        17.398108333
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83788029",
+      "name": "Mettuguda",
+      "coord": [
+        78.5191915,
+        17.4353176
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83859784",
+      "name": "Osmania Medical College",
+      "coord": [
+        78.4817,
+        17.38207
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q83886076",
+      "name": "Khairatabad",
+      "coord": [
+        78.46087,
+        17.41162
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84028775",
+      "name": "Peddamma Gudi",
+      "coord": [
+        78.408555555,
+        17.430583333
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84250421",
+      "name": "JNTU College",
+      "coord": [
+        78.388793,
+        17.498653
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84301996",
+      "name": "Begumpet",
+      "coord": [
+        78.4569386,
+        17.4378437
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84358120",
+      "name": "Rasoolpura",
+      "coord": [
+        78.475936,
+        17.4434683
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84499965",
+      "name": "Invesco Prakash Nagar",
+      "coord": [
+        78.4652894,
+        17.4448917
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84567224",
+      "name": "Paradise",
+      "coord": [
+        78.4850961,
+        17.4435274
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84766563",
+      "name": "Gandhi Hospital",
+      "coord": [
+        78.501867,
+        17.425425
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q84890478",
+      "name": "Musheerabad",
+      "coord": [
+        78.4994144,
+        17.4187541
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q85518572",
+      "name": "Yusufguda",
+      "coord": [
+        78.4269193,
+        17.435096
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q85770033",
+      "name": "Irrum Manzil",
+      "coord": [
+        78.45635,
+        17.42023
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q85773083",
+      "name": "KPHB Colony",
+      "coord": [
+        78.401795,
+        17.49378
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q85846368",
+      "name": "NMDC Lakdi-ka-pul",
+      "coord": [
+        78.4646968,
+        17.4038078
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874431",
+      "name": "Road No.5 Jubilee Hills",
+      "coord": [
+        78.4232,
+        17.43005
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874543",
+      "name": "JBS Parade Ground",
+      "coord": [
+        78.49648,
+        17.44875
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874559",
+      "name": "Sultan Bazaar",
+      "coord": [
+        78.48403,
+        17.38443
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874730",
+      "name": "Secunderabad West",
+      "coord": [
+        78.49954,
+        17.4338
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874753",
+      "name": "RTC X Roads",
+      "coord": [
+        78.49681,
+        17.40705
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874757",
+      "name": "Chikkadpally",
+      "coord": [
+        78.4949,
+        17.40036
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874763",
+      "name": "Narayanaguda",
+      "coord": [
+        78.48996,
+        17.39436
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

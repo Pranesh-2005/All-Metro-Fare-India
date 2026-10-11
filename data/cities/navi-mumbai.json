@@ -1,0 +1,179 @@
+{
+  "id": "navi-mumbai",
+  "name": "Navi Mumbai Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2023-11-17"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "nmmc",
+      "name": "Navi Mumbai Metro",
+      "shortName": "NMM",
+      "color": "#00a3a3",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 4,
+            "fare": 15
+          },
+          {
+            "max": 6,
+            "fare": 20
+          },
+          {
+            "max": 8,
+            "fare": 25
+          },
+          {
+            "max": 10,
+            "fare": 30
+          },
+          {
+            "max": 999,
+            "fare": 40
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2023-11-17",
+        "confidence": "unverified",
+        "sourceUrl": "https://themetrorailguy.com/navi-mumbai-metro-information-map-updates/",
+        "note": "Line 1 (Belapur–Pendhar). ₹10 min / ₹40 above 10 km matches the launch announcement; interior bands from aggregator."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "line-1",
+      "operator": "nmmc",
+      "name": "Line 1",
+      "color": "#0062cc",
+      "stations": [
+        "Q123471592",
+        "Q123471593",
+        "Q123471594",
+        "Q123471595",
+        "Q123471596",
+        "Q123471597",
+        "Q123471598",
+        "Q123471600",
+        "Q123471601",
+        "Q123471604",
+        "Q123471605"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q123471592",
+      "name": "Belapur Terminal (CBD Belapur)",
+      "coord": [
+        73.04026,
+        19.0206
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471593",
+      "name": "RBI Colony (Kharghar)",
+      "coord": [
+        73.04795,
+        19.02299
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471594",
+      "name": "Belpada (Kharghar)",
+      "coord": [
+        73.05494,
+        19.02528
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471595",
+      "name": "Utsav Chowk (Kharghar)",
+      "coord": [
+        73.05895,
+        19.03258
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471596",
+      "name": "Kendriya Vihar (Kharghar)",
+      "coord": [
+        73.06407,
+        19.03768
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471597",
+      "name": "Kharghar Village (Kharghar)",
+      "coord": [
+        73.07431,
+        19.04311
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471598",
+      "name": "Central Park (Kharghar)",
+      "coord": [
+        73.076,
+        19.05366
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471600",
+      "name": "Pethpada (Kharghar)",
+      "coord": [
+        73.07738,
+        19.06382
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471601",
+      "name": "Amandoot (Kharghar)",
+      "coord": [
+        73.08186,
+        19.07368
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471604",
+      "name": "Pethali-Taloja",
+      "coord": [
+        73.09069,
+        19.07459
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123471605",
+      "name": "Pendhar(Taloja)",
+      "coord": [
+        73.0978,
+        19.07224
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

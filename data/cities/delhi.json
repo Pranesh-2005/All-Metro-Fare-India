@@ -1,0 +1,2809 @@
+{
+  "id": "delhi",
+  "name": "Delhi NCR",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-08-25"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "dmrc",
+      "name": "Delhi Metro Rail Corporation",
+      "shortName": "DMRC",
+      "color": "#e2231a",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 11
+          },
+          {
+            "max": 5,
+            "fare": 21
+          },
+          {
+            "max": 12,
+            "fare": 32
+          },
+          {
+            "max": 21,
+            "fare": 43
+          },
+          {
+            "max": 32,
+            "fare": 54
+          },
+          {
+            "max": 999,
+            "fare": 64
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-08-25",
+        "confidence": "verified",
+        "sourceUrl": "https://www.delhimetrorail.com/fare",
+        "note": "Token/single-journey distance fares. Smart-card riders get 10% off."
+      },
+      "discounts": [
+        {
+          "id": "smartcard",
+          "label": "Smart card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
+    },
+    {
+      "id": "dmrc-aex",
+      "name": "Airport Express Line",
+      "shortName": "AEX",
+      "color": "#f26522",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 5,
+            "fare": 20
+          },
+          {
+            "max": 15,
+            "fare": 50
+          },
+          {
+            "max": 999,
+            "fare": 60
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-08-25",
+        "confidence": "unverified",
+        "sourceUrl": "https://www.delhimetrorail.com/airport-express-line",
+        "note": "Airport Express is a station-pair matrix, not clean km bands; these are approximate (New Delhi→Aerocity ₹50, →T3 ₹60). Confirm against the DMRC calculator."
+      },
+      "discounts": []
+    },
+    {
+      "id": "rapidmetro",
+      "name": "Rapid Metro Gurgaon",
+      "shortName": "Rapid",
+      "color": "#00a3a3",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 5,
+            "fare": 20
+          },
+          {
+            "max": 999,
+            "fare": 35
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-08-25",
+        "confidence": "unverified",
+        "note": "Effectively flat: ₹20 within a phase, ₹35 crossing both phases. Not confirmed against a DMRC notice."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "blue-line-1",
+      "operator": "dmrc",
+      "name": "Blue Line (1)",
+      "color": "#0062cc",
+      "stations": [
+        "Q12525001",
+        "Q4701799",
+        "Q6798106",
+        "Q6798108",
+        "Q7005382",
+        "Q11325617",
+        "Q7047602",
+        "Q7047605",
+        "Q4948436",
+        "Q7047598",
+        "Q4207094",
+        "Q28169403",
+        "Q28169402",
+        "Q28169401",
+        "Q55625348",
+        "Q55625349",
+        "Q39049185"
+      ]
+    },
+    {
+      "id": "blue-line-2",
+      "operator": "dmrc",
+      "name": "Blue Line (2)",
+      "color": "#0062cc",
+      "stations": [
+        "Q5317950",
+        "Q5317949",
+        "Q5317951",
+        "Q5317944",
+        "Q5317945",
+        "Q5317946",
+        "Q5317947",
+        "Q5317948",
+        "Q5317936",
+        "Q5317939",
+        "Q6982809",
+        "Q11288937",
+        "Q11288933",
+        "Q6150737",
+        "Q11309886",
+        "Q11318978",
+        "Q7631236",
+        "Q11316094",
+        "Q7286379",
+        "Q259656",
+        "Q6917665",
+        "Q12419759",
+        "Q11306954",
+        "Q7144412",
+        "Q7286033",
+        "Q6373014",
+        "Q6190836",
+        "Q7288800",
+        "Q7286183",
+        "Q4858265",
+        "Q6748047",
+        "Q7237614",
+        "Q6026956",
+        "Q12525001",
+        "Q6505213",
+        "Q7040065",
+        "Q7239761",
+        "Q6371278",
+        "Q4751288",
+        "Q6378945",
+        "Q12523622"
+      ]
+    },
+    {
+      "id": "pink-line-1",
+      "operator": "dmrc",
+      "name": "Pink Line (1)",
+      "color": "#e5338c",
+      "stations": [
+        "Q28172749",
+        "Q138646341",
+        "Q138646338",
+        "Q138646331",
+        "Q138646333",
+        "Q138646325",
+        "Q138646322",
+        "Q138646313",
+        "Q138646309",
+        "Q28172619",
+        "Q4832101",
+        "Q28172657",
+        "Q6998648",
+        "Q28172658",
+        "Q28178866",
+        "Q28172735",
+        "Q7286379",
+        "Q28172745",
+        "Q28172747",
+        "Q28172737",
+        "Q38739199",
+        "Q30591952",
+        "Q28172666",
+        "Q28172662",
+        "Q17055892",
+        "Q28172660",
+        "Q6474492",
+        "Q28172738",
+        "Q28172734",
+        "Q28172665",
+        "Q6798106",
+        "Q55421995",
+        "Q28172740",
+        "Q30646922",
+        "Q55421849",
+        "Q55421833",
+        "Q4751288",
+        "Q6371278",
+        "Q28172856",
+        "Q28178869",
+        "Q28172733",
+        "Q11288582",
+        "Q28172732"
+      ]
+    },
+    {
+      "id": "pink-line-2",
+      "operator": "dmrc",
+      "name": "Pink Line (2)",
+      "color": "#e5338c",
+      "stations": [
+        "Q28172749",
+        "Q28172730",
+        "Q28172729",
+        "Q28172727"
+      ]
+    },
+    {
+      "id": "yellow-line",
+      "operator": "dmrc",
+      "name": "Yellow Line",
+      "color": "#f6c200",
+      "stations": [
+        "Q888667",
+        "Q5970668",
+        "Q6715812",
+        "Q11307061",
+        "Q5620352",
+        "Q4791528",
+        "Q5556767",
+        "Q11313479",
+        "Q5094801",
+        "Q7273002",
+        "Q7402900",
+        "Q6745134",
+        "Q5683002",
+        "Q5602948",
+        "Q4651928",
+        "Q17055892",
+        "Q6276226",
+        "Q7278893",
+        "Q7877392",
+        "Q5061812",
+        "Q7144407",
+        "Q7286183",
+        "Q3634456",
+        "Q5088577",
+        "Q5071227",
+        "Q4207344",
+        "Q5124512",
+        "Q11352050",
+        "Q7936037",
+        "Q795125",
+        "Q6888294",
+        "Q4832101",
+        "Q4680843",
+        "Q862598",
+        "Q26964765",
+        "Q26964763",
+        "Q21539950"
+      ]
+    },
+    {
+      "id": "violet-line",
+      "operator": "dmrc",
+      "name": "Violet Line",
+      "color": "#6b2a86",
+      "stations": [
+        "Q4207344",
+        "Q19581000",
+        "Q19580828",
+        "Q19580569",
+        "Q19580817",
+        "Q6748047",
+        "Q16850982",
+        "Q5061812",
+        "Q6400082",
+        "Q6165993",
+        "Q6154100",
+        "Q6474492",
+        "Q6907367",
+        "Q17067477",
+        "Q6987901",
+        "Q6353342",
+        "Q5589852",
+        "Q7081967",
+        "Q17058781",
+        "Q7424130",
+        "Q6893528",
+        "Q7851651",
+        "Q4840629",
+        "Q20967689",
+        "Q20967667",
+        "Q20967661",
+        "Q20967695",
+        "Q20967574",
+        "Q20967615",
+        "Q20967666",
+        "Q20961861",
+        "Q20967610",
+        "Q27962769",
+        "Q27962771"
+      ]
+    },
+    {
+      "id": "magenta-line-1",
+      "operator": "dmrc",
+      "name": "Magenta Line (1)",
+      "color": "#cc0099",
+      "stations": [
+        "Q4948436",
+        "Q28172616",
+        "Q28169996",
+        "Q28169995",
+        "Q28172613",
+        "Q28169993",
+        "Q28172610",
+        "Q28172607",
+        "Q6353342",
+        "Q28172606",
+        "Q28169988",
+        "Q28172603",
+        "Q28172601",
+        "Q5683002",
+        "Q28169973",
+        "Q28172592",
+        "Q28172590",
+        "Q28172570",
+        "Q28172569",
+        "Q28172567",
+        "Q28172566",
+        "Q20718091",
+        "Q28169938",
+        "Q24807633",
+        "Q6150737",
+        "Q131309538"
+      ]
+    },
+    {
+      "id": "magenta-line-2",
+      "operator": "dmrc",
+      "name": "Magenta Line (2)",
+      "color": "#cc0099",
+      "stations": [
+        "Q28172619",
+        "Q138605788",
+        "Q26964765",
+        "Q138573868",
+        "Q138573160",
+        "Q7198601",
+        "Q138573161"
+      ]
+    },
+    {
+      "id": "red-line",
+      "operator": "dmrc",
+      "name": "Red Line",
+      "color": "#e2231a",
+      "stations": [
+        "Q4207358",
+        "Q7359754",
+        "Q11351030",
+        "Q7198601",
+        "Q6425927",
+        "Q6998648",
+        "Q6394986",
+        "Q11295526",
+        "Q4207366",
+        "Q11307659",
+        "Q7238590",
+        "Q7259157",
+        "Q3632416",
+        "Q4207344",
+        "Q11307901",
+        "Q7445815",
+        "Q11288582",
+        "Q11307902",
+        "Q6751563",
+        "Q6191072",
+        "Q4207341",
+        "Q29025782",
+        "Q29025799",
+        "Q29025802",
+        "Q29025803",
+        "Q29025805",
+        "Q29467143",
+        "Q29467145",
+        "Q29467146"
+      ]
+    },
+    {
+      "id": "green-line-1",
+      "operator": "dmrc",
+      "name": "Green Line (1)",
+      "color": "#00a650",
+      "stations": [
+        "Q4207354",
+        "Q4207366"
+      ]
+    },
+    {
+      "id": "green-line-2",
+      "operator": "dmrc",
+      "name": "Green Line (2)",
+      "color": "#00a650",
+      "stations": [
+        "Q29025631",
+        "Q29025630",
+        "Q29025628",
+        "Q30591462",
+        "Q30591461",
+        "Q30591460",
+        "Q30591459",
+        "Q6935833",
+        "Q7285915",
+        "Q6963529",
+        "Q6963528",
+        "Q7645348",
+        "Q7877393",
+        "Q7160416",
+        "Q7141809",
+        "Q20718098",
+        "Q6727807",
+        "Q7499286",
+        "Q28178866",
+        "Q7141807",
+        "Q4207354",
+        "Q7426116",
+        "Q12419759"
+      ]
+    },
+    {
+      "id": "rapid-metro-gurgaon",
+      "operator": "rapidmetro",
+      "name": "Rapid Metro Gurgaon",
+      "color": "#00b7c3",
+      "stations": [
+        "Q62024529",
+        "Q62024530",
+        "Q62004719",
+        "Q62004770",
+        "Q62024534",
+        "Q11307061",
+        "Q16999832",
+        "Q16999711",
+        "Q16999885",
+        "Q17026075",
+        "Q16999809"
+      ]
+    },
+    {
+      "id": "airport-express-line",
+      "operator": "dmrc-aex",
+      "name": "Airport Express Line",
+      "color": "#0062cc",
+      "stations": [
+        "Q3634456",
+        "Q11308729",
+        "Q5269438",
+        "Q5253729",
+        "Q4698881",
+        "Q5317950",
+        "Q112787125"
+      ]
+    },
+    {
+      "id": "grey-line",
+      "operator": "dmrc",
+      "name": "Grey Line",
+      "color": "#8c8c8c",
+      "stations": [
+        "Q5317936",
+        "Q28172632",
+        "Q28172634",
+        "Q107555792"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q28172662",
+      "name": "Sarojini Nagar",
+      "coord": [
+        77.1985707,
+        28.5758068
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172665",
+      "name": "Sarai Kale Khan - Nizamuddin",
+      "coord": [
+        77.2571281,
+        28.5893558
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172666",
+      "name": "Bhikaji Cama Place",
+      "coord": [
+        77.1878882,
+        28.5702112
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172727",
+      "name": "Shiv Vihar",
+      "coord": [
+        77.2894938,
+        28.7216122
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172729",
+      "name": "Johri Enclave",
+      "coord": [
+        77.2901066,
+        28.7131667
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172730",
+      "name": "Gokulpuri",
+      "coord": [
+        77.286111111,
+        28.7025
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172732",
+      "name": "Jaffrabad",
+      "coord": [
+        77.2747475,
+        28.6827587
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172733",
+      "name": "East Azad Nagar",
+      "coord": [
+        77.285,
+        28.664722222
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172734",
+      "name": "Ashram",
+      "coord": [
+        77.2584745,
+        28.5722076
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172735",
+      "name": "ESI - Basaidarapur",
+      "coord": [
+        77.1273906,
+        28.6582712
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172737",
+      "name": "Delhi Cantonment",
+      "coord": [
+        77.1404231,
+        28.60871
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172738",
+      "name": "Vinobapuri",
+      "coord": [
+        77.250502,
+        28.565944
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172740",
+      "name": "Trilokpuri - Sanjay Lake",
+      "coord": [
+        77.3088491,
+        28.6136784
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172745",
+      "name": "Mayapuri",
+      "coord": [
+        77.1297412,
+        28.637099
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172747",
+      "name": "Naraina Vihar",
+      "coord": [
+        77.1364883,
+        28.6241248
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172749",
+      "name": "Maujpur - Babarpur",
+      "coord": [
+        77.2795849,
+        28.6920729
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172856",
+      "name": "Karkarduma Court",
+      "coord": [
+        77.2957867,
+        28.6536847
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28178866",
+      "name": "Punjabi Bagh West",
+      "coord": [
+        77.1392564,
+        28.6728259
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28178869",
+      "name": "Krishna Nagar metro station (Delhi)",
+      "coord": [
+        77.2902761,
+        28.6578549
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025628",
+      "name": "Pandit Shree Ram Sharma",
+      "coord": [
+        76.9514575,
+        28.6892418
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025630",
+      "name": "Bahadurgarh City",
+      "coord": [
+        76.935098022,
+        28.690724122
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025631",
+      "name": "Brigadier Hoshiyar Singh",
+      "coord": [
+        76.9192442,
+        28.6973385
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025782",
+      "name": "Shaheed Nagar",
+      "coord": [
+        77.3337588,
+        28.6766323
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025799",
+      "name": "Raj Bagh",
+      "coord": [
+        77.3465777,
+        28.6770311
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025802",
+      "name": "Major Mohit Sharma Rajendra Nagar",
+      "coord": [
+        77.358265,
+        28.677631
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025803",
+      "name": "Shyam Park",
+      "coord": [
+        77.3709017,
+        28.6782315
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29025805",
+      "name": "Mohan Nagar",
+      "coord": [
+        77.3839328,
+        28.6784801
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29467143",
+      "name": "Arthala",
+      "coord": [
+        77.3917729,
+        28.676927
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29467145",
+      "name": "Hindon River",
+      "coord": [
+        77.4063702,
+        28.6734148
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q29467146",
+      "name": "Shaheed Sthal",
+      "coord": [
+        77.4154528,
+        28.6706208
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30591459",
+      "name": "Mundka Industrial Area",
+      "coord": [
+        77.0173627,
+        28.6834099
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30591460",
+      "name": "Ghevra",
+      "coord": [
+        76.9957729,
+        28.6852888
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30591461",
+      "name": "Tikri Kalan",
+      "coord": [
+        76.9773361,
+        28.6868535
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30591462",
+      "name": "Tikri Border",
+      "coord": [
+        76.9640511,
+        28.6880335
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30591952",
+      "name": "Sir M. Vishweshwaraiah Moti Bagh",
+      "coord": [
+        77.1757257,
+        28.5785038
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30646922",
+      "name": "Vinod Nagar East",
+      "coord": [
+        77.3052657,
+        28.6200392
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38739199",
+      "name": "Durgabai Deshmukh South Campus",
+      "coord": [
+        77.169475,
+        28.589441
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049185",
+      "name": "Noida Electronic City",
+      "coord": [
+        77.37493,
+        28.6279412
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55421833",
+      "name": "IP Extension",
+      "coord": [
+        77.3109003,
+        28.6318981
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55421849",
+      "name": "Vinod Nagar",
+      "coord": [
+        77.304583,
+        28.6249765
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55421995",
+      "name": "Shree Ram Mandir Mayur Vihar",
+      "coord": [
+        77.2987036,
+        28.6057942
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55625348",
+      "name": "Noida Sector 59",
+      "coord": [
+        77.3727259,
+        28.606493
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55625349",
+      "name": "Noida Sector 62",
+      "coord": [
+        77.3736097,
+        28.6169948
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62004719",
+      "name": "Sector 53-54",
+      "coord": [
+        77.1004314,
+        28.4463817
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62004770",
+      "name": "Sector 42-43",
+      "coord": [
+        77.0969935,
+        28.4575126
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62024529",
+      "name": "Sector 55-56",
+      "coord": [
+        77.1052486,
+        28.4233798
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62024530",
+      "name": "Sector 54 Chowk",
+      "coord": [
+        77.1049804,
+        28.4328827
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62024534",
+      "name": "Phase 1",
+      "coord": [
+        77.0939948,
+        28.4714911
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q107555792",
+      "name": "Dhansa Bus Stand",
+      "coord": [
+        76.97848,
+        28.61191
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q112787125",
+      "name": "IICC - Dwarka Sector 25",
+      "coord": [
+        77.04347,
+        28.55212
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q131309538",
+      "name": "Krishna Park Extension",
+      "coord": [
+        77.0843935,
+        28.6477708
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138573160",
+      "name": "Prashant Vihar",
+      "coord": [
+        77.13879,
+        28.71306
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138573161",
+      "name": "Deepali Chowk",
+      "coord": [
+        77.11896,
+        28.69823
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138573868",
+      "name": "Haiderpur Village",
+      "coord": [
+        77.14226,
+        28.72503
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138605788",
+      "name": "Bhalaswa",
+      "coord": [
+        77.168076,
+        28.736967
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646309",
+      "name": "Burari",
+      "coord": [
+        77.19955,
+        28.72996
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646313",
+      "name": "Jharoda Majra",
+      "coord": [
+        77.21372,
+        28.72497
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646322",
+      "name": "Jagatpur - Wazirabad",
+      "coord": [
+        77.224005,
+        28.721133
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646325",
+      "name": "Soorghat",
+      "coord": [
+        77.22746,
+        28.710218
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646331",
+      "name": "Khajuri Khas",
+      "coord": [
+        77.254457,
+        28.705226
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646333",
+      "name": "Nanaksar Sonia Vihar",
+      "coord": [
+        77.242494,
+        28.708722
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646338",
+      "name": "Bhajanpura",
+      "coord": [
+        77.262643,
+        28.703603
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q138646341",
+      "name": "Yamuna Vihar",
+      "coord": [
+        77.277317,
+        28.702361
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7273002",
+      "name": "Qutab Minar",
+      "coord": [
+        77.186319,
+        28.512951
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7278893",
+      "name": "Lok Kalyan Marg",
+      "coord": [
+        77.2111765,
+        28.5976575
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7285915",
+      "name": "Rajdhani Park",
+      "coord": [
+        77.043844,
+        28.6822
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7286033",
+      "name": "Rajendra Place",
+      "coord": [
+        77.178263,
+        28.642241
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7286183",
+      "name": "Rajiv Chowk",
+      "coord": [
+        77.219639,
+        28.632846
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7286379",
+      "name": "Rajouri Garden",
+      "coord": [
+        77.122634,
+        28.649004
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7288800",
+      "name": "Ramakrishna Ashram Marg",
+      "coord": [
+        77.208502,
+        28.639268
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7359754",
+      "name": "Dr. Baba Saheb Ambedkar Hospital",
+      "coord": [
+        77.115387,
+        28.71498
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7402900",
+      "name": "Saket",
+      "coord": [
+        77.2015353,
+        28.5204916
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7424130",
+      "name": "Sarita Vihar",
+      "coord": [
+        77.2883946,
+        28.5285878
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7426116",
+      "name": "Satguru Ram Singh Marg",
+      "coord": [
+        77.1576443,
+        28.6620478
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7445815",
+      "name": "Seelampur",
+      "coord": [
+        77.266738,
+        28.669824
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7499286",
+      "name": "Shivaji Park",
+      "coord": [
+        77.130347,
+        28.674944
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7631236",
+      "name": "Subhash Nagar",
+      "coord": [
+        77.104905,
+        28.640431
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7645348",
+      "name": "Maharaja Surajmal Stadium",
+      "coord": [
+        77.073953,
+        28.681792
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7851651",
+      "name": "Tughlakabad",
+      "coord": [
+        77.2993983,
+        28.5025661
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7877392",
+      "name": "Seva Teerth",
+      "coord": [
+        77.2119637,
+        28.61106
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7877393",
+      "name": "Udyog Nagar",
+      "coord": [
+        77.080775,
+        28.680994
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7936037",
+      "name": "Vishwa Vidyalaya",
+      "coord": [
+        77.214596,
+        28.694813
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11288582",
+      "name": "Welcome",
+      "coord": [
+        77.277934,
+        28.67205
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11288933",
+      "name": "Uttam Nagar East",
+      "coord": [
+        77.065207,
+        28.624786
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11288937",
+      "name": "Uttam Nagar West",
+      "coord": [
+        77.055698,
+        28.621728
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11295526",
+      "name": "Kanhaiya Nagar",
+      "coord": [
+        77.164761,
+        28.682437
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11306954",
+      "name": "Shadipur",
+      "coord": [
+        77.158249,
+        28.651655
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11307061",
+      "name": "Sikanderpur metro station, Gurugram",
+      "coord": [
+        77.09305556,
+        28.48138889
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11307659",
+      "name": "Shastri Nagar",
+      "coord": [
+        77.181785,
+        28.670134
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11307901",
+      "name": "Shastri Park",
+      "coord": [
+        77.250098,
+        28.668204
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11307902",
+      "name": "Shahdara",
+      "coord": [
+        77.289923,
+        28.673476
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11308729",
+      "name": "Shivaji Stadium",
+      "coord": [
+        77.2114121,
+        28.6287699
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11309886",
+      "name": "Janakpuri East",
+      "coord": [
+        77.086593,
+        28.633013
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11313479",
+      "name": "Sultanpur",
+      "coord": [
+        77.1613893,
+        28.4991895
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11316094",
+      "name": "Tagore Garden",
+      "coord": [
+        77.112914,
+        28.643688
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11318978",
+      "name": "Tilak Nagar",
+      "coord": [
+        77.096364,
+        28.636645
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11325617",
+      "name": "Noida Sector 15",
+      "coord": [
+        77.31158,
+        28.585156
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11351030",
+      "name": "Rohini",
+      "coord": [
+        77.125901,
+        28.707659
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q11352050",
+      "name": "Vidhan Sabha",
+      "coord": [
+        77.221779,
+        28.687858
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q12419759",
+      "name": "Kirti Nagar",
+      "coord": [
+        77.151473,
+        28.6551
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q12523622",
+      "name": "Vaishali",
+      "coord": [
+        77.339711,
+        28.6499468
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q12525001",
+      "name": "Yamuna Bank",
+      "coord": [
+        77.26793,
+        28.62328
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16850982",
+      "name": "Janpath",
+      "coord": [
+        77.2191842,
+        28.6250595
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16999711",
+      "name": "Phase 3",
+      "coord": [
+        77.0935191,
+        28.4936626
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16999809",
+      "name": "Belvedere Towers",
+      "coord": [
+        77.0882,
+        28.4918
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16999832",
+      "name": "Phase 2",
+      "coord": [
+        77.0928,
+        28.4876
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16999885",
+      "name": "Moulsari Avenue",
+      "coord": [
+        77.0945853,
+        28.5008186
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17026075",
+      "name": "Cyber City",
+      "coord": [
+        77.0892532,
+        28.4980337
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17055892",
+      "name": "Dilli Haat - INA",
+      "coord": [
+        77.2073111,
+        28.5752244
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17058781",
+      "name": "Jasola Apollo",
+      "coord": [
+        77.2832581,
+        28.5381295
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17067477",
+      "name": "Kailash Colony",
+      "coord": [
+        77.2419541,
+        28.5553876
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19580569",
+      "name": "Delhi Gate",
+      "coord": [
+        77.2403797,
+        28.6400716
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19580817",
+      "name": "ITO",
+      "coord": [
+        77.2413198,
+        28.6293714
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19580828",
+      "name": "Jama Masjid",
+      "coord": [
+        77.2375801,
+        28.650157
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19581000",
+      "name": "Lal Qila",
+      "coord": [
+        77.236693,
+        28.6566569
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20718091",
+      "name": "Palam",
+      "coord": [
+        77.0830764,
+        28.5889102
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20718098",
+      "name": "Paschim Vihar East",
+      "coord": [
+        77.1124363,
+        28.677327
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20961861",
+      "name": "Bata Chowk",
+      "coord": [
+        77.313441,
+        28.386052
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967574",
+      "name": "Badkal Mor",
+      "coord": [
+        77.31027778,
+        28.42277778
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967610",
+      "name": "Escorts Mujesar",
+      "coord": [
+        77.314954,
+        28.370081
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967615",
+      "name": "Old Faridabad",
+      "coord": [
+        77.311388888,
+        28.410833333
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967661",
+      "name": "Mewla Maharajpur",
+      "coord": [
+        77.30813,
+        28.448495
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967666",
+      "name": "Neelam Chowk Ajronda",
+      "coord": [
+        77.3124,
+        28.3978
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967667",
+      "name": "NHPC Chowk",
+      "coord": [
+        77.307422,
+        28.45766
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967689",
+      "name": "Sarai",
+      "coord": [
+        77.3050028,
+        28.4776821
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20967695",
+      "name": "Sector 28",
+      "coord": [
+        77.309096,
+        28.438325
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q21539950",
+      "name": "Samaypur Badli",
+      "coord": [
+        77.1376725,
+        28.7450431
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q24807633",
+      "name": "Dabri Mor - Janakpuri South",
+      "coord": [
+        77.0852568,
+        28.6159059
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q26964763",
+      "name": "Rohini Sector 18, 19",
+      "coord": [
+        77.1398754,
+        28.7383176
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q26964765",
+      "name": "Haiderpur Badli Mor",
+      "coord": [
+        77.14913,
+        28.729923
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q27962769",
+      "name": "Sant Surdas (Sihi)",
+      "coord": [
+        77.316218,
+        28.354673
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q27962771",
+      "name": "Raja Nahar Singh",
+      "coord": [
+        77.316446,
+        28.339801
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169401",
+      "name": "Noida Sector 61",
+      "coord": [
+        77.3722988,
+        28.597631
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169402",
+      "name": "Noida Sector 52",
+      "coord": [
+        77.3728392,
+        28.5866997
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169403",
+      "name": "Noida Sector 34",
+      "coord": [
+        77.3634415,
+        28.5801987
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169938",
+      "name": "Dashrath Puri",
+      "coord": [
+        77.0824405,
+        28.601499
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169973",
+      "name": "IIT Delhi",
+      "coord": [
+        77.1938172,
+        28.5471992
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169988",
+      "name": "Greater Kailash",
+      "coord": [
+        77.2382473,
+        28.5418318
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169993",
+      "name": "Jamia Millia Islamia",
+      "coord": [
+        77.2862314,
+        28.5628827
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169995",
+      "name": "Jasola Vihar Shaheen Bagh",
+      "coord": [
+        77.2966437,
+        28.5458851
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28169996",
+      "name": "Kalindi Kunj",
+      "coord": [
+        77.3101741,
+        28.5428132
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172566",
+      "name": "Sadar Bazaar Cantonment",
+      "coord": [
+        77.1111904,
+        28.5771253
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172567",
+      "name": "Terminal 1-IGI Airport",
+      "coord": [
+        77.1223813,
+        28.5653003
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172569",
+      "name": "Shankar Vihar",
+      "coord": [
+        77.1404875,
+        28.5607755
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172570",
+      "name": "Vasant Vihar",
+      "coord": [
+        77.1609903,
+        28.5578289
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172590",
+      "name": "Munirka",
+      "coord": [
+        77.1739849,
+        28.5578978
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172592",
+      "name": "R. K. Puram",
+      "coord": [
+        77.1849418,
+        28.5504912
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172601",
+      "name": "Panchsheel Park",
+      "coord": [
+        77.2205072,
+        28.5423378
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172603",
+      "name": "Chirag Delhi",
+      "coord": [
+        77.231221,
+        28.541183
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172606",
+      "name": "Nehru Enclave",
+      "coord": [
+        77.2511709,
+        28.5458491
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172607",
+      "name": "Okhla NSIC",
+      "coord": [
+        77.26473,
+        28.55456
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172610",
+      "name": "Sukhdev Vihar",
+      "coord": [
+        77.2751331,
+        28.5597695
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172613",
+      "name": "Okhla Vihar",
+      "coord": [
+        77.2919123,
+        28.5612849
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172616",
+      "name": "Okhla Bird Sanctuary",
+      "coord": [
+        77.3216486,
+        28.5528643
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172619",
+      "name": "Majlis Park",
+      "coord": [
+        77.182,
+        28.724166666
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172632",
+      "name": "Nangli",
+      "coord": [
+        77.0104,
+        28.617238888
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172634",
+      "name": "Najafgarh",
+      "coord": [
+        76.986508333,
+        28.61255
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172657",
+      "name": "Shalimar Bagh",
+      "coord": [
+        77.165191,
+        28.701819
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172658",
+      "name": "Shakurpur",
+      "coord": [
+        77.1496258,
+        28.6857788
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28172660",
+      "name": "South Extension",
+      "coord": [
+        77.2202651,
+        28.5686112
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7047605",
+      "name": "Noida Sector 18",
+      "coord": [
+        77.3261158,
+        28.5708129
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7081967",
+      "name": "Harkesh Nagar Okhla",
+      "coord": [
+        77.2751404,
+        28.5429197
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7141807",
+      "name": "Punjabi Bagh",
+      "coord": [
+        77.1460591,
+        28.6729288
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7141809",
+      "name": "Paschim Vihar West",
+      "coord": [
+        77.102106,
+        28.678589
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7144407",
+      "name": "Patel Chowk",
+      "coord": [
+        77.211785,
+        28.623235
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7144412",
+      "name": "Patel Nagar",
+      "coord": [
+        77.169251,
+        28.645049
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7160416",
+      "name": "Peeragarhi",
+      "coord": [
+        77.09255,
+        28.679703
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7198601",
+      "name": "Madhuban Chowk",
+      "coord": [
+        77.132397,
+        28.703151
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7237614",
+      "name": "Supreme Court",
+      "coord": [
+        77.242523,
+        28.62349
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7238590",
+      "name": "Pratap Nagar",
+      "coord": [
+        77.198841,
+        28.666698
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7239761",
+      "name": "Preet Vihar",
+      "coord": [
+        77.295143,
+        28.641466
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7259157",
+      "name": "Pulbangash",
+      "coord": [
+        77.206984,
+        28.666251
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q259656",
+      "name": "Ramesh Nagar",
+      "coord": [
+        77.131507,
+        28.652972
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q795125",
+      "name": "GTB Nagar",
+      "coord": [
+        77.207011,
+        28.698206
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q862598",
+      "name": "Jahangirpuri",
+      "coord": [
+        77.162787,
+        28.725828
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q888667",
+      "name": "Millennium City Centre",
+      "coord": [
+        77.0724192,
+        28.4592693
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q3632416",
+      "name": "Tis Hazari",
+      "coord": [
+        77.216517,
+        28.667216
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q3634456",
+      "name": "New Delhi",
+      "coord": [
+        77.221538,
+        28.642229
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4207094",
+      "name": "Noida City Centre",
+      "coord": [
+        77.3561,
+        28.5747
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4207341",
+      "name": "Dilshad Garden",
+      "coord": [
+        77.321486,
+        28.675892
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4207344",
+      "name": "Kashmere Gate",
+      "coord": [
+        77.228045,
+        28.667489
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4207354",
+      "name": "Ashok Park Main",
+      "coord": [
+        77.155011,
+        28.671603
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4207358",
+      "name": "Rithala",
+      "coord": [
+        77.107029,
+        28.720879
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4207366",
+      "name": "Inderlok",
+      "coord": [
+        77.170337,
+        28.673445
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4651928",
+      "name": "AIIMS",
+      "coord": [
+        77.2080433,
+        28.5668957
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4680843",
+      "name": "Adarsh Nagar",
+      "coord": [
+        77.170452,
+        28.716535
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4698881",
+      "name": "IGI Airport",
+      "coord": [
+        77.086738,
+        28.557096
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4701799",
+      "name": "Akshardham",
+      "coord": [
+        77.279415,
+        28.617911
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4751288",
+      "name": "Anand Vihar",
+      "coord": [
+        77.315878,
+        28.646886
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4791528",
+      "name": "Arjan Garh",
+      "coord": [
+        77.12583333,
+        28.48083333
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4832101",
+      "name": "Azadpur",
+      "coord": [
+        77.179974,
+        28.707273
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4840629",
+      "name": "Badarpur Border",
+      "coord": [
+        77.30306,
+        28.49358
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4858265",
+      "name": "Barakhamba Road",
+      "coord": [
+        77.224526,
+        28.62998
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4948436",
+      "name": "Botanical Garden",
+      "coord": [
+        77.334781,
+        28.564208
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5061812",
+      "name": "Central Secretariat",
+      "coord": [
+        77.211785,
+        28.615042
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5071227",
+      "name": "Chandni Chowk",
+      "coord": [
+        77.230169,
+        28.657838
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5088577",
+      "name": "Chawri Bazar",
+      "coord": [
+        77.226226,
+        28.649564
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5094801",
+      "name": "Chhatarpur",
+      "coord": [
+        77.174926,
+        28.506552
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5124512",
+      "name": "Civil Lines metro station (Delhi)",
+      "coord": [
+        77.224998,
+        28.676921
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5253729",
+      "name": "Delhi Aerocity",
+      "coord": [
+        77.12079,
+        28.54905
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5269438",
+      "name": "Dhaula Kuan",
+      "coord": [
+        77.16169,
+        28.591853
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317936",
+      "name": "Dwarka-Kakrola",
+      "coord": [
+        77.022808,
+        28.614966
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317939",
+      "name": "Dwarka Mor",
+      "coord": [
+        77.03344,
+        28.619299
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317944",
+      "name": "Dwarka Sector 10",
+      "coord": [
+        77.057422,
+        28.581099
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317945",
+      "name": "Dwarka Sector 11",
+      "coord": [
+        77.049426,
+        28.5865
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317946",
+      "name": "Dwarka Sector 12",
+      "coord": [
+        77.040682,
+        28.592303
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317947",
+      "name": "Dwarka Sector 13",
+      "coord": [
+        77.033374,
+        28.597124
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317948",
+      "name": "Dwarka Sector 14",
+      "coord": [
+        77.025951,
+        28.60226
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317949",
+      "name": "Dwarka Sector 8",
+      "coord": [
+        77.06703,
+        28.56562
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317950",
+      "name": "Dwarka Sector 21",
+      "coord": [
+        77.0580654,
+        28.552349
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5317951",
+      "name": "Dwarka Sector 9",
+      "coord": [
+        77.065245,
+        28.574311
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5556767",
+      "name": "Ghitorni",
+      "coord": [
+        77.14915,
+        28.493785
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5589852",
+      "name": "Govind Puri",
+      "coord": [
+        77.2642865,
+        28.5446056
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5602948",
+      "name": "Green Park",
+      "coord": [
+        77.2070264,
+        28.5580377
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5620352",
+      "name": "Guru Dronacharya",
+      "coord": [
+        77.1025,
+        28.48194444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5683002",
+      "name": "Hauz Khas",
+      "coord": [
+        77.2063442,
+        28.5434438
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5970668",
+      "name": "IFFCO Chowk metro station Gurugram",
+      "coord": [
+        77.0725545,
+        28.4720889
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6026956",
+      "name": "Indraprastha",
+      "coord": [
+        77.249991,
+        28.620504
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6150737",
+      "name": "Janakpuri West",
+      "coord": [
+        77.078243,
+        28.62954
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6154100",
+      "name": "Jangpura",
+      "coord": [
+        77.2396586,
+        28.5833097
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6165993",
+      "name": "Jawaharlal Nehru Stadium",
+      "coord": [
+        77.233049,
+        28.590381
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6190836",
+      "name": "Jhandewalan",
+      "coord": [
+        77.199812,
+        28.644399
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6191072",
+      "name": "Jhilmil",
+      "coord": [
+        77.312488,
+        28.675663
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6276226",
+      "name": "Jor Bagh",
+      "coord": [
+        77.2120368,
+        28.5860802
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6353342",
+      "name": "Kalkaji Mandir",
+      "coord": [
+        77.25904,
+        28.54921
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6371278",
+      "name": "Karkarduma",
+      "coord": [
+        77.30556,
+        28.648539
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6373014",
+      "name": "Karol Bagh",
+      "coord": [
+        77.188541,
+        28.643877
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6378945",
+      "name": "Kaushambi",
+      "coord": [
+        77.3242969,
+        28.6455231
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6394986",
+      "name": "Keshav Puram",
+      "coord": [
+        77.161784,
+        28.688903
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6400082",
+      "name": "Khan Market",
+      "coord": [
+        77.227883,
+        28.60246
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6425927",
+      "name": "Kohat Enclave",
+      "coord": [
+        77.140835,
+        28.698004
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6474492",
+      "name": "Lajpat Nagar",
+      "coord": [
+        77.2364603,
+        28.5705658
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6505213",
+      "name": "Laxmi Nagar",
+      "coord": [
+        77.277603,
+        28.630596
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6715812",
+      "name": "MG Road",
+      "coord": [
+        77.0799521,
+        28.4795558
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6727807",
+      "name": "Madipur",
+      "coord": [
+        77.119561,
+        28.676361
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6745134",
+      "name": "Malviya Nagar",
+      "coord": [
+        77.20329167,
+        28.52868611
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6748047",
+      "name": "Mandi House",
+      "coord": [
+        77.234724,
+        28.625816
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6751563",
+      "name": "Mansarovar Park",
+      "coord": [
+        77.301554,
+        28.675406
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6798106",
+      "name": "Mayur Vihar-I",
+      "coord": [
+        77.289526,
+        28.604134
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6798108",
+      "name": "Mayur Vihar Extension",
+      "coord": [
+        77.294664,
+        28.594211
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6888294",
+      "name": "Model Town",
+      "coord": [
+        77.193868,
+        28.702822
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6893528",
+      "name": "Mohan Estate",
+      "coord": [
+        77.2946274,
+        28.519622
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6907367",
+      "name": "Moolchand",
+      "coord": [
+        77.2342448,
+        28.5639852
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6917665",
+      "name": "Moti Nagar",
+      "coord": [
+        77.142563,
+        28.658131
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6935833",
+      "name": "Mundka",
+      "coord": [
+        77.030219,
+        28.682442
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6963528",
+      "name": "Nangloi",
+      "coord": [
+        77.064675,
+        28.682356
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6963529",
+      "name": "Nangloi",
+      "coord": [
+        77.056083,
+        28.682106
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6982809",
+      "name": "Nawada",
+      "coord": [
+        77.045089,
+        28.620222
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6987901",
+      "name": "Nehru Place",
+      "coord": [
+        77.2517658,
+        28.551403
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6998648",
+      "name": "Netaji Subhash Place",
+      "coord": [
+        77.15245,
+        28.695886
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7005382",
+      "name": "New Ashok Nagar",
+      "coord": [
+        77.302067,
+        28.58916
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7040065",
+      "name": "Nirman Vihar",
+      "coord": [
+        77.286804,
+        28.636531
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7047598",
+      "name": "Golf Course",
+      "coord": [
+        77.346029,
+        28.567181
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7047602",
+      "name": "Noida Sector 16",
+      "coord": [
+        77.317635,
+        28.578395
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

@@ -1,0 +1,137 @@
+{
+  "id": "bhopal",
+  "name": "Bhopal Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-12-28"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "mpmrc-bpl",
+      "name": "Madhya Pradesh Metro (Bhopal)",
+      "shortName": "MPMRCL",
+      "color": "#00a650",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 20
+          },
+          {
+            "max": 5,
+            "fare": 30
+          },
+          {
+            "max": 999,
+            "fare": 40
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-12-28",
+        "confidence": "unverified",
+        "sourceUrl": "https://bhopal.metroroute.co.in/",
+        "note": "Introductory — priority corridor only. 1–2 stations ₹20, 3–5 ₹30, full ₹40. Dates/figures vary across outlets."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "orange-line",
+      "operator": "mpmrc-bpl",
+      "name": "Orange Line",
+      "color": "#f26522",
+      "stations": [
+        "Q137511104",
+        "Q137511106",
+        "Q137511107",
+        "Q137511109",
+        "Q137511110",
+        "Q137511112",
+        "Q137511113",
+        "Q137511115"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q137511104",
+      "name": "Subhash Nagar",
+      "coord": [
+        77.429924,
+        23.247828
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511106",
+      "name": "Kendriya Vidyalaya",
+      "coord": [
+        77.431608,
+        23.240286
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511107",
+      "name": "Board Office Chauraha",
+      "coord": [
+        77.431576,
+        23.232567
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511109",
+      "name": "MP Nagar",
+      "coord": [
+        77.435162,
+        23.227734
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511110",
+      "name": "Rani Kamalapati",
+      "coord": [
+        77.43837,
+        23.221271
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511112",
+      "name": "DRM Office",
+      "coord": [
+        77.443378,
+        23.2161683
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511113",
+      "name": "Alkapuri",
+      "coord": [
+        77.4510343,
+        23.2164851
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q137511115",
+      "name": "AIIMS",
+      "coord": [
+        77.456006,
+        23.209914
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

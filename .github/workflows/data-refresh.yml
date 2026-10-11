@@ -1,0 +1,52 @@
+name: Nightly data refresh
+
+# Rebuilds every data/cities/*.json from Wikidata (topology) + fare scrapers,
+# validates the result, and opens a PR only when something actually changed.
+# A new station or line that Wikidata already knows about, or a fare a scraper
+# picks up, lands as a reviewable diff instead of silently or never.
+
+on:
+  schedule:
+    - cron: "17 2 * * *" # 02:17 UTC nightly (off the :00 rush)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Rebuild city data from live sources
+        run: npm run data:refresh
+
+      - name: Validate (fails the job on bad data — no PR is opened)
+        run: npm run data:validate
+
+      - name: Run fare engine tests
+        run: npm run test:fare
+
+      - name: Open a PR if the data changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "data: nightly refresh"
+          branch: data/nightly-refresh
+          title: "Nightly data refresh"
+          body: |
+            Automated refresh of `data/cities/*.json` from Wikidata topology and
+            fare scrapers. Validation and fare tests passed. Review the diff —
+            especially any fare change or a station appearing/disappearing — then
+            merge. Fares still marked `unverified` need an operator source before
+            they can be trusted.
+          labels: data, automated
+          add-paths: data/cities/*.json

@@ -1,0 +1,283 @@
+{
+  "id": "lucknow",
+  "name": "Lucknow Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2017-09-01"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "upmrc-lko",
+      "name": "Uttar Pradesh Metro (Lucknow)",
+      "shortName": "UPMRC",
+      "color": "#e2231a",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 1,
+            "fare": 10
+          },
+          {
+            "max": 2,
+            "fare": 15
+          },
+          {
+            "max": 6,
+            "fare": 20
+          },
+          {
+            "max": 9,
+            "fare": 30
+          },
+          {
+            "max": 13,
+            "fare": 40
+          },
+          {
+            "max": 17,
+            "fare": 50
+          },
+          {
+            "max": 999,
+            "fare": 60
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2017-09-01",
+        "confidence": "unverified",
+        "sourceUrl": "https://themetrorailguy.com/lucknow-metro-information-map-updates/",
+        "note": "By stations. Go Smart card discount (excluded). UPMRC site is a calculator."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "red-line",
+      "operator": "upmrc-lko",
+      "name": "Red Line",
+      "color": "#e2231a",
+      "stations": [
+        "Q20861591",
+        "Q17049249",
+        "Q17123999",
+        "Q17067907",
+        "Q17090390",
+        "Q17049199",
+        "Q18109514",
+        "Q17072467",
+        "Q17052168",
+        "Q18111047",
+        "Q17055586",
+        "Q17088024",
+        "Q17054729",
+        "Q17064439",
+        "Q17070265",
+        "Q17058330",
+        "Q17049480",
+        "Q17068737",
+        "Q17086022",
+        "Q17056424",
+        "Q17075643"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q17049199",
+      "name": "Alambagh",
+      "coord": [
+        80.902222222,
+        26.813888888
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17049249",
+      "name": "Amausi",
+      "coord": [
+        80.8786648,
+        26.771351
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17049480",
+      "name": "Badshahnagar",
+      "coord": [
+        80.9610451,
+        26.8706677
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17052168",
+      "name": "Durgapuri",
+      "coord": [
+        80.9151395,
+        26.8319454
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17054729",
+      "name": "Hazratganj",
+      "coord": [
+        80.9419535,
+        26.8497149
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17055586",
+      "name": "Hussain Ganj",
+      "coord": [
+        80.9344997,
+        26.8391004
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17056424",
+      "name": "Indira Nagar",
+      "coord": [
+        80.9908569,
+        26.8727328
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17058330",
+      "name": "IT Chauraha",
+      "coord": [
+        80.9454967,
+        26.870997
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17064439",
+      "name": "KD Singh Babu Stadium",
+      "coord": [
+        80.9367601,
+        26.8540478
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17067907",
+      "name": "Krishna Nagar",
+      "coord": [
+        80.891666666,
+        26.794444444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17068737",
+      "name": "Lekhraj Market",
+      "coord": [
+        80.9736049,
+        26.8708397
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17070265",
+      "name": "Lucknow University",
+      "coord": [
+        80.9395342,
+        26.8655011
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17072467",
+      "name": "Mawaiya",
+      "coord": [
+        80.909722222,
+        26.825277777
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17075643",
+      "name": "Munshi Pulia",
+      "coord": [
+        80.9958297,
+        26.8879306
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17086022",
+      "name": "Ramsagar Mishra Nagar",
+      "coord": [
+        80.9823529,
+        26.872237
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17088024",
+      "name": "Sachivalaya",
+      "coord": [
+        80.9414975,
+        26.8425095
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17090390",
+      "name": "Singaar Nagar",
+      "coord": [
+        80.896111111,
+        26.803055555
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17123999",
+      "name": "Transport Nagar",
+      "coord": [
+        80.882777777,
+        26.778055555
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18109514",
+      "name": "Alambagh ISBT",
+      "coord": [
+        80.907222222,
+        26.818611111
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18111047",
+      "name": "Charbagh",
+      "coord": [
+        80.9229876,
+        26.832367
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20861591",
+      "name": "Chaudhary Charan Singh International Airport",
+      "coord": [
+        80.880213,
+        26.766302
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

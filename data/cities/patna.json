@@ -1,0 +1,103 @@
+{
+  "id": "patna",
+  "name": "Patna Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-10-06"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "pmrc",
+      "name": "Patna Metro Rail Corporation",
+      "shortName": "PMRC",
+      "color": "#0062cc",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 3,
+            "fare": 15
+          },
+          {
+            "max": 999,
+            "fare": 30
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-10-06",
+        "confidence": "unverified",
+        "sourceUrl": "https://patnametrorail.com/",
+        "note": "Introductory — priority corridor (5 stations). ₹15 ≤3 km, ₹30 for 3–6 km. Smart card 10% off. Very new, will change."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "blue-line",
+      "operator": "pmrc",
+      "name": "Blue Line",
+      "color": "#0062cc",
+      "stations": [
+        "Q124333671",
+        "Q135412302",
+        "Q135412342",
+        "Q135412343",
+        "Q135412326"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q124333671",
+      "name": "Patliputra Bus Terminal",
+      "coord": [
+        85.189801,
+        25.576308
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q135412302",
+      "name": "Zero Mile",
+      "coord": [
+        85.1867518,
+        25.5856718
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q135412326",
+      "name": "Malahi Pakri",
+      "coord": [
+        85.157833333,
+        25.593827777
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q135412342",
+      "name": "Bhootnath",
+      "coord": [
+        85.173579,
+        25.585472
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q135412343",
+      "name": "Khemnichak",
+      "coord": [
+        85.158891666,
+        25.584563888
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

@@ -1,0 +1,279 @@
+{
+  "id": "noida",
+  "name": "Noida Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2019-01-25"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "nmrc",
+      "name": "Noida Metro Rail Corporation",
+      "shortName": "NMRC",
+      "color": "#0062cc",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 1,
+            "fare": 10
+          },
+          {
+            "max": 2,
+            "fare": 15
+          },
+          {
+            "max": 6,
+            "fare": 20
+          },
+          {
+            "max": 9,
+            "fare": 30
+          },
+          {
+            "max": 16,
+            "fare": 40
+          },
+          {
+            "max": 999,
+            "fare": 50
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2019-01-25",
+        "confidence": "unverified",
+        "sourceUrl": "https://noida.metroroute.co.in/",
+        "note": "Aqua Line, by stations. CITY1 smart card ~10% off; lower cap on Sundays. NMRC site is a calculator."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "aqua-line",
+      "operator": "nmrc",
+      "name": "Aqua Line",
+      "color": "#00b7c3",
+      "stations": [
+        "Q39049233",
+        "Q60685663",
+        "Q39049232",
+        "Q60685657",
+        "Q39049230",
+        "Q39049227",
+        "Q60685649",
+        "Q39049218",
+        "Q39049224",
+        "Q60685643",
+        "Q39049222",
+        "Q39049217",
+        "Q39049215",
+        "Q39049212",
+        "Q39049211",
+        "Q60685637",
+        "Q39049205",
+        "Q39049206",
+        "Q39049201",
+        "Q59155432",
+        "Q61445024"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q39049201",
+      "name": "Noida Sector 76",
+      "coord": [
+        77.3796567,
+        28.5653291
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049205",
+      "name": "Noida Sector 81",
+      "coord": [
+        77.3899966,
+        28.5493444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049206",
+      "name": "Noida Sector 101",
+      "coord": [
+        77.384938,
+        28.556125
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049211",
+      "name": "Noida Sector 83",
+      "coord": [
+        77.3964339,
+        28.5222674
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049212",
+      "name": "Noida Sector 137",
+      "coord": [
+        77.4036652,
+        28.5107568
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049215",
+      "name": "Noida Sector 142",
+      "coord": [
+        77.4128625,
+        28.4989526
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049217",
+      "name": "Noida Sector 143",
+      "coord": [
+        77.4224246,
+        28.4942617
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049218",
+      "name": "Noida Sector 147",
+      "coord": [
+        77.4660909,
+        28.4593349
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049222",
+      "name": "Noida Sector 144",
+      "coord": [
+        77.433022,
+        28.4863338
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049224",
+      "name": "Noida Sector 146",
+      "coord": [
+        77.4551851,
+        28.4687644
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049227",
+      "name": "Knowledge Park II",
+      "coord": [
+        77.5002837,
+        28.4570003
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049230",
+      "name": "Pari Chowk",
+      "coord": [
+        77.5083116,
+        28.463327
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049232",
+      "name": "DELTA 1",
+      "coord": [
+        77.5256816,
+        28.4783345
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39049233",
+      "name": "Depot",
+      "coord": [
+        77.5439367,
+        28.488802
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q59155432",
+      "name": "Rainbow",
+      "coord": [
+        77.37827,
+        28.5744736
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q60685637",
+      "name": "NSEZ",
+      "coord": [
+        77.3948058,
+        28.5322663
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q60685643",
+      "name": "Noida Sector 145",
+      "coord": [
+        77.4424446,
+        28.4790135
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q60685649",
+      "name": "Noida Sector 148",
+      "coord": [
+        77.4766588,
+        28.4480108
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q60685657",
+      "name": "ALPHA 1",
+      "coord": [
+        77.5126782,
+        28.470936
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q60685663",
+      "name": "GNIDA Office",
+      "coord": [
+        77.5364828,
+        28.4846576
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61445024",
+      "name": "Noida Sector 51",
+      "coord": [
+        77.375325,
+        28.5856994
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

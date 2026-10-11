@@ -1,0 +1,456 @@
+{
+  "id": "nagpur",
+  "name": "Nagpur Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-01-01"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "mahametro-ngp",
+      "name": "Maharashtra Metro (Nagpur)",
+      "shortName": "Maha Metro",
+      "color": "#f6c200",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 6,
+            "fare": 20
+          },
+          {
+            "max": 999,
+            "fare": 30
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-01-01",
+        "confidence": "unverified",
+        "sourceUrl": "https://nagpur.metroroute.co.in/",
+        "note": "By stations: 0–2 ₹10, 3–6 ₹20, 7+ ₹30. Maha Card 10% off. Maha Metro site is a calculator."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "orange-line",
+      "operator": "mahametro-ngp",
+      "name": "Orange Line",
+      "color": "#f26522",
+      "stations": [
+        "Q61367677",
+        "Q61367688",
+        "Q61367714",
+        "Q61367720",
+        "Q61367753",
+        "Q61367761",
+        "Q61367770",
+        "Q59155303",
+        "Q61367784",
+        "Q61367795",
+        "Q61367800",
+        "Q61367810",
+        "Q61367813",
+        "Q61367824",
+        "Q61367834",
+        "Q61367840",
+        "Q55074904",
+        "Q55074918",
+        "Q61367849",
+        "Q61367854"
+      ]
+    },
+    {
+      "id": "aqua-line",
+      "operator": "mahametro-ngp",
+      "name": "Aqua Line",
+      "color": "#00b7c3",
+      "stations": [
+        "Q61367864",
+        "Q61367872",
+        "Q61070914",
+        "Q61367880",
+        "Q61367888",
+        "Q61367893",
+        "Q61367905",
+        "Q61367918",
+        "Q61367911",
+        "Q59155303",
+        "Q61367928",
+        "Q61367931",
+        "Q61367945",
+        "Q61367950",
+        "Q61367956",
+        "Q61367967",
+        "Q61367971",
+        "Q61367984",
+        "Q61367989",
+        "Q61367994"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q55074904",
+      "name": "New Airport",
+      "coord": [
+        79.0558687,
+        21.066235
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55074918",
+      "name": "Khapri",
+      "coord": [
+        79.048068,
+        21.049335
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q59155303",
+      "name": "Sitabuldi",
+      "coord": [
+        79.083708,
+        21.141725
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61070914",
+      "name": "Ambedkar Square",
+      "coord": [
+        79.129422,
+        21.148287
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367677",
+      "name": "Automative Square",
+      "coord": [
+        79.11967,
+        21.185793
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367688",
+      "name": "Nari Road",
+      "coord": [
+        79.10995,
+        21.179524
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367714",
+      "name": "Indora Square",
+      "coord": [
+        79.100589,
+        21.17359
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367720",
+      "name": "Kadvi Square",
+      "coord": [
+        79.092368,
+        21.168665
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367753",
+      "name": "Gaddi Godam Square",
+      "coord": [
+        79.083698,
+        21.161646
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367761",
+      "name": "Kasturchand Park",
+      "coord": [
+        79.081405,
+        21.154239
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367770",
+      "name": "Zero Mile",
+      "coord": [
+        79.080916,
+        21.146703
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367784",
+      "name": "Congress Nagar",
+      "coord": [
+        79.082513,
+        21.127882
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367795",
+      "name": "Rahate Colony",
+      "coord": [
+        79.075698,
+        21.127589
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367800",
+      "name": "Ajni Square",
+      "coord": [
+        79.072109,
+        21.118353
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367810",
+      "name": "Chhatrapati Square",
+      "coord": [
+        79.069636,
+        21.109281
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367813",
+      "name": "Jaiprakash Nagar",
+      "coord": [
+        79.068096,
+        21.103611
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367824",
+      "name": "Ujjwal Nagar",
+      "coord": [
+        79.066319,
+        21.096541
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367834",
+      "name": "Airport",
+      "coord": [
+        79.063761,
+        21.086253
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367840",
+      "name": "Airport South",
+      "coord": [
+        79.060487,
+        21.079023
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367849",
+      "name": "Eco Park",
+      "coord": [
+        79.040875,
+        21.030622
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367854",
+      "name": "Metro City",
+      "coord": [
+        79.039014,
+        21.025015
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367864",
+      "name": "Prajapati Nagar",
+      "coord": [
+        79.148862,
+        21.150243
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367872",
+      "name": "Vaishnodevi Square",
+      "coord": [
+        79.13627,
+        21.14797
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367880",
+      "name": "Telephone Exchange",
+      "coord": [
+        79.118138,
+        21.148785
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367888",
+      "name": "Chitar Oli Square",
+      "coord": [
+        79.110319,
+        21.149583
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367893",
+      "name": "Agrasen Square",
+      "coord": [
+        79.102837,
+        21.151011
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367905",
+      "name": "Dosar Vaishya Square",
+      "coord": [
+        79.094864,
+        21.15295
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367911",
+      "name": "Cotton Market",
+      "coord": [
+        79.089792,
+        21.14593
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367918",
+      "name": "Nagpur",
+      "coord": [
+        79.09037,
+        21.151261
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367928",
+      "name": "Jhansi Rani Square",
+      "coord": [
+        79.077605,
+        21.140607
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367931",
+      "name": "Institute of Engineers",
+      "coord": [
+        79.069968,
+        21.138205
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367945",
+      "name": "Shankar Nagar Square",
+      "coord": [
+        79.061534,
+        21.136124
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367950",
+      "name": "LAD College Square",
+      "coord": [
+        79.054796,
+        21.13288
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367956",
+      "name": "Dharampeth College",
+      "coord": [
+        79.045867,
+        21.128664
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367967",
+      "name": "Subhash Nagar",
+      "coord": [
+        79.041995,
+        21.123259
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367971",
+      "name": "Rachana Ring Road Junction",
+      "coord": [
+        79.02919,
+        21.121443
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367984",
+      "name": "Vasudev Nagar",
+      "coord": [
+        79.019454,
+        21.118758
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367989",
+      "name": "Bansi Nagar",
+      "coord": [
+        79.012917,
+        21.116364
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q61367994",
+      "name": "Lokmanya Nagar",
+      "coord": [
+        79.001649,
+        21.110727
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

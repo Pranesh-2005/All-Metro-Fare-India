@@ -1,0 +1,229 @@
+{
+  "id": "indore",
+  "name": "Indore Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-06-01"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "mpmrc-ind",
+      "name": "Madhya Pradesh Metro (Indore)",
+      "shortName": "MPMRCL",
+      "color": "#f6c200",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 5,
+            "fare": 20
+          },
+          {
+            "max": 8,
+            "fare": 30
+          },
+          {
+            "max": 12,
+            "fare": 40
+          },
+          {
+            "max": 17,
+            "fare": 50
+          },
+          {
+            "max": 999,
+            "fare": 60
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-06-01",
+        "confidence": "unverified",
+        "sourceUrl": "https://www.myindoremetro.com/fares",
+        "note": "Provisional — Yellow Line partly open, official revised chart awaited; sources conflict (₹20–30 priority vs ₹20–80 full-line). Treat as low-confidence."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "yellow-line",
+      "operator": "mpmrc-ind",
+      "name": "Yellow Line",
+      "color": "#f6c200",
+      "stations": [
+        "Q134725694",
+        "Q134725695",
+        "Q134725696",
+        "Q134725697",
+        "Q134725698",
+        "Q134725699",
+        "Q134725700",
+        "Q134725701",
+        "Q134725702",
+        "Q134725703",
+        "Q134725704",
+        "Q134725705",
+        "Q134725706",
+        "Q134725707",
+        "Q134725708",
+        "Q134725709"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q134725694",
+      "name": "Devi Ahilya Bai Holkar Terminal",
+      "coord": [
+        75.797499,
+        22.73897
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725695",
+      "name": "Maharani Lakshmi Bai",
+      "coord": [
+        75.800922,
+        22.745334
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725696",
+      "name": "Rani Avanti Bai Lodhi",
+      "coord": [
+        75.804248,
+        22.75408
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725697",
+      "name": "Rani Durgavati",
+      "coord": [
+        75.811146,
+        22.763132
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725698",
+      "name": "Veerangana Jhalkari Bai",
+      "coord": [
+        75.818914,
+        22.771798
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725699",
+      "name": "Super Corridor 2",
+      "coord": [
+        75.825748,
+        22.778175
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725700",
+      "name": "Super Corridor 1",
+      "coord": [
+        75.8371,
+        22.786631
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725701",
+      "name": "Bhawarshala Square",
+      "coord": [
+        75.846155,
+        22.78992
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725702",
+      "name": "MR 10 Road",
+      "coord": [
+        75.854309,
+        22.782886
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725703",
+      "name": "ISBT/MR 10 Flyover",
+      "coord": [
+        75.864168,
+        22.769524
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725704",
+      "name": "Chandragupta Square",
+      "coord": [
+        75.869876,
+        22.764823
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725705",
+      "name": "Hira Nagar",
+      "coord": [
+        75.87568,
+        22.759668
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725706",
+      "name": "Bapat Square",
+      "coord": [
+        75.880229,
+        22.754483
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725707",
+      "name": "Meghdoot Garden",
+      "coord": [
+        75.888448,
+        22.752683
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725708",
+      "name": "Vijay Nagar Square",
+      "coord": [
+        75.894295,
+        22.751327
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134725709",
+      "name": "Radisson Square",
+      "coord": [
+        75.903232,
+        22.747399
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

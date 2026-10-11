@@ -1,0 +1,817 @@
+{
+  "id": "mumbai",
+  "name": "Mumbai Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2023-01-01"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "mmrda",
+      "name": "Mumbai Metropolitan Region Development Authority",
+      "shortName": "Mumbai Metro",
+      "color": "#0062cc",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 3,
+            "fare": 10
+          },
+          {
+            "max": 12,
+            "fare": 20
+          },
+          {
+            "max": 18,
+            "fare": 30
+          },
+          {
+            "max": 24,
+            "fare": 40
+          },
+          {
+            "max": 999,
+            "fare": 50
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2023-01-01",
+        "confidence": "unverified",
+        "sourceUrl": "https://www.timesnownews.com/mumbai/mumbai-metro-line-2a-and-7-ticket-prices-start-from-rs-10-check-complete-list-of-rates-here-article-97045520",
+        "note": "Lines 2A/7 table. Line 1 (Versova–Ghatkopar) is a separate operator with ₹10–40; Line 3 Aqua differs again. Interior bands reconstructed."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "line-3",
+      "operator": "mmrda",
+      "name": "Line 3",
+      "color": "#0062cc",
+      "stations": [
+        "Q130461525",
+        "Q130461533",
+        "Q130461530",
+        "Q18127858",
+        "Q130461529",
+        "Q130461531",
+        "Q130461528",
+        "Q130461532",
+        "Q130461526",
+        "Q130461527",
+        "Q130461615",
+        "Q130461616",
+        "Q130461614",
+        "Q130461617",
+        "Q130461618",
+        "Q130461613",
+        "Q130461632",
+        "Q130461629",
+        "Q130461631",
+        "Q130461624",
+        "Q130461623",
+        "Q130461628",
+        "Q130461620",
+        "Q130461626",
+        "Q130461621",
+        "Q130461633",
+        "Q130461622"
+      ]
+    },
+    {
+      "id": "line-2",
+      "operator": "mmrda",
+      "name": "Line 2",
+      "color": "#e2231a",
+      "stations": [
+        "Q116196854",
+        "Q116266921",
+        "Q116266991",
+        "Q116266992",
+        "Q116266993",
+        "Q116266994",
+        "Q116266995",
+        "Q116266996",
+        "Q116266997",
+        "Q116188743",
+        "Q116266999",
+        "Q116267000",
+        "Q116267001",
+        "Q116267002",
+        "Q116267003",
+        "Q116267004",
+        "Q116267041"
+      ]
+    },
+    {
+      "id": "line-7",
+      "operator": "mmrda",
+      "name": "Line 7",
+      "color": "#00a650",
+      "stations": [
+        "Q116196854",
+        "Q116271872",
+        "Q116271873",
+        "Q116271875",
+        "Q116271876",
+        "Q116271877",
+        "Q116271878",
+        "Q116271879",
+        "Q116271880",
+        "Q116271881",
+        "Q116271882",
+        "Q116271883",
+        "Q116271884",
+        "Q116271885"
+      ]
+    },
+    {
+      "id": "line-1",
+      "operator": "mmrda",
+      "name": "Line 1",
+      "color": "#f6c200",
+      "stations": [
+        "Q16981954",
+        "Q18126164",
+        "Q17513235",
+        "Q18353576",
+        "Q18127858",
+        "Q18109449",
+        "Q17515440",
+        "Q18378926",
+        "Q17512034",
+        "Q17514369",
+        "Q17512769",
+        "Q17264777"
+      ]
+    },
+    {
+      "id": "line-9",
+      "operator": "mmrda",
+      "name": "Line 9",
+      "color": "#6b2a86",
+      "stations": [
+        "Q116196854",
+        "Q139034594",
+        "Q139034656",
+        "Q139034676"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q16981954",
+      "name": "Ghatkopar",
+      "coord": [
+        72.90799,
+        19.08666
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17264777",
+      "name": "Versova",
+      "coord": [
+        72.8213,
+        19.1303
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17512034",
+      "name": "Andheri",
+      "coord": [
+        72.848132,
+        19.120791
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17512769",
+      "name": "D.N. Nagar",
+      "coord": [
+        72.83019,
+        19.12829
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17513235",
+      "name": "Asalpha",
+      "coord": [
+        72.901887,
+        19.092544
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17514369",
+      "name": "Azad Nagar",
+      "coord": [
+        72.837655,
+        19.12693
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17515440",
+      "name": "Chakala",
+      "coord": [
+        72.867696,
+        19.112045
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18109449",
+      "name": "Airport Road",
+      "coord": [
+        72.874117,
+        19.110113
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18126164",
+      "name": "Jagruti Nagar",
+      "coord": [
+        72.901866,
+        19.092582
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18127858",
+      "name": "Marol Naka",
+      "coord": [
+        72.879536,
+        19.108195
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18353576",
+      "name": "Saki Naka",
+      "coord": [
+        72.887962,
+        19.103528
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18378926",
+      "name": "Western Express Highway",
+      "coord": [
+        72.856394,
+        19.115787
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116188743",
+      "name": "Valnai",
+      "coord": [
+        72.834285,
+        19.196934
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116196854",
+      "name": "Dahisar metro station (East)",
+      "coord": [
+        72.86733,
+        19.25171
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266921",
+      "name": "Anand Nagar",
+      "coord": [
+        72.86633,
+        19.25718
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266991",
+      "name": "Kandarpada",
+      "coord": [
+        72.85054,
+        19.25658
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266992",
+      "name": "Mandapeshwar",
+      "coord": [
+        72.84573,
+        19.24957
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266993",
+      "name": "Eksar",
+      "coord": [
+        72.84345,
+        19.24039
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266994",
+      "name": "Borivali West",
+      "coord": [
+        72.84086,
+        19.23136
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266995",
+      "name": "Pahadi Eksar",
+      "coord": [
+        72.84094,
+        19.22282
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266996",
+      "name": "Kandivali West",
+      "coord": [
+        72.83746,
+        19.21425
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266997",
+      "name": "Dahanukarwadi",
+      "coord": [
+        72.83474,
+        19.20652
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116266999",
+      "name": "Malad West",
+      "coord": [
+        72.8358,
+        19.1853
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116267000",
+      "name": "Lower Malad",
+      "coord": [
+        72.83642,
+        19.17313
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116267001",
+      "name": "Pahadi Goregaon",
+      "coord": [
+        72.83482,
+        19.16237
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116267002",
+      "name": "Goregaon West",
+      "coord": [
+        72.83578,
+        19.15308
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116267003",
+      "name": "Oshiwara",
+      "coord": [
+        72.83396,
+        19.14601
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116267004",
+      "name": "Lower Oshiwara",
+      "coord": [
+        72.83162,
+        19.14071
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116267041",
+      "name": "Andheri West",
+      "coord": [
+        72.83142,
+        19.12914
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271872",
+      "name": "Ovaripada",
+      "coord": [
+        72.86417,
+        19.24314
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271873",
+      "name": "Rashtriya Udyan",
+      "coord": [
+        72.86311,
+        19.23481
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271875",
+      "name": "Devipada",
+      "coord": [
+        72.86432,
+        19.22404
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271876",
+      "name": "Magathane",
+      "coord": [
+        72.86689,
+        19.21681
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271877",
+      "name": "Poisar",
+      "coord": [
+        72.86308,
+        19.20352
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271878",
+      "name": "Akurli",
+      "coord": [
+        72.86057,
+        19.19814
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271879",
+      "name": "Kurar",
+      "coord": [
+        72.85844,
+        19.1873
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271880",
+      "name": "Dindoshi",
+      "coord": [
+        72.85824,
+        19.1798
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271881",
+      "name": "Aarey",
+      "coord": [
+        72.85876,
+        19.16942
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271882",
+      "name": "Goregaon East",
+      "coord": [
+        72.8564,
+        19.1524
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271883",
+      "name": "Jogeshwari (East)",
+      "coord": [
+        72.85507,
+        19.14297
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271884",
+      "name": "Mogra",
+      "coord": [
+        72.85531,
+        19.12845
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q116271885",
+      "name": "Gundavali",
+      "coord": [
+        72.85518,
+        19.11453
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461525",
+      "name": "Aarey JVLR",
+      "coord": [
+        72.883864,
+        19.131223
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461526",
+      "name": "Bandra Colony",
+      "coord": [
+        72.849344,
+        19.069967
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461527",
+      "name": "Bandra-Kurla Complex",
+      "coord": [
+        72.854666,
+        19.060655
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461528",
+      "name": "CSMI-Airport - T1",
+      "coord": [
+        72.853571,
+        19.093903
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461529",
+      "name": "CSMI-Airport - T2",
+      "coord": [
+        72.874439,
+        19.102348
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461530",
+      "name": "MIDC-Andheri",
+      "coord": [
+        72.873613,
+        19.117359
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461531",
+      "name": "Sahar Road",
+      "coord": [
+        72.865201,
+        19.102207
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461532",
+      "name": "Santacruz",
+      "coord": [
+        72.84707,
+        19.079344
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461533",
+      "name": "SEEPZ",
+      "coord": [
+        72.8737307,
+        19.1260022
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461613",
+      "name": "Acharya Atrey Chowk",
+      "coord": [
+        72.817704,
+        18.997824
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461614",
+      "name": "Dadar",
+      "coord": [
+        72.839227,
+        19.023619
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461615",
+      "name": "Dharavi",
+      "coord": [
+        72.8497423,
+        19.0462584
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461616",
+      "name": "Shitladevi Temple",
+      "coord": [
+        72.84196,
+        19.038464
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461617",
+      "name": "Siddhivinayak Temple",
+      "coord": [
+        72.830923,
+        19.015883
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461618",
+      "name": "Worli",
+      "coord": [
+        72.8192711,
+        19.008605
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461620",
+      "name": "Chhatrapati Shivaji Maharaj Terminus",
+      "coord": [
+        72.831837,
+        18.940827
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461621",
+      "name": "Churchgate",
+      "coord": [
+        72.826948,
+        18.931484
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461622",
+      "name": "Cuffe Parade",
+      "coord": [
+        72.820717,
+        18.913568
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461623",
+      "name": "Girgaon",
+      "coord": [
+        72.822195,
+        18.952103
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461624",
+      "name": "Grant Road",
+      "coord": [
+        72.818037,
+        18.963157
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461626",
+      "name": "Hutatma Chowk",
+      "coord": [
+        72.83251,
+        18.934182
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461628",
+      "name": "Kalbadevi",
+      "coord": [
+        72.8272,
+        18.946334
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461629",
+      "name": "Mahalaxmi",
+      "coord": [
+        72.825408,
+        18.979489
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461631",
+      "name": "Jagannath Shankar Sheth Metro",
+      "coord": [
+        72.821189,
+        18.969992
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461632",
+      "name": "Science Centre",
+      "coord": [
+        72.821363,
+        18.990921
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130461633",
+      "name": "Vidhan Bhavan",
+      "coord": [
+        72.825486,
+        18.924781
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q139034594",
+      "name": "Pandurang Wadi",
+      "coord": [
+        72.872513,
+        19.259781
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q139034656",
+      "name": "Miragaon",
+      "coord": [
+        72.880608,
+        19.27096
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q139034676",
+      "name": "Kashigaon",
+      "coord": [
+        72.880222,
+        19.277696
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": [
+    {
+      "from": "Q17512769",
+      "to": "Q116267041",
+      "walkMeters": 160,
+      "free": true
+    }
+  ]
+}

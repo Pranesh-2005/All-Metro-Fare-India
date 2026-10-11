@@ -1,0 +1,350 @@
+{
+  "id": "pune",
+  "name": "Pune Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-01-01"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "mahametro-pune",
+      "name": "Maharashtra Metro (Pune)",
+      "shortName": "Maha Metro",
+      "color": "#6b2a86",
+      "fareRules": {
+        "basis": "station_count",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 5,
+            "fare": 20
+          },
+          {
+            "max": 10,
+            "fare": 30
+          },
+          {
+            "max": 999,
+            "fare": 35
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-01-01",
+        "confidence": "unverified",
+        "sourceUrl": "https://pune.metroroute.co.in/",
+        "note": "By stations: 1–2 ₹10, 3–5 ₹20, 6–10 ₹30, 11+ ₹35. Band boundaries approximate; Maha Metro site is a calculator."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "aqua-line-pune-metro",
+      "operator": "mahametro-pune",
+      "name": "Aqua Line (Pune Metro)",
+      "color": "#00b7c3",
+      "stations": [
+        "Q111197718",
+        "Q111197732",
+        "Q111197733",
+        "Q111197734",
+        "Q111197735",
+        "Q121163782",
+        "Q121163222",
+        "Q121162817",
+        "Q121139876",
+        "Q121162379",
+        "Q121161986",
+        "Q121161769",
+        "Q124762850",
+        "Q124793268",
+        "Q124793273",
+        "Q124793263"
+      ]
+    },
+    {
+      "id": "purple-line",
+      "operator": "mahametro-pune",
+      "name": "Purple Line",
+      "color": "#6b2a86",
+      "stations": [
+        "Q111197736",
+        "Q111197737",
+        "Q111197738",
+        "Q111197739",
+        "Q111197740",
+        "Q121140110",
+        "Q121140108",
+        "Q140773906",
+        "Q121139922",
+        "Q121139876",
+        "Q130381226",
+        "Q130381236",
+        "Q130381241"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q111197718",
+      "name": "Vanaz",
+      "coord": [
+        73.805238201,
+        18.507161474
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197732",
+      "name": "Anand Nagar",
+      "coord": [
+        73.814041495,
+        18.509562052
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197733",
+      "name": "Ideal Colony",
+      "coord": [
+        73.822042486,
+        18.509040664
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197734",
+      "name": "Nal Stop",
+      "coord": [
+        73.828676243,
+        18.507313486
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197735",
+      "name": "Garware College",
+      "coord": [
+        73.838023001,
+        18.511990591
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197736",
+      "name": "PCMC Bhavan",
+      "coord": [
+        73.805496938,
+        18.626932806
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197737",
+      "name": "Sant Tukaram Nagar",
+      "coord": [
+        73.815639324,
+        18.614558579
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197738",
+      "name": "Nashik Phata",
+      "coord": [
+        73.822314299,
+        18.607336879
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197739",
+      "name": "Kasarwadi",
+      "coord": [
+        73.827286289,
+        18.599738467
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q111197740",
+      "name": "Phugewadi",
+      "coord": [
+        73.831226767,
+        18.591146409
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121139876",
+      "name": "Civil Court",
+      "coord": [
+        73.858006202,
+        18.526909261
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121139922",
+      "name": "Shivaji Nagar",
+      "coord": [
+        73.849543888,
+        18.532715826
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121140108",
+      "name": "Bopodi",
+      "coord": [
+        73.83814408,
+        18.569728164
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121140110",
+      "name": "Dapodi",
+      "coord": [
+        73.833835137,
+        18.583772319
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121161769",
+      "name": "Ruby Hall Clinic",
+      "coord": [
+        73.877844395,
+        18.532703619
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121161986",
+      "name": "Pune Railway",
+      "coord": [
+        73.872562732,
+        18.529688982
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121162379",
+      "name": "Mangalwar Peth",
+      "coord": [
+        73.865230753,
+        18.530021772
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121162817",
+      "name": "PMC Bhavan",
+      "coord": [
+        73.853488289,
+        18.522745505
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121163222",
+      "name": "Chhatrapati Sambhaji Udyan",
+      "coord": [
+        73.84759485,
+        18.520117093
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q121163782",
+      "name": "Deccan Gymkhana",
+      "coord": [
+        73.844489149,
+        18.516331896
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124762850",
+      "name": "Bund Garden",
+      "coord": [
+        73.883429797,
+        18.540554327
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124793263",
+      "name": "Ramwadi",
+      "coord": [
+        73.908699678,
+        18.557231365
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124793268",
+      "name": "Yerwada",
+      "coord": [
+        73.88672095,
+        18.545418708
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124793273",
+      "name": "Kalyani Nagar",
+      "coord": [
+        73.905762953,
+        18.544484285
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130381226",
+      "name": "Kasba Peth",
+      "coord": [
+        73.85954598,
+        18.521221325
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130381236",
+      "name": "Mandai",
+      "coord": [
+        73.856930934,
+        18.512996757
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q130381241",
+      "name": "Swargate",
+      "coord": [
+        73.85774201,
+        18.499625989
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q140773906",
+      "name": "Khadki",
+      "coord": [
+        73.841531,
+        18.562108
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

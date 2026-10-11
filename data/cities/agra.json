@@ -1,0 +1,117 @@
+{
+  "id": "agra",
+  "name": "Agra Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2024-03-06"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "upmrc-agr",
+      "name": "Uttar Pradesh Metro (Agra)",
+      "shortName": "UPMRC",
+      "color": "#6b2a86",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 1,
+            "fare": 10
+          },
+          {
+            "max": 2,
+            "fare": 15
+          },
+          {
+            "max": 999,
+            "fare": 20
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2024-03-06",
+        "confidence": "unverified",
+        "sourceUrl": "https://www.ndtv.com/india-news/pm-narendra-modi-to-virtually-flag-off-priority-corridor-of-agra-metro-tomorrow-5180637",
+        "note": "Priority corridor (6 stations). UPMRC quoted ₹10 ≤1 km, ₹15 ≤2 km, ₹20 for 2–6 km. NCMC 10% off. Will change as the line extends."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "yellow-line",
+      "operator": "upmrc-agr",
+      "name": "Yellow Line",
+      "color": "#f6c200",
+      "stations": [
+        "Q124759438",
+        "Q124759439",
+        "Q124759440",
+        "Q124759441",
+        "Q124759442",
+        "Q124759443"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q124759438",
+      "name": "Mankameshwar Mandir",
+      "coord": [
+        78.01741379,
+        27.178096977
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759439",
+      "name": "Dr. Ambedkar Chowk",
+      "coord": [
+        78.022080817,
+        27.175022411
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759440",
+      "name": "Taj Mahal",
+      "coord": [
+        78.035683248,
+        27.16832587
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759441",
+      "name": "Fatehabad Road",
+      "coord": [
+        78.042526041,
+        27.160173693
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759442",
+      "name": "Basai",
+      "coord": [
+        78.050628781,
+        27.15771838
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759443",
+      "name": "Taj East Gate",
+      "coord": [
+        78.057906485,
+        27.158295085
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

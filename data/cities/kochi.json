@@ -1,0 +1,319 @@
+{
+  "id": "kochi",
+  "name": "Kochi Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2016-11-01"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "kmrl",
+      "name": "Kochi Metro Rail Limited",
+      "shortName": "KMRL",
+      "color": "#00a650",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 5,
+            "fare": 20
+          },
+          {
+            "max": 10,
+            "fare": 30
+          },
+          {
+            "max": 15,
+            "fare": 40
+          },
+          {
+            "max": 20,
+            "fare": 50
+          },
+          {
+            "max": 999,
+            "fare": 60
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2016-11-01",
+        "confidence": "unverified",
+        "sourceUrl": "https://themetrorailguy.com/kochi-metro-fare-chart-ticket-prices/",
+        "note": "Zones F1–F6, +₹10/zone, long-notified structure. KMRL card gives a discount (excluded)."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "line-1",
+      "operator": "kmrl",
+      "name": "Line 1",
+      "color": "#0062cc",
+      "stations": [
+        "Q124759251",
+        "Q113997249",
+        "Q113997246",
+        "Q67172500",
+        "Q67171027",
+        "Q20583828",
+        "Q67170983",
+        "Q67154725",
+        "Q20574885",
+        "Q42343250",
+        "Q42328335",
+        "Q42308850",
+        "Q42308815",
+        "Q42306467",
+        "Q38697682",
+        "Q38584315",
+        "Q38582577",
+        "Q38566574",
+        "Q38499541",
+        "Q38478898",
+        "Q38477696",
+        "Q38379892",
+        "Q38389562",
+        "Q38476797",
+        "Q38476609"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q20574885",
+      "name": "Ernakulam South",
+      "coord": [
+        76.291277777,
+        9.967755555
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20583828",
+      "name": "Vyttila",
+      "coord": [
+        76.3204,
+        9.9674
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38379892",
+      "name": "Ambattukavu",
+      "coord": [
+        76.339003888,
+        10.079371944
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38389562",
+      "name": "Companypady",
+      "coord": [
+        76.34284,
+        10.087293055
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38476609",
+      "name": "Aluva",
+      "coord": [
+        76.349638055,
+        10.109675
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38476797",
+      "name": "Pulinchodu",
+      "coord": [
+        76.346661111,
+        10.09512
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38477696",
+      "name": "Muttom",
+      "coord": [
+        76.333726944,
+        10.072575
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38478898",
+      "name": "Kalamassery",
+      "coord": [
+        76.321926111,
+        10.0584
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38499541",
+      "name": "Cochin University",
+      "coord": [
+        76.318376944,
+        10.046878888
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38566574",
+      "name": "Pathadipalam",
+      "coord": [
+        76.314371111,
+        10.035948055
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38582577",
+      "name": "Edapally",
+      "coord": [
+        76.308456111,
+        10.025106111
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38584315",
+      "name": "Changampuzha Park",
+      "coord": [
+        76.302318888,
+        10.01488
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q38697682",
+      "name": "Palarivattom",
+      "coord": [
+        76.304768888,
+        10.006431944
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q42306467",
+      "name": "J. L. N. Stadium",
+      "coord": [
+        76.299535,
+        10.000554
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q42308815",
+      "name": "Kaloor",
+      "coord": [
+        76.291669,
+        9.994484
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q42308850",
+      "name": "Town Hall",
+      "coord": [
+        76.288035,
+        9.991247
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q42328335",
+      "name": "M. G. Road",
+      "coord": [
+        76.282351,
+        9.983395
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q42343250",
+      "name": "Maharaja's College",
+      "coord": [
+        76.285015,
+        9.973487
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q67154725",
+      "name": "Kadavanthra",
+      "coord": [
+        76.298258333,
+        9.966588888
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q67170983",
+      "name": "Elamkulam",
+      "coord": [
+        76.30849,
+        9.96709
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q67171027",
+      "name": "Thaikoodam",
+      "coord": [
+        76.32368,
+        9.96
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q67172500",
+      "name": "Petta",
+      "coord": [
+        76.331004,
+        9.951161
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q113997246",
+      "name": "Vadakkekkotta",
+      "coord": [
+        76.33949,
+        9.95282
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q113997249",
+      "name": "SN Junction",
+      "coord": [
+        76.34619,
+        9.95476
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759251",
+      "name": "Tripunithura Metro Terminal",
+      "coord": [
+        76.35173,
+        9.95041347
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

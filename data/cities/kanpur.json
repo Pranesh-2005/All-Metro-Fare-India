@@ -1,0 +1,213 @@
+{
+  "id": "kanpur",
+  "name": "Kanpur Metro",
+  "dataVersion": {
+    "network": "wikidata-2025-10",
+    "fares": "2025-05-31"
+  },
+  "tunables": {
+    "rideSpeedKmph": 35,
+    "dwellMinutes": 0.5,
+    "transferMinutes": 4
+  },
+  "operators": [
+    {
+      "id": "upmrc-knp",
+      "name": "Uttar Pradesh Metro (Kanpur)",
+      "shortName": "UPMRC",
+      "color": "#e2231a",
+      "fareRules": {
+        "basis": "distance_km",
+        "slabs": [
+          {
+            "max": 2,
+            "fare": 10
+          },
+          {
+            "max": 5,
+            "fare": 15
+          },
+          {
+            "max": 9,
+            "fare": 20
+          },
+          {
+            "max": 14,
+            "fare": 30
+          },
+          {
+            "max": 18,
+            "fare": 40
+          },
+          {
+            "max": 22,
+            "fare": 50
+          },
+          {
+            "max": 999,
+            "fare": 60
+          }
+        ],
+        "variants": [],
+        "effectiveFrom": "2025-05-31",
+        "confidence": "unverified",
+        "sourceUrl": "https://upseva.in/tools/kanpur-metro-fare-calculator/",
+        "note": "UPMRC publishes zones not km; ₹60 covers the full 23.5 km IIT→Naubasta trip. km boundaries reconstructed. GoSmart 10% off."
+      },
+      "discounts": []
+    }
+  ],
+  "lines": [
+    {
+      "id": "orange-line",
+      "operator": "upmrc-knp",
+      "name": "Orange Line",
+      "color": "#f26522",
+      "stations": [
+        "Q110300579",
+        "Q110300581",
+        "Q110300582",
+        "Q110300583",
+        "Q110300584",
+        "Q110300585",
+        "Q110300586",
+        "Q110300587",
+        "Q110300588",
+        "Q134652753",
+        "Q134652761",
+        "Q134652771",
+        "Q134692731",
+        "Q134692732"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "Q110300579",
+      "name": "IIT Kanpur",
+      "coord": [
+        80.24823,
+        26.50918
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300581",
+      "name": "Kalyanpur",
+      "coord": [
+        80.25264,
+        26.50321
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300582",
+      "name": "SPM Hospital",
+      "coord": [
+        80.2589,
+        26.49891
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300583",
+      "name": "Vishwavidyalaya metro station (Kanpur)",
+      "coord": [
+        80.2707374,
+        26.4955096
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300584",
+      "name": "Gurudev Chauraha",
+      "coord": [
+        80.28451,
+        26.49149
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300585",
+      "name": "Geeta Nagar",
+      "coord": [
+        80.29216,
+        26.48701
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300586",
+      "name": "Rawatpur",
+      "coord": [
+        80.30009,
+        26.48288
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300587",
+      "name": "LLR Hospital",
+      "coord": [
+        80.31159,
+        26.47927
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q110300588",
+      "name": "Moti Jheel",
+      "coord": [
+        80.31855,
+        26.47906
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134652753",
+      "name": "Chunniganj",
+      "coord": [
+        80.337095,
+        26.477062
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134652761",
+      "name": "Naveen Market",
+      "coord": [
+        80.345464,
+        26.474096
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134652771",
+      "name": "Bada Chauraha",
+      "coord": [
+        80.352416,
+        26.472742
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134692731",
+      "name": "Nayaganj",
+      "coord": [
+        80.359551,
+        26.464164
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q134692732",
+      "name": "Kanpur Central",
+      "coord": [
+        80.351804,
+        26.453887
+      ],
+      "aliases": []
+    }
+  ],
+  "transfers": []
+}

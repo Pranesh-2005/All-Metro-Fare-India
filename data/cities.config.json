@@ -1,0 +1,126 @@
+{
+  "defaultFare": {
+    "basis": "distance_km",
+    "slabs": [
+      { "max": 2, "fare": 10 },
+      { "max": 5, "fare": 20 },
+      { "max": 12, "fare": 30 },
+      { "max": 21, "fare": 40 },
+      { "max": 32, "fare": 50 },
+      { "max": 999, "fare": 60 }
+    ],
+    "effectiveFrom": "2025-01-01",
+    "confidence": "unverified",
+    "note": "Placeholder distance bands common to Indian metros. Replace with the operator's published table (scraper or manual edit) to mark verified."
+  },
+  "cities": [
+    {
+      "id": "delhi",
+      "name": "Delhi NCR",
+      "wikidataNetwork": "Q271195",
+      "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-08-25" },
+      "defaultOperator": "dmrc",
+      "lineOperators": { "Q5253735": "dmrc-aex", "Q7294170": "rapidmetro" },
+      "operators": [
+        {
+          "id": "dmrc",
+          "name": "Delhi Metro Rail Corporation",
+          "shortName": "DMRC",
+          "color": "#e2231a",
+          "fareRules": {
+            "basis": "distance_km",
+            "slabs": [
+              { "max": 2, "fare": 11 },
+              { "max": 5, "fare": 21 },
+              { "max": 12, "fare": 32 },
+              { "max": 21, "fare": 43 },
+              { "max": 32, "fare": 54 },
+              { "max": 999, "fare": 64 }
+            ],
+            "effectiveFrom": "2025-08-25",
+            "confidence": "verified",
+            "sourceUrl": "https://www.delhimetrorail.com/fare",
+            "note": "Token/single-journey distance fares. Smart-card riders get 10% off."
+          },
+          "discounts": [
+            { "id": "smartcard", "label": "Smart card (10% off)", "kind": "percent", "value": 10, "group": "card" }
+          ]
+        },
+        {
+          "id": "dmrc-aex",
+          "name": "Airport Express Line",
+          "shortName": "AEX",
+          "color": "#f26522",
+          "fareRules": {
+            "basis": "distance_km",
+            "slabs": [
+              { "max": 2, "fare": 10 },
+              { "max": 5, "fare": 20 },
+              { "max": 15, "fare": 50 },
+              { "max": 999, "fare": 60 }
+            ],
+            "effectiveFrom": "2025-08-25",
+            "confidence": "unverified",
+            "sourceUrl": "https://www.delhimetrorail.com/airport-express-line",
+            "note": "Airport Express is a station-pair matrix, not clean km bands; these are approximate (New Delhi→Aerocity ₹50, →T3 ₹60). Confirm against the DMRC calculator."
+          },
+          "discounts": []
+        },
+        {
+          "id": "rapidmetro",
+          "name": "Rapid Metro Gurgaon",
+          "shortName": "Rapid",
+          "color": "#00a3a3",
+          "fareRules": {
+            "basis": "distance_km",
+            "slabs": [
+              { "max": 5, "fare": 20 },
+              { "max": 999, "fare": 35 }
+            ],
+            "effectiveFrom": "2025-08-25",
+            "confidence": "unverified",
+            "note": "Effectively flat: ₹20 within a phase, ₹35 crossing both phases. Not confirmed against a DMRC notice."
+          },
+          "discounts": []
+        }
+      ],
+      "transfers": []
+    },
+    { "id": "bengaluru", "name": "Bengaluru", "wikidataNetwork": "Q279343", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-02-09" }, "defaultOperator": "bmrcl", "operatorMeta": { "name": "Bangalore Metro Rail Corporation", "shortName": "BMRCL", "color": "#6b2a86" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 10 }, { "max": 4, "fare": 20 }, { "max": 6, "fare": 30 }, { "max": 8, "fare": 40 }, { "max": 10, "fare": 50 }, { "max": 15, "fare": 60 }, { "max": 20, "fare": 70 }, { "max": 25, "fare": 80 }, { "max": 999, "fare": 90 } ], "effectiveFrom": "2025-02-09", "confidence": "unverified", "sourceUrl": "https://www.thehindu.com/news/cities/bangalore/metro-fare-hike-not-limited-to-50-complain-many-commuters/article69199999.ece", "note": "₹10 floor / ₹90 cap confirmed from news; interior km bands reconstructed. BMRCL site is a JS calculator." } },
+    { "id": "mumbai", "name": "Mumbai Metro", "wikidataNetwork": "Q646414", "dataVersion": { "network": "wikidata-2025-10", "fares": "2023-01-01" }, "defaultOperator": "mmrda", "operatorMeta": { "name": "Mumbai Metropolitan Region Development Authority", "shortName": "Mumbai Metro", "color": "#0062cc" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 3, "fare": 10 }, { "max": 12, "fare": 20 }, { "max": 18, "fare": 30 }, { "max": 24, "fare": 40 }, { "max": 999, "fare": 50 } ], "effectiveFrom": "2023-01-01", "confidence": "unverified", "sourceUrl": "https://www.timesnownews.com/mumbai/mumbai-metro-line-2a-and-7-ticket-prices-start-from-rs-10-check-complete-list-of-rates-here-article-97045520", "note": "Lines 2A/7 table. Line 1 (Versova–Ghatkopar) is a separate operator with ₹10–40; Line 3 Aqua differs again. Interior bands reconstructed." } },
+    { "id": "kolkata", "name": "Kolkata Metro", "wikidataNetwork": "Q1048849", "dataVersion": { "network": "wikidata-2025-10", "fares": "2024-05-22" }, "defaultOperator": "kmrc", "operatorMeta": { "name": "Kolkata Metro Rail Corporation", "shortName": "KMRC", "color": "#00a650" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 5 }, { "max": 5, "fare": 10 }, { "max": 10, "fare": 15 }, { "max": 20, "fare": 20 }, { "max": 999, "fare": 25 } ], "effectiveFrom": "2024-05-22", "confidence": "unverified", "sourceUrl": "https://kolkata.metroroute.co.in/", "note": "Blue Line table (cap ₹25); Green/Orange lines cap higher at ₹30. Metro Railway Kolkata publishes no static slab page; bands from aggregator." } },
+    { "id": "chennai", "name": "Chennai Metro", "wikidataNetwork": "Q1639576", "dataVersion": { "network": "wikidata-2025-10", "fares": "2021-02-22" }, "defaultOperator": "cmrl", "operatorMeta": { "name": "Chennai Metro Rail Limited", "shortName": "CMRL", "color": "#0062cc" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 2, "fare": 10 }, { "max": 5, "fare": 20 }, { "max": 10, "fare": 30 }, { "max": 15, "fare": 40 }, { "max": 999, "fare": 50 } ], "effectiveFrom": "2021-02-22", "confidence": "unverified", "sourceUrl": "https://city-rails.com/en/chennai-metro-map/", "note": "CMRL uses a station-pair matrix with five fare levels ₹10/20/30/40/50, not km bands; approximated by station count. QR/NCMC gets 20% off." } },
+    { "id": "hyderabad", "name": "Hyderabad Metro", "wikidataNetwork": "Q646209", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-05-17" }, "defaultOperator": "hmrl", "operatorMeta": { "name": "Hyderabad Metro Rail", "shortName": "HMRL", "color": "#e2231a" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 12 }, { "max": 4, "fare": 18 }, { "max": 6, "fare": 30 }, { "max": 9, "fare": 40 }, { "max": 12, "fare": 50 }, { "max": 15, "fare": 55 }, { "max": 18, "fare": 60 }, { "max": 21, "fare": 66 }, { "max": 24, "fare": 70 }, { "max": 999, "fare": 75 } ], "effectiveFrom": "2025-05-17", "confidence": "verified", "sourceUrl": "https://ltmetro.com/fare-chart-hyderabad-metro-rail/", "note": "Token/QR fares from L&TMRHL's official Fare Fixation Committee press release (15 May 2025). Smart card 10% off." } },
+    { "id": "ahmedabad", "name": "Ahmedabad Metro", "wikidataNetwork": "Q1895288", "dataVersion": { "network": "wikidata-2025-10", "fares": "2022-10-01" }, "defaultOperator": "gmrc", "operatorMeta": { "name": "Gujarat Metro Rail Corporation", "shortName": "GMRC", "color": "#f26522" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 5 }, { "max": 5, "fare": 10 }, { "max": 9, "fare": 15 }, { "max": 13, "fare": 20 }, { "max": 18, "fare": 25 }, { "max": 24, "fare": 30 }, { "max": 30, "fare": 35 }, { "max": 999, "fare": 40 } ], "effectiveFrom": "2022-10-01", "confidence": "unverified", "sourceUrl": "https://www.gujaratmetrorail.com/ahmedabad/", "note": "Min ₹5 / max ₹40 documented; intermediate km bands are a best-guess — GMRC publishes fares only via its app." } },
+    { "id": "nagpur", "name": "Nagpur Metro", "wikidataNetwork": "Q6959014", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-01-01" }, "defaultOperator": "mahametro-ngp", "operatorMeta": { "name": "Maharashtra Metro (Nagpur)", "shortName": "Maha Metro", "color": "#f6c200" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 2, "fare": 10 }, { "max": 6, "fare": 20 }, { "max": 999, "fare": 30 } ], "effectiveFrom": "2025-01-01", "confidence": "unverified", "sourceUrl": "https://nagpur.metroroute.co.in/", "note": "By stations: 0–2 ₹10, 3–6 ₹20, 7+ ₹30. Maha Card 10% off. Maha Metro site is a calculator." } },
+    { "id": "pune", "name": "Pune Metro", "wikidataNetwork": "Q3595697", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-01-01" }, "defaultOperator": "mahametro-pune", "operatorMeta": { "name": "Maharashtra Metro (Pune)", "shortName": "Maha Metro", "color": "#6b2a86" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 2, "fare": 10 }, { "max": 5, "fare": 20 }, { "max": 10, "fare": 30 }, { "max": 999, "fare": 35 } ], "effectiveFrom": "2025-01-01", "confidence": "unverified", "sourceUrl": "https://pune.metroroute.co.in/", "note": "By stations: 1–2 ₹10, 3–5 ₹20, 6–10 ₹30, 11+ ₹35. Band boundaries approximate; Maha Metro site is a calculator." } },
+    { "id": "kochi", "name": "Kochi Metro", "wikidataNetwork": "Q3522910", "dataVersion": { "network": "wikidata-2025-10", "fares": "2016-11-01" }, "defaultOperator": "kmrl", "operatorMeta": { "name": "Kochi Metro Rail Limited", "shortName": "KMRL", "color": "#00a650" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 10 }, { "max": 5, "fare": 20 }, { "max": 10, "fare": 30 }, { "max": 15, "fare": 40 }, { "max": 20, "fare": 50 }, { "max": 999, "fare": 60 } ], "effectiveFrom": "2016-11-01", "confidence": "unverified", "sourceUrl": "https://themetrorailguy.com/kochi-metro-fare-chart-ticket-prices/", "note": "Zones F1–F6, +₹10/zone, long-notified structure. KMRL card gives a discount (excluded)." } },
+    { "id": "lucknow", "name": "Lucknow Metro", "wikidataNetwork": "Q6697779", "dataVersion": { "network": "wikidata-2025-10", "fares": "2017-09-01" }, "defaultOperator": "upmrc-lko", "operatorMeta": { "name": "Uttar Pradesh Metro (Lucknow)", "shortName": "UPMRC", "color": "#e2231a" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 1, "fare": 10 }, { "max": 2, "fare": 15 }, { "max": 6, "fare": 20 }, { "max": 9, "fare": 30 }, { "max": 13, "fare": 40 }, { "max": 17, "fare": 50 }, { "max": 999, "fare": 60 } ], "effectiveFrom": "2017-09-01", "confidence": "unverified", "sourceUrl": "https://themetrorailguy.com/lucknow-metro-information-map-updates/", "note": "By stations. Go Smart card discount (excluded). UPMRC site is a calculator." } },
+    { "id": "noida", "name": "Noida Metro", "wikidataNetwork": "Q16909221", "dataVersion": { "network": "wikidata-2025-10", "fares": "2019-01-25" }, "defaultOperator": "nmrc", "operatorMeta": { "name": "Noida Metro Rail Corporation", "shortName": "NMRC", "color": "#0062cc" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 1, "fare": 10 }, { "max": 2, "fare": 15 }, { "max": 6, "fare": 20 }, { "max": 9, "fare": 30 }, { "max": 16, "fare": 40 }, { "max": 999, "fare": 50 } ], "effectiveFrom": "2019-01-25", "confidence": "unverified", "sourceUrl": "https://noida.metroroute.co.in/", "note": "Aqua Line, by stations. CITY1 smart card ~10% off; lower cap on Sundays. NMRC site is a calculator." } },
+    { "id": "indore", "name": "Indore Metro", "wikidataNetwork": "Q17056449", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-06-01" }, "defaultOperator": "mpmrc-ind", "operatorMeta": { "name": "Madhya Pradesh Metro (Indore)", "shortName": "MPMRCL", "color": "#f6c200" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 2, "fare": 10 }, { "max": 5, "fare": 20 }, { "max": 8, "fare": 30 }, { "max": 12, "fare": 40 }, { "max": 17, "fare": 50 }, { "max": 999, "fare": 60 } ], "effectiveFrom": "2025-06-01", "confidence": "unverified", "sourceUrl": "https://www.myindoremetro.com/fares", "note": "Provisional — Yellow Line partly open, official revised chart awaited; sources conflict (₹20–30 priority vs ₹20–80 full-line). Treat as low-confidence." } },
+    { "id": "kanpur", "name": "Kanpur Metro", "wikidataNetwork": "Q17063873", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-05-31" }, "defaultOperator": "upmrc-knp", "operatorMeta": { "name": "Uttar Pradesh Metro (Kanpur)", "shortName": "UPMRC", "color": "#e2231a" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 10 }, { "max": 5, "fare": 15 }, { "max": 9, "fare": 20 }, { "max": 14, "fare": 30 }, { "max": 18, "fare": 40 }, { "max": 22, "fare": 50 }, { "max": 999, "fare": 60 } ], "effectiveFrom": "2025-05-31", "confidence": "unverified", "sourceUrl": "https://upseva.in/tools/kanpur-metro-fare-calculator/", "note": "UPMRC publishes zones not km; ₹60 covers the full 23.5 km IIT→Naubasta trip. km boundaries reconstructed. GoSmart 10% off." } },
+    { "id": "jaipur", "name": "Jaipur Metro", "wikidataNetwork": "Q6124135", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-01-31" }, "defaultOperator": "jmrc", "operatorMeta": { "name": "Jaipur Metro Rail Corporation", "shortName": "JMRC", "color": "#e5338c" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 2, "fare": 10 }, { "max": 5, "fare": 15 }, { "max": 8, "fare": 25 }, { "max": 999, "fare": 30 } ], "effectiveFrom": "2025-01-31", "confidence": "verified", "sourceUrl": "https://transport.rajasthan.gov.in/content/dam/transport/metro/Passenger%20Information/MetroFares/Notification%20of%20%20Fare%20Revision%20%20Effective%20from%2031.01.2025.pdf", "note": "By stations (Pink Line). From JMRC's official fare-revision notification (rajasthan.gov.in). Smart card 10% off." } },
+    { "id": "navi-mumbai", "name": "Navi Mumbai Metro", "wikidataNetwork": "Q4503146", "dataVersion": { "network": "wikidata-2025-10", "fares": "2023-11-17" }, "defaultOperator": "nmmc", "operatorMeta": { "name": "Navi Mumbai Metro", "shortName": "NMM", "color": "#00a3a3" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 2, "fare": 10 }, { "max": 4, "fare": 15 }, { "max": 6, "fare": 20 }, { "max": 8, "fare": 25 }, { "max": 10, "fare": 30 }, { "max": 999, "fare": 40 } ], "effectiveFrom": "2023-11-17", "confidence": "unverified", "sourceUrl": "https://themetrorailguy.com/navi-mumbai-metro-information-map-updates/", "note": "Line 1 (Belapur–Pendhar). ₹10 min / ₹40 above 10 km matches the launch announcement; interior bands from aggregator." } },
+    { "id": "bhopal", "name": "Bhopal Metro", "wikidataNetwork": "Q4902010", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-12-28" }, "defaultOperator": "mpmrc-bpl", "operatorMeta": { "name": "Madhya Pradesh Metro (Bhopal)", "shortName": "MPMRCL", "color": "#00a650" },
+      "fare": { "basis": "station_count", "slabs": [ { "max": 2, "fare": 20 }, { "max": 5, "fare": 30 }, { "max": 999, "fare": 40 } ], "effectiveFrom": "2025-12-28", "confidence": "unverified", "sourceUrl": "https://bhopal.metroroute.co.in/", "note": "Introductory — priority corridor only. 1–2 stations ₹20, 3–5 ₹30, full ₹40. Dates/figures vary across outlets." } },
+    { "id": "agra", "name": "Agra Metro", "wikidataNetwork": "Q24088780", "dataVersion": { "network": "wikidata-2025-10", "fares": "2024-03-06" }, "defaultOperator": "upmrc-agr", "operatorMeta": { "name": "Uttar Pradesh Metro (Agra)", "shortName": "UPMRC", "color": "#6b2a86" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 1, "fare": 10 }, { "max": 2, "fare": 15 }, { "max": 999, "fare": 20 } ], "effectiveFrom": "2024-03-06", "confidence": "unverified", "sourceUrl": "https://www.ndtv.com/india-news/pm-narendra-modi-to-virtually-flag-off-priority-corridor-of-agra-metro-tomorrow-5180637", "note": "Priority corridor (6 stations). UPMRC quoted ₹10 ≤1 km, ₹15 ≤2 km, ₹20 for 2–6 km. NCMC 10% off. Will change as the line extends." } },
+    { "id": "patna", "name": "Patna Metro", "wikidataNetwork": "Q7145108", "dataVersion": { "network": "wikidata-2025-10", "fares": "2025-10-06" }, "defaultOperator": "pmrc", "operatorMeta": { "name": "Patna Metro Rail Corporation", "shortName": "PMRC", "color": "#0062cc" },
+      "fare": { "basis": "distance_km", "slabs": [ { "max": 3, "fare": 15 }, { "max": 999, "fare": 30 } ], "effectiveFrom": "2025-10-06", "confidence": "unverified", "sourceUrl": "https://patnametrorail.com/", "note": "Introductory — priority corridor (5 stations). ₹15 ≤3 km, ₹30 for 3–6 km. Smart card 10% off. Very new, will change." } }
+  ]
+}
