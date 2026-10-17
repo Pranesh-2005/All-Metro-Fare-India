@@ -55,6 +55,12 @@ Wikidata, re-applies curated fares, validates, runs the fare tests, and opens a
 pull request **only when `data/cities/*.json` actually changed**. A new station
 or line that Wikidata already knows about lands as a reviewable diff.
 
+If the run fails at "Open a PR" with *GitHub Actions is not permitted to create
+or approve pull requests*, enable it once in the repo: **Settings → Actions →
+General → Workflow permissions → Allow GitHub Actions to create and approve pull
+requests**. A Wikidata outage does not fail the run — that city keeps its last
+committed file and the job logs a warning annotation instead.
+
 To add a city: add one entry to `data/cities.config.json` (its Wikidata network
 id + operator fare block) and run `data:refresh`. To fix a fare: edit that
 operator's `fare` block.

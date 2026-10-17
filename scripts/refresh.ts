@@ -1,4 +1,4 @@
-import { readFile, mkdir, writeFile } from "node:fs/promises";
+import { access, readFile, mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { City, type FareRules } from "../lib/schema";
 import { haversineKm } from "../lib/fare/geo";
@@ -49,23 +49,42 @@ type Raw = { name: string; lon: number; lat: number };
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+/** WDQS answers with these under load (and 429 when throttled); back off and
+ *  retry rather than spending the nightly job on one bad minute upstream. */
+const RETRYABLE = new Set([408, 429, 500, 502, 503, 504]);
+const MAX_ATTEMPTS = 5;
+
 async function sparql(query: string): Promise<Row[]> {
-  for (let attempt = 0; ; attempt++) {
-    const res = await fetch(`${WDQS}?query=${encodeURIComponent(query)}`, {
-      headers: { Accept: "application/sparql-results+json", "User-Agent": UA },
-    });
-    if (res.status === 429 && attempt < 4) {
-      const wait = Number(res.headers.get("retry-after")) * 1000 || 2000 * (attempt + 1);
-      await sleep(wait);
-      continue;
+  const url = `${WDQS}?query=${encodeURIComponent(query)}`;
+  for (let attempt = 1; ; attempt++) {
+    let res: Response | undefined;
+    let failure = "";
+    try {
+      res = await fetch(url, {
+        headers: { Accept: "application/sparql-results+json", "User-Agent": UA },
+        signal: AbortSignal.timeout(60_000),
+      });
+    } catch (error) {
+      failure = `network: ${(error as Error).message}`;
     }
-    if (!res.ok) throw new Error(`Wikidata ${res.status} ${res.statusText}`);
-    const body = (await res.json()) as { results: { bindings: Row[] } };
-    return body.results.bindings;
+
+    if (res?.ok) {
+      const body = (await res.json()) as { results: { bindings: Row[] } };
+      return body.results.bindings;
+    }
+    if (res) failure = `Wikidata ${res.status} ${res.statusText}`;
+
+    if (res && !RETRYABLE.has(res.status)) throw new Error(failure);
+    if (attempt >= MAX_ATTEMPTS) throw new Error(`${failure} (after ${attempt} attempts)`);
+
+    const retryAfter = Number(res?.headers.get("retry-after")) * 1000;
+    const backoff = Math.min(30_000, 1500 * 2 ** (attempt - 1));
+    await sleep(retryAfter || backoff + Math.random() * 500);
   }
 }
 
 const qid = (uri: string) => uri.replace(/.*\//, "");
+const cityFile = (id: string) => join(ROOT, "data", "cities", `${id}.json`);
 const cleanName = (label: string) =>
   label.replace(/\s+(metro|railway)\s+station$/i, "").replace(/\s+station$/i, "").trim();
 
@@ -315,10 +334,20 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
   if (!parsed.success) {
     throw new Error(`${cfg.id}: not schema-valid\n${JSON.stringify(parsed.error.issues, null, 2)}`);
   }
-  const out = join(ROOT, "data", "cities", `${cfg.id}.json`);
+  const out = cityFile(cfg.id);
   await mkdir(join(ROOT, "data", "cities"), { recursive: true });
   await writeFile(out, JSON.stringify(parsed.data, null, 2) + "\n");
   return { stations: city.stations.length, lines: city.lines.length, transfers: city.transfers.length };
+}
+
+/** True when the city already has committed data we can leave untouched. */
+async function hasCommittedData(id: string): Promise<boolean> {
+  try {
+    await access(cityFile(id));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 async function main() {
@@ -333,18 +362,42 @@ async function main() {
   }
 
   let ok = 0;
+  const keptStale: string[] = [];
+  const missing: string[] = [];
   for (const cfg of cities) {
     try {
       const r = await buildCity(cfg, config.defaultFare);
       console.log(`✔ ${cfg.id.padEnd(14)} ${r.stations} stations, ${r.lines} line chains, ${r.transfers} transfers`);
       ok += 1;
     } catch (error) {
-      console.error(`✘ ${cfg.id}: ${(error as Error).message.split("\n")[0]}`);
+      const message = (error as Error).message.split("\n")[0];
+      // buildCity writes only after the whole city validates, so a failure
+      // here leaves the previous file intact. That is the right outcome for a
+      // transient upstream outage — the site keeps serving last-good data.
+      if (await hasCommittedData(cfg.id)) {
+        keptStale.push(cfg.id);
+        console.warn(`⚠ ${cfg.id.padEnd(14)} ${message} — kept last committed data`);
+        if (process.env.GITHUB_ACTIONS === "true") {
+          console.log(`::warning title=Stale data: ${cfg.id}::${message}. Kept the last committed data/cities/${cfg.id}.json.`);
+        }
+      } else {
+        missing.push(cfg.id);
+        console.error(`✘ ${cfg.id}: ${message} (and no committed file to fall back to)`);
+      }
     }
     await sleep(400); // be polite to WDQS between cities
   }
-  console.log(`\n${ok}/${cities.length} cities built. Next: npm run data:validate`);
-  if (ok < cities.length) process.exitCode = 1;
+
+  console.log(`\n${ok}/${cities.length} cities rebuilt. Next: npm run data:validate`);
+  if (keptStale.length) {
+    console.log(`⚠ ${keptStale.length} kept last committed data: ${keptStale.join(", ")}`);
+  }
+  // Only a city with no data at all is fatal: the nightly job should not fail
+  // (and skip validation + tests) because WDQS had a bad minute.
+  if (missing.length) {
+    console.error(`✘ no data for: ${missing.join(", ")}`);
+    process.exitCode = 1;
+  }
 }
 
 main().catch((error) => {

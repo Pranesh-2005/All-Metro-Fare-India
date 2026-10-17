@@ -4,6 +4,16 @@ name: Nightly data refresh
 # validates the result, and opens a PR only when something actually changed.
 # A new station or line that Wikidata already knows about, or a fare a scraper
 # picks up, lands as a reviewable diff instead of silently or never.
+#
+# PR CREATION REQUIRES A REPO SETTING:
+#   Settings → Actions → General → Workflow permissions →
+#   ✔ "Allow GitHub Actions to create and approve pull requests"
+# Without it the last step fails with "GitHub Actions is not permitted to
+# create or approve pull requests" — that is a repo toggle, not a workflow bug.
+#
+# A transient Wikidata outage no longer fails the job: refresh keeps the last
+# committed file per city and emits a warning annotation; only a city with no
+# data at all fails the run.
 
 on:
   schedule:
@@ -14,15 +24,22 @@ permissions:
   contents: write
   pull-requests: write
 
+# Never let tonight's run race yesterday's (a stuck run would otherwise have
+# two jobs writing the same branch).
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - run: npm ci
@@ -37,7 +54,7 @@ jobs:
         run: npm run test:fare
 
       - name: Open a PR if the data changed
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "data: nightly refresh"
           branch: data/nightly-refresh
@@ -48,5 +65,7 @@ jobs:
             especially any fare change or a station appearing/disappearing — then
             merge. Fares still marked `unverified` need an operator source before
             they can be trusted.
-          labels: data, automated
+
+            Check the run's warning annotations: a city listed there could not be
+            fetched tonight and kept its previously committed file.
           add-paths: data/cities/*.json
