@@ -17,7 +17,8 @@ name: Nightly data refresh
 
 on:
   schedule:
-    - cron: "17 2 * * *" # 02:17 UTC nightly (off the :00 rush)
+    # GitHub cron is UTC. 02:17 IST = 20:47 UTC the previous day.
+    - cron: "47 20 * * *" # 02:17 IST nightly (off the :00 rush)
   workflow_dispatch: {}
 
 permissions:
