@@ -66,45 +66,19 @@
         "sourceUrl": "https://ltmetro.com/fare-chart-hyderabad-metro-rail/",
         "note": "Token/QR fares from L&TMRHL's official Fare Fixation Committee press release (15 May 2025). Smart card 10% off."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "smartcard",
+          "label": "Smart card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "918341146468"
     }
   ],
   "lines": [
-    {
-      "id": "red-line",
-      "operator": "hmrl",
-      "name": "Red Line",
-      "color": "#e2231a",
-      "stations": [
-        "Q58814838",
-        "Q58814872",
-        "Q81820840",
-        "Q81724990",
-        "Q81640785",
-        "Q81483949",
-        "Q81406369",
-        "Q56701860",
-        "Q83859784",
-        "Q62860405",
-        "Q63346685",
-        "Q83718950",
-        "Q85846368",
-        "Q83886076",
-        "Q85770033",
-        "Q58814848",
-        "Q56701862",
-        "Q83175963",
-        "Q83008743",
-        "Q82698806",
-        "Q82532536",
-        "Q82256850",
-        "Q82064377",
-        "Q83283577",
-        "Q85773083",
-        "Q84250421",
-        "Q58814840"
-      ]
-    },
     {
       "id": "blue-line",
       "operator": "hmrl",
@@ -153,9 +127,107 @@
         "Q108874559",
         "Q56701860"
       ]
+    },
+    {
+      "id": "red-line",
+      "operator": "hmrl",
+      "name": "Red Line",
+      "color": "#e2231a",
+      "stations": [
+        "Q58814838",
+        "Q58814872",
+        "Q81820840",
+        "Q81724990",
+        "Q81640785",
+        "Q81483949",
+        "Q81406369",
+        "Q56701860",
+        "Q83859784",
+        "Q62860405",
+        "Q63346685",
+        "Q83718950",
+        "Q85846368",
+        "Q83886076",
+        "Q85770033",
+        "Q58814848",
+        "Q56701862",
+        "Q83175963",
+        "Q83008743",
+        "Q82698806",
+        "Q82532536",
+        "Q82256850",
+        "Q82064377",
+        "Q83283577",
+        "Q85773083",
+        "Q84250421",
+        "Q58814840"
+      ]
     }
   ],
   "stations": [
+    {
+      "id": "Q108874431",
+      "name": "Road No.5 Jubilee Hills",
+      "coord": [
+        78.4232,
+        17.43005
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874543",
+      "name": "JBS Parade Ground",
+      "coord": [
+        78.49648,
+        17.44875
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874559",
+      "name": "Sultan Bazaar",
+      "coord": [
+        78.48403,
+        17.38443
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874730",
+      "name": "Secunderabad West",
+      "coord": [
+        78.49954,
+        17.4338
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874753",
+      "name": "RTC X Roads",
+      "coord": [
+        78.49681,
+        17.40705
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874757",
+      "name": "Chikkadpally",
+      "coord": [
+        78.4949,
+        17.40036
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q108874763",
+      "name": "Narayanaguda",
+      "coord": [
+        78.48996,
+        17.39436
+      ],
+      "aliases": []
+    },
     {
       "id": "Q56701857",
       "name": "Tarnaka",
@@ -603,69 +675,6 @@
       "coord": [
         78.4646968,
         17.4038078
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874431",
-      "name": "Road No.5 Jubilee Hills",
-      "coord": [
-        78.4232,
-        17.43005
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874543",
-      "name": "JBS Parade Ground",
-      "coord": [
-        78.49648,
-        17.44875
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874559",
-      "name": "Sultan Bazaar",
-      "coord": [
-        78.48403,
-        17.38443
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874730",
-      "name": "Secunderabad West",
-      "coord": [
-        78.49954,
-        17.4338
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874753",
-      "name": "RTC X Roads",
-      "coord": [
-        78.49681,
-        17.40705
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874757",
-      "name": "Chikkadpally",
-      "coord": [
-        78.4949,
-        17.40036
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q108874763",
-      "name": "Narayanaguda",
-      "coord": [
-        78.48996,
-        17.39436
       ],
       "aliases": []
     }

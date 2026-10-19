@@ -42,7 +42,23 @@
         "sourceUrl": "https://pune.metroroute.co.in/",
         "note": "By stations: 1–2 ₹10, 3–5 ₹20, 6–10 ₹30, 11+ ₹35. Band boundaries approximate; Maha Metro site is a calculator."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "one-pune-weekday",
+          "label": "One Pune weekdays (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        },
+        {
+          "id": "one-pune-weekend",
+          "label": "One Pune weekends (30% off)",
+          "kind": "percent",
+          "value": 30,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "919420101990"
     }
   ],
   "lines": [

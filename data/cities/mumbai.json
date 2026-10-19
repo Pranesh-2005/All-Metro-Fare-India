@@ -46,10 +46,71 @@
         "sourceUrl": "https://www.timesnownews.com/mumbai/mumbai-metro-line-2a-and-7-ticket-prices-start-from-rs-10-check-complete-list-of-rates-here-article-97045520",
         "note": "Lines 2A/7 table. Line 1 (Versova–Ghatkopar) is a separate operator with ₹10–40; Line 3 Aqua differs again. Interior bands reconstructed."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "mumbai1-weekday",
+          "label": "Mumbai 1 Mon–Sat (5% off)",
+          "kind": "percent",
+          "value": 5,
+          "group": "card"
+        },
+        {
+          "id": "mumbai1-sunday",
+          "label": "Mumbai 1 Sun/holiday (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "918652635500"
     }
   ],
   "lines": [
+    {
+      "id": "line-1",
+      "operator": "mmrda",
+      "name": "Line 1",
+      "color": "#f6c200",
+      "stations": [
+        "Q16981954",
+        "Q18126164",
+        "Q17513235",
+        "Q18353576",
+        "Q18127858",
+        "Q18109449",
+        "Q17515440",
+        "Q18378926",
+        "Q17512034",
+        "Q17514369",
+        "Q17512769",
+        "Q17264777"
+      ]
+    },
+    {
+      "id": "line-2",
+      "operator": "mmrda",
+      "name": "Line 2",
+      "color": "#e2231a",
+      "stations": [
+        "Q116196854",
+        "Q116266921",
+        "Q116266991",
+        "Q116266992",
+        "Q116266993",
+        "Q116266994",
+        "Q116266995",
+        "Q116266996",
+        "Q116266997",
+        "Q116188743",
+        "Q116266999",
+        "Q116267000",
+        "Q116267001",
+        "Q116267002",
+        "Q116267003",
+        "Q116267004",
+        "Q116267041"
+      ]
+    },
     {
       "id": "line-3",
       "operator": "mmrda",
@@ -86,31 +147,6 @@
       ]
     },
     {
-      "id": "line-2",
-      "operator": "mmrda",
-      "name": "Line 2",
-      "color": "#e2231a",
-      "stations": [
-        "Q116196854",
-        "Q116266921",
-        "Q116266991",
-        "Q116266992",
-        "Q116266993",
-        "Q116266994",
-        "Q116266995",
-        "Q116266996",
-        "Q116266997",
-        "Q116188743",
-        "Q116266999",
-        "Q116267000",
-        "Q116267001",
-        "Q116267002",
-        "Q116267003",
-        "Q116267004",
-        "Q116267041"
-      ]
-    },
-    {
       "id": "line-7",
       "operator": "mmrda",
       "name": "Line 7",
@@ -133,26 +169,6 @@
       ]
     },
     {
-      "id": "line-1",
-      "operator": "mmrda",
-      "name": "Line 1",
-      "color": "#f6c200",
-      "stations": [
-        "Q16981954",
-        "Q18126164",
-        "Q17513235",
-        "Q18353576",
-        "Q18127858",
-        "Q18109449",
-        "Q17515440",
-        "Q18378926",
-        "Q17512034",
-        "Q17514369",
-        "Q17512769",
-        "Q17264777"
-      ]
-    },
-    {
       "id": "line-9",
       "operator": "mmrda",
       "name": "Line 9",
@@ -166,114 +182,6 @@
     }
   ],
   "stations": [
-    {
-      "id": "Q16981954",
-      "name": "Ghatkopar",
-      "coord": [
-        72.90799,
-        19.08666
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17264777",
-      "name": "Versova",
-      "coord": [
-        72.8213,
-        19.1303
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17512034",
-      "name": "Andheri",
-      "coord": [
-        72.848132,
-        19.120791
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17512769",
-      "name": "D.N. Nagar",
-      "coord": [
-        72.83019,
-        19.12829
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17513235",
-      "name": "Asalpha",
-      "coord": [
-        72.901887,
-        19.092544
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17514369",
-      "name": "Azad Nagar",
-      "coord": [
-        72.837655,
-        19.12693
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17515440",
-      "name": "Chakala",
-      "coord": [
-        72.867696,
-        19.112045
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18109449",
-      "name": "Airport Road",
-      "coord": [
-        72.874117,
-        19.110113
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18126164",
-      "name": "Jagruti Nagar",
-      "coord": [
-        72.901866,
-        19.092582
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18127858",
-      "name": "Marol Naka",
-      "coord": [
-        72.879536,
-        19.108195
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18353576",
-      "name": "Saki Naka",
-      "coord": [
-        72.887962,
-        19.103528
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18378926",
-      "name": "Western Express Highway",
-      "coord": [
-        72.856394,
-        19.115787
-      ],
-      "aliases": []
-    },
     {
       "id": "Q116188743",
       "name": "Valnai",
@@ -802,6 +710,114 @@
       "coord": [
         72.880222,
         19.277696
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16981954",
+      "name": "Ghatkopar",
+      "coord": [
+        72.90799,
+        19.08666
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17264777",
+      "name": "Versova",
+      "coord": [
+        72.8213,
+        19.1303
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17512034",
+      "name": "Andheri",
+      "coord": [
+        72.848132,
+        19.120791
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17512769",
+      "name": "D.N. Nagar",
+      "coord": [
+        72.83019,
+        19.12829
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17513235",
+      "name": "Asalpha",
+      "coord": [
+        72.901887,
+        19.092544
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17514369",
+      "name": "Azad Nagar",
+      "coord": [
+        72.837655,
+        19.12693
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17515440",
+      "name": "Chakala",
+      "coord": [
+        72.867696,
+        19.112045
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18109449",
+      "name": "Airport Road",
+      "coord": [
+        72.874117,
+        19.110113
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18126164",
+      "name": "Jagruti Nagar",
+      "coord": [
+        72.901866,
+        19.092582
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18127858",
+      "name": "Marol Naka",
+      "coord": [
+        72.879536,
+        19.108195
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18353576",
+      "name": "Saki Naka",
+      "coord": [
+        72.887962,
+        19.103528
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18378926",
+      "name": "Western Express Highway",
+      "coord": [
+        72.856394,
+        19.115787
       ],
       "aliases": []
     }

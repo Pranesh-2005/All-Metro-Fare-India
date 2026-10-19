@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { FareBreakdown } from "@/components/fare-breakdown";
 import { RouteMap } from "@/components/route-map";
+import type { MapPoint, RouteSegment } from "@/components/map-view";
 import { StationPicker } from "@/components/station-picker";
 import {
   allDiscounts,
@@ -10,7 +11,7 @@ import {
   discountedFare,
   type DiscountSelection,
 } from "@/lib/discounts";
-import { planTripForCity } from "@/lib/fare/engine";
+import { planTripForCity, type Route } from "@/lib/fare/engine";
 import { minutes, rupees } from "@/lib/format";
 import type { City } from "@/lib/schema";
 
@@ -31,14 +32,26 @@ export function Calculator({ cities }: { cities: City[] }) {
   const variants = city ? cityFareVariants(city) : [];
   const discountOptions = city ? allDiscounts(city) : [];
 
-  const mapPoints = useMemo(() => {
+  const mapPoints = useMemo<MapPoint[]>(() => {
     if (!city) return [];
     const onRoute = new Set(plan?.cheapest.stations ?? []);
     const ids = onRoute.size > 0 ? onRoute : null;
+    const service = stationService(city);
     return city.stations
       .filter((station) => !ids || ids.has(station.id))
-      .map((station) => ({ id: station.id, name: station.name, coord: station.coord }));
+      .map((station) => ({
+        id: station.id,
+        name: station.name,
+        coord: station.coord,
+        interchange: service.interchanges.has(station.id),
+        lineColors: service.colorsOf.get(station.id) ?? [],
+      }));
   }, [city, plan]);
+
+  const segments = useMemo<RouteSegment[]>(
+    () => (city && plan ? segmentsOf(plan.cheapest, city) : []),
+    [city, plan],
+  );
 
   const pickStation = (stationId: string) => {
     if (!fromId || (fromId && toId)) {
@@ -198,6 +211,7 @@ export function Calculator({ cities }: { cities: City[] }) {
         <RouteMap
           geometry={plan?.cheapest.geometry ?? []}
           points={mapPoints}
+          segments={segments}
           fromId={fromId}
           toId={toId}
           onPick={pickStation}
@@ -222,4 +236,52 @@ function toggleIn(
     }
   }
   return next;
+}
+
+/** Which lines serve each station — drives marker colour and the interchange ring. */
+function stationService(city: City) {
+  const colorsOf = new Map<string, string[]>();
+  const groups = new Map<string, Set<string>>();
+  for (const line of city.lines) {
+    // Branch chains are named "Magenta Line (1)" / "(2)": the same real line,
+    // so they must not make their shared junction look like an interchange.
+    const group = line.name.replace(/ \(\d+\)$/, "");
+    for (const id of line.stations) {
+      colorsOf.set(id, [...(colorsOf.get(id) ?? []), line.color]);
+      const served = groups.get(id) ?? new Set<string>();
+      served.add(group);
+      groups.set(id, served);
+    }
+  }
+  const interchanges = new Set(
+    [...groups].filter(([, served]) => served.size > 1).map(([id]) => id),
+  );
+  return { colorsOf, interchanges };
+}
+
+/** Split a route into runs on one line so each can be drawn in that line's colour. */
+function segmentsOf(route: Route, city: City): RouteSegment[] {
+  const coord = new Map(city.stations.map((s) => [s.id, s.coord]));
+  const color = new Map(city.lines.map((l) => [l.id, l.color]));
+  const out: RouteSegment[] = [];
+  let current: RouteSegment | null = null;
+  let currentKey: string | null = null;
+  for (const hop of route.hops) {
+    const from = coord.get(hop.fromStation);
+    const to = coord.get(hop.toStation);
+    if (!from || !to) continue;
+    const key = hop.lineId ?? "walk";
+    if (!current || currentKey !== key) {
+      current = {
+        id: `${key}-${out.length}`,
+        color: hop.lineId ? (color.get(hop.lineId) ?? "#2563eb") : "#64748b",
+        coordinates: [from],
+        dashed: !hop.lineId,
+      };
+      currentKey = key;
+      out.push(current);
+    }
+    current.coordinates.push(to);
+  }
+  return out;
 }

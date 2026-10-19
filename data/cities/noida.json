@@ -50,7 +50,16 @@
         "sourceUrl": "https://noida.metroroute.co.in/",
         "note": "Aqua Line, by stations. CITY1 smart card ~10% off; lower cap on Sundays. NMRC site is a calculator."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "city1",
+          "label": "CITY1 card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "919599030188"
     }
   ],
   "lines": [

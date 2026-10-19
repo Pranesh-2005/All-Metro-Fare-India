@@ -38,38 +38,19 @@
         "sourceUrl": "https://nagpur.metroroute.co.in/",
         "note": "By stations: 0–2 ₹10, 3–6 ₹20, 7+ ₹30. Maha Card 10% off. Maha Metro site is a calculator."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "maha-card",
+          "label": "Maha Card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "918624888568"
     }
   ],
   "lines": [
-    {
-      "id": "orange-line",
-      "operator": "mahametro-ngp",
-      "name": "Orange Line",
-      "color": "#f26522",
-      "stations": [
-        "Q61367677",
-        "Q61367688",
-        "Q61367714",
-        "Q61367720",
-        "Q61367753",
-        "Q61367761",
-        "Q61367770",
-        "Q59155303",
-        "Q61367784",
-        "Q61367795",
-        "Q61367800",
-        "Q61367810",
-        "Q61367813",
-        "Q61367824",
-        "Q61367834",
-        "Q61367840",
-        "Q55074904",
-        "Q55074918",
-        "Q61367849",
-        "Q61367854"
-      ]
-    },
     {
       "id": "aqua-line",
       "operator": "mahametro-ngp",
@@ -96,6 +77,34 @@
         "Q61367984",
         "Q61367989",
         "Q61367994"
+      ]
+    },
+    {
+      "id": "orange-line",
+      "operator": "mahametro-ngp",
+      "name": "Orange Line",
+      "color": "#f26522",
+      "stations": [
+        "Q61367677",
+        "Q61367688",
+        "Q61367714",
+        "Q61367720",
+        "Q61367753",
+        "Q61367761",
+        "Q61367770",
+        "Q59155303",
+        "Q61367784",
+        "Q61367795",
+        "Q61367800",
+        "Q61367810",
+        "Q61367813",
+        "Q61367824",
+        "Q61367834",
+        "Q61367840",
+        "Q55074904",
+        "Q55074918",
+        "Q61367849",
+        "Q61367854"
       ]
     }
   ],

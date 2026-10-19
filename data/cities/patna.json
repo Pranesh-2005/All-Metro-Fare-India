@@ -34,7 +34,15 @@
         "sourceUrl": "https://patnametrorail.com/",
         "note": "Introductory — priority corridor (5 stations). ₹15 ≤3 km, ₹30 for 3–6 km. Smart card 10% off. Very new, will change."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "smartcard",
+          "label": "Smart card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
     }
   ],
   "lines": [

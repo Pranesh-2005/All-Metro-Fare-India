@@ -39,6 +39,10 @@ type CityConfig = {
   operatorMeta?: { name: string; shortName: string; color: string };
   /** Curated fare for the single auto-operator; falls back to the shared defaultFare. */
   fare?: FareRules;
+  /** Concessions for the single auto-operator (same shape as Operator.discounts). */
+  discounts?: unknown[];
+  /** Official WhatsApp ticketing number for the single auto-operator. */
+  whatsapp?: string;
   operators?: unknown[];
   lineOperators?: Record<string, string>;
   transfers?: unknown[];
@@ -105,6 +109,10 @@ function colorFor(label: string, index: number): string {
 
 const slug = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "line";
+
+/** Plain ASCII ordering. `localeCompare` would make the output depend on the
+ *  runner's locale, which is exactly the kind of drift this file must not have. */
+const byId = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
 
 /**
  * Covers a line's adjacency with as few simple paths as possible: a plain line
@@ -273,7 +281,14 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
       const operator = cfg.lineOperators?.[wdLine] ?? cfg.defaultOperator;
       const color = colorFor(label, index);
       const base = slug(label);
-      const chains = chainsOfLine(edgesByLine.get(wdLine)!);
+      // Wikidata returns rows in no guaranteed order, so the chains (and the
+      // direction each one runs in) can flip between runs. Canonicalise before
+      // naming: orient every chain from its smaller endpoint id, then sort by
+      // that id. Otherwise an unchanged network produces a reorder-only diff
+      // every night. Direction is cosmetic — the graph is bidirectional.
+      const chains = chainsOfLine(edgesByLine.get(wdLine)!)
+        .map((chain) => (byId(chain[0], chain[chain.length - 1]) <= 0 ? chain : [...chain].reverse()))
+        .sort((a, b) => byId(a[0], b[0]));
       chains.forEach((chain, i) => {
         let id = chains.length > 1 ? `${base}-${i + 1}` : base;
         while (usedSlugs.has(id)) id = `${id}x`;
@@ -291,6 +306,7 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
   const onALine = new Set(lines.flatMap((l) => l.stations));
   for (const id of [...stations.keys()]) if (!onALine.has(id)) stations.delete(id);
   for (const id of [...linesOfStation.keys()]) if (!onALine.has(id)) linesOfStation.delete(id);
+  lines.sort((a, b) => byId(a.id, b.id)); // stable file order, not query order
 
   const operators = cfg.operators ?? [
     {
@@ -299,7 +315,8 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
       shortName: cfg.operatorMeta?.shortName ?? cfg.defaultOperator.toUpperCase(),
       color: cfg.operatorMeta?.color ?? "#444444",
       fareRules: await scrapeFares(cfg.defaultOperator, cfg.fare ?? defaultFare),
-      discounts: [],
+      discounts: cfg.discounts ?? [],
+      whatsapp: cfg.whatsapp,
     },
   ];
 
@@ -315,8 +332,12 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
   // refresh picks them up once Wikidata links them.
   const keep = largestComponent(lines, transfers, [...stations.keys()]);
   const keptLines = lines.filter((l) => l.stations.every((s) => keep.has(s)));
-  const keptStations = [...stations.entries()].filter(([id]) => keep.has(id));
-  const keptTransfers = transfers.filter((t) => keep.has(t.from) && keep.has(t.to));
+  const keptStations = [...stations.entries()]
+    .filter(([id]) => keep.has(id))
+    .sort(([a], [b]) => byId(a, b));
+  const keptTransfers = transfers
+    .filter((t) => keep.has(t.from) && keep.has(t.to))
+    .sort((a, b) => byId(a.from, b.from) || byId(a.to, b.to));
 
   const city = {
     id: cfg.id,

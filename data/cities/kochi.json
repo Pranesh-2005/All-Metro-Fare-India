@@ -48,9 +48,18 @@
         "effectiveFrom": "2016-11-01",
         "confidence": "unverified",
         "sourceUrl": "https://themetrorailguy.com/kochi-metro-fare-chart-ticket-prices/",
-        "note": "Zones F1–F6, +₹10/zone, long-notified structure. KMRL card gives a discount (excluded)."
+        "note": "Zones F1–F6, +₹10/zone, long-notified structure. Kochi1 card gives 10% off."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "kochi1",
+          "label": "Kochi1 card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "919188957488"
     }
   ],
   "lines": [
@@ -89,6 +98,33 @@
     }
   ],
   "stations": [
+    {
+      "id": "Q113997246",
+      "name": "Vadakkekkotta",
+      "coord": [
+        76.33949,
+        9.95282
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q113997249",
+      "name": "SN Junction",
+      "coord": [
+        76.34619,
+        9.95476
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q124759251",
+      "name": "Tripunithura Metro Terminal",
+      "coord": [
+        76.35173,
+        9.95041347
+      ],
+      "aliases": []
+    },
     {
       "id": "Q20574885",
       "name": "Ernakulam South",
@@ -284,33 +320,6 @@
       "coord": [
         76.331004,
         9.951161
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q113997246",
-      "name": "Vadakkekkotta",
-      "coord": [
-        76.33949,
-        9.95282
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q113997249",
-      "name": "SN Junction",
-      "coord": [
-        76.34619,
-        9.95476
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q124759251",
-      "name": "Tripunithura Metro Terminal",
-      "coord": [
-        76.35173,
-        9.95041347
       ],
       "aliases": []
     }

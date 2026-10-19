@@ -54,7 +54,15 @@
         "sourceUrl": "https://upseva.in/tools/kanpur-metro-fare-calculator/",
         "note": "UPMRC publishes zones not km; ₹60 covers the full 23.5 km IIT→Naubasta trip. km boundaries reconstructed. GoSmart 10% off."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "gosmart",
+          "label": "GoSmart (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
     }
   ],
   "lines": [

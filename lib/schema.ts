@@ -55,6 +55,11 @@ export const Operator = z.object({
   color: z.string(),
   fareRules: FareRules,
   discounts: z.array(Discount).default([]),
+  /**
+   * Official WhatsApp ticketing number, digits only with country code (e.g.
+   * "919650855800"). Absent when the operator has no WhatsApp booking channel.
+   */
+  whatsapp: z.string().regex(/^\d{10,15}$/).optional(),
 });
 
 export const Line = z.object({

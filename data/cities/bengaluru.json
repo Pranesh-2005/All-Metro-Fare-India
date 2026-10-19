@@ -62,93 +62,109 @@
         "sourceUrl": "https://www.thehindu.com/news/cities/bangalore/metro-fare-hike-not-limited-to-50-complain-many-commuters/article69199999.ece",
         "note": "₹10 floor / ₹90 cap confirmed from news; interior km bands reconstructed. BMRCL site is a JS calculator."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "smartcard-peak",
+          "label": "Smart card peak (5% off)",
+          "kind": "percent",
+          "value": 5,
+          "group": "card"
+        },
+        {
+          "id": "smartcard-offpeak",
+          "label": "Smart card off-peak (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "918105556677"
     }
   ],
   "lines": [
-    {
-      "id": "purple-line",
-      "operator": "bmrcl",
-      "name": "Purple Line",
-      "color": "#6b2a86",
-      "stations": [
-        "Q116966154",
-        "Q108532167",
-        "Q108364370",
-        "Q108336517",
-        "Q108364322",
-        "Q108336548",
-        "Q108336508",
-        "Q23838580",
-        "Q39046388",
-        "Q39046425",
-        "Q39046429",
-        "Q23838583",
-        "Q23838569",
-        "Q39070950",
-        "Q6737727",
-        "Q24211039",
-        "Q5539295",
-        "Q5192189",
-        "Q5539354",
-        "Q5539214",
-        "Q5641098",
-        "Q6025080",
-        "Q5539450",
-        "Q4848761",
-        "Q112747483",
-        "Q112683488",
-        "Q112683430",
-        "Q112683412",
-        "Q112683421",
-        "Q112683413",
-        "Q112683408",
-        "Q112683398",
-        "Q112745606",
-        "Q112683402",
-        "Q112683401",
-        "Q112683391",
-        "Q112683422"
-      ]
-    },
     {
       "id": "green-line",
       "operator": "bmrcl",
       "name": "Green Line",
       "color": "#00a650",
       "stations": [
-        "Q122143705",
-        "Q122143708",
-        "Q122143726",
-        "Q23838590",
-        "Q30647029",
-        "Q30647031",
-        "Q17082550",
-        "Q17082567",
-        "Q17100227",
-        "Q16904094",
-        "Q17088478",
-        "Q17070948",
-        "Q17085511",
-        "Q17068244",
-        "Q17100145",
-        "Q17088462",
-        "Q6737727",
-        "Q20861592",
-        "Q24912918",
-        "Q24912941",
-        "Q39045921",
-        "Q39045926",
-        "Q33101535",
-        "Q33101537",
-        "Q33101538",
-        "Q33101539",
-        "Q28153807",
-        "Q104828836",
-        "Q104828819",
-        "Q104828812",
+        "Q104828788",
         "Q104828801",
-        "Q104828788"
+        "Q104828812",
+        "Q104828819",
+        "Q104828836",
+        "Q28153807",
+        "Q33101539",
+        "Q33101538",
+        "Q33101537",
+        "Q33101535",
+        "Q39045926",
+        "Q39045921",
+        "Q24912941",
+        "Q24912918",
+        "Q20861592",
+        "Q6737727",
+        "Q17088462",
+        "Q17100145",
+        "Q17068244",
+        "Q17085511",
+        "Q17070948",
+        "Q17088478",
+        "Q16904094",
+        "Q17100227",
+        "Q17082567",
+        "Q17082550",
+        "Q30647031",
+        "Q30647029",
+        "Q23838590",
+        "Q122143726",
+        "Q122143708",
+        "Q122143705"
+      ]
+    },
+    {
+      "id": "purple-line",
+      "operator": "bmrcl",
+      "name": "Purple Line",
+      "color": "#6b2a86",
+      "stations": [
+        "Q112683422",
+        "Q112683391",
+        "Q112683401",
+        "Q112683402",
+        "Q112745606",
+        "Q112683398",
+        "Q112683408",
+        "Q112683413",
+        "Q112683421",
+        "Q112683412",
+        "Q112683430",
+        "Q112683488",
+        "Q112747483",
+        "Q4848761",
+        "Q5539450",
+        "Q6025080",
+        "Q5641098",
+        "Q5539214",
+        "Q5539354",
+        "Q5192189",
+        "Q5539295",
+        "Q24211039",
+        "Q6737727",
+        "Q39070950",
+        "Q23838569",
+        "Q23838583",
+        "Q39046429",
+        "Q39046425",
+        "Q39046388",
+        "Q23838580",
+        "Q108336508",
+        "Q108336548",
+        "Q108364322",
+        "Q108336517",
+        "Q108364370",
+        "Q108532167",
+        "Q116966154"
       ]
     },
     {
@@ -177,366 +193,6 @@
     }
   ],
   "stations": [
-    {
-      "id": "Q4848761",
-      "name": "Baiyappanahalli",
-      "coord": [
-        77.6525903,
-        12.9906651
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5192189",
-      "name": "Cubbon Park",
-      "coord": [
-        77.5974655,
-        12.9809006
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5539214",
-      "name": "Trinity",
-      "coord": [
-        77.617,
-        12.973
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5539295",
-      "name": "Dr. B. R. Ambedkar metro station, Vidhana Soudha",
-      "coord": [
-        77.59164,
-        12.97874
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5539354",
-      "name": "MG Road",
-      "coord": [
-        77.6068,
-        12.9755
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5539450",
-      "name": "Swami Vivekananda Road",
-      "coord": [
-        77.6450043,
-        12.9859103
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5641098",
-      "name": "Halasuru",
-      "coord": [
-        77.62628,
-        12.97566
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6025080",
-      "name": "Indiranagar",
-      "coord": [
-        77.63865,
-        12.97833
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6737727",
-      "name": "Majestic",
-      "coord": [
-        77.5728703,
-        12.9756893
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q16904094",
-      "name": "Yeshwanthpur",
-      "coord": [
-        77.5499,
-        13.0232
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17068244",
-      "name": "Kuvempu Road",
-      "coord": [
-        77.5569474,
-        12.9985024
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17070948",
-      "name": "Mahalakshmi",
-      "coord": [
-        77.5488344,
-        13.0083374
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17082550",
-      "name": "Peenya Industry",
-      "coord": [
-        77.5255669,
-        13.0364766
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17082567",
-      "name": "Peenya",
-      "coord": [
-        77.5334693,
-        13.0329868
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17085511",
-      "name": "Rajajinagar",
-      "coord": [
-        77.5497483,
-        13.0003455
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17088462",
-      "name": "Sampige Road",
-      "coord": [
-        77.570805,
-        12.9905455
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17088478",
-      "name": "Sandal Soap Factory",
-      "coord": [
-        77.5540211,
-        13.014793
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17100145",
-      "name": "Srirampura",
-      "coord": [
-        77.5633565,
-        12.9965259
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17100227",
-      "name": "Goraguntepalya",
-      "coord": [
-        77.5408622,
-        13.0284805
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q20861592",
-      "name": "Chickpete",
-      "coord": [
-        77.5747975,
-        12.9675484
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q23838569",
-      "name": "Magadi Road",
-      "coord": [
-        77.5554118,
-        12.9756582
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q23838580",
-      "name": "Mysore Road",
-      "coord": [
-        77.5300737,
-        12.9467266
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q23838583",
-      "name": "Hosahalli",
-      "coord": [
-        77.5454434,
-        12.974303
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q23838590",
-      "name": "Nagasandra",
-      "coord": [
-        77.5001257,
-        13.0481315
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q24211039",
-      "name": "Sir M. Visveshwaraya",
-      "coord": [
-        77.5839458,
-        12.9742808
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q24912918",
-      "name": "Krishna Rajendra Market",
-      "coord": [
-        77.5735999,
-        12.9564453
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q24912941",
-      "name": "National College",
-      "coord": [
-        77.573736,
-        12.9506136
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q28153807",
-      "name": "Yelachenahalli",
-      "coord": [
-        77.5701687,
-        12.8959381
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30647029",
-      "name": "Dasarahalli",
-      "coord": [
-        77.5123791,
-        13.0435416
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30647031",
-      "name": "Jalahalli",
-      "coord": [
-        77.5198377,
-        13.0395842
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q33101535",
-      "name": "Jayanagar",
-      "coord": [
-        77.5802873,
-        12.9294558
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q33101537",
-      "name": "Rashtreeya Vidyalaya Road",
-      "coord": [
-        77.5802612,
-        12.9215875
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q33101538",
-      "name": "Banashankari",
-      "coord": [
-        77.5736287,
-        12.9155387
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q33101539",
-      "name": "Jayaprakash Nagar",
-      "coord": [
-        77.5731788,
-        12.9074229
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q39045921",
-      "name": "Lalbagh",
-      "coord": [
-        77.5800613,
-        12.9462868
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q39045926",
-      "name": "Southend Circle",
-      "coord": [
-        77.5800747,
-        12.938321
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q39046388",
-      "name": "Deepanjali Nagar",
-      "coord": [
-        77.5371011,
-        12.9522153
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q39046425",
-      "name": "Attiguppe",
-      "coord": [
-        77.533582,
-        12.961957
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q39046429",
-      "name": "Vijayanagar",
-      "coord": [
-        77.5374015,
-        12.9709156
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q39070950",
-      "name": "City Railway",
-      "coord": [
-        77.5657558,
-        12.9758405
-      ],
-      "aliases": []
-    },
     {
       "id": "Q104828788",
       "name": "Silk Institute",
@@ -921,6 +577,366 @@
       "coord": [
         77.58837,
         12.91711
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q16904094",
+      "name": "Yeshwanthpur",
+      "coord": [
+        77.5499,
+        13.0232
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17068244",
+      "name": "Kuvempu Road",
+      "coord": [
+        77.5569474,
+        12.9985024
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17070948",
+      "name": "Mahalakshmi",
+      "coord": [
+        77.5488344,
+        13.0083374
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17082550",
+      "name": "Peenya Industry",
+      "coord": [
+        77.5255669,
+        13.0364766
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17082567",
+      "name": "Peenya",
+      "coord": [
+        77.5334693,
+        13.0329868
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17085511",
+      "name": "Rajajinagar",
+      "coord": [
+        77.5497483,
+        13.0003455
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17088462",
+      "name": "Sampige Road",
+      "coord": [
+        77.570805,
+        12.9905455
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17088478",
+      "name": "Sandal Soap Factory",
+      "coord": [
+        77.5540211,
+        13.014793
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17100145",
+      "name": "Srirampura",
+      "coord": [
+        77.5633565,
+        12.9965259
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17100227",
+      "name": "Goraguntepalya",
+      "coord": [
+        77.5408622,
+        13.0284805
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20861592",
+      "name": "Chickpete",
+      "coord": [
+        77.5747975,
+        12.9675484
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q23838569",
+      "name": "Magadi Road",
+      "coord": [
+        77.5554118,
+        12.9756582
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q23838580",
+      "name": "Mysore Road",
+      "coord": [
+        77.5300737,
+        12.9467266
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q23838583",
+      "name": "Hosahalli",
+      "coord": [
+        77.5454434,
+        12.974303
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q23838590",
+      "name": "Nagasandra",
+      "coord": [
+        77.5001257,
+        13.0481315
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q24211039",
+      "name": "Sir M. Visveshwaraya",
+      "coord": [
+        77.5839458,
+        12.9742808
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q24912918",
+      "name": "Krishna Rajendra Market",
+      "coord": [
+        77.5735999,
+        12.9564453
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q24912941",
+      "name": "National College",
+      "coord": [
+        77.573736,
+        12.9506136
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q28153807",
+      "name": "Yelachenahalli",
+      "coord": [
+        77.5701687,
+        12.8959381
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30647029",
+      "name": "Dasarahalli",
+      "coord": [
+        77.5123791,
+        13.0435416
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30647031",
+      "name": "Jalahalli",
+      "coord": [
+        77.5198377,
+        13.0395842
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q33101535",
+      "name": "Jayanagar",
+      "coord": [
+        77.5802873,
+        12.9294558
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q33101537",
+      "name": "Rashtreeya Vidyalaya Road",
+      "coord": [
+        77.5802612,
+        12.9215875
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q33101538",
+      "name": "Banashankari",
+      "coord": [
+        77.5736287,
+        12.9155387
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q33101539",
+      "name": "Jayaprakash Nagar",
+      "coord": [
+        77.5731788,
+        12.9074229
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39045921",
+      "name": "Lalbagh",
+      "coord": [
+        77.5800613,
+        12.9462868
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39045926",
+      "name": "Southend Circle",
+      "coord": [
+        77.5800747,
+        12.938321
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39046388",
+      "name": "Deepanjali Nagar",
+      "coord": [
+        77.5371011,
+        12.9522153
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39046425",
+      "name": "Attiguppe",
+      "coord": [
+        77.533582,
+        12.961957
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39046429",
+      "name": "Vijayanagar",
+      "coord": [
+        77.5374015,
+        12.9709156
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q39070950",
+      "name": "City Railway",
+      "coord": [
+        77.5657558,
+        12.9758405
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4848761",
+      "name": "Baiyappanahalli",
+      "coord": [
+        77.6525903,
+        12.9906651
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5192189",
+      "name": "Cubbon Park",
+      "coord": [
+        77.5974655,
+        12.9809006
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5539214",
+      "name": "Trinity",
+      "coord": [
+        77.617,
+        12.973
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5539295",
+      "name": "Dr. B. R. Ambedkar metro station, Vidhana Soudha",
+      "coord": [
+        77.59164,
+        12.97874
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5539354",
+      "name": "MG Road",
+      "coord": [
+        77.6068,
+        12.9755
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5539450",
+      "name": "Swami Vivekananda Road",
+      "coord": [
+        77.6450043,
+        12.9859103
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5641098",
+      "name": "Halasuru",
+      "coord": [
+        77.62628,
+        12.97566
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6025080",
+      "name": "Indiranagar",
+      "coord": [
+        77.63865,
+        12.97833
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6737727",
+      "name": "Majestic",
+      "coord": [
+        77.5728703,
+        12.9756893
       ],
       "aliases": []
     }

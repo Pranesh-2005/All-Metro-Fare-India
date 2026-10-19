@@ -50,7 +50,15 @@
         "sourceUrl": "https://themetrorailguy.com/navi-mumbai-metro-information-map-updates/",
         "note": "Line 1 (Belapur–Pendhar). ₹10 min / ₹40 above 10 km matches the launch announcement; interior bands from aggregator."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "smartcard",
+          "label": "Smart card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
     }
   ],
   "lines": [

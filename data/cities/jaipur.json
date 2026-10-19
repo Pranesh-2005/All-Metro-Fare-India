@@ -42,7 +42,15 @@
         "sourceUrl": "https://transport.rajasthan.gov.in/content/dam/transport/metro/Passenger%20Information/MetroFares/Notification%20of%20%20Fare%20Revision%20%20Effective%20from%2031.01.2025.pdf",
         "note": "By stations (Pink Line). From JMRC's official fare-revision notification (rajasthan.gov.in). Smart card 10% off."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "smartcard",
+          "label": "Smart card (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
     }
   ],
   "lines": [

@@ -52,9 +52,17 @@
         "effectiveFrom": "2017-09-01",
         "confidence": "unverified",
         "sourceUrl": "https://themetrorailguy.com/lucknow-metro-information-map-updates/",
-        "note": "By stations. Go Smart card discount (excluded). UPMRC site is a calculator."
+        "note": "By stations. Go Smart card gives 10% off. UPMRC site is a calculator."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "go-smart",
+          "label": "Go Smart (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
     }
   ],
   "lines": [
@@ -64,27 +72,27 @@
       "name": "Red Line",
       "color": "#e2231a",
       "stations": [
-        "Q20861591",
-        "Q17049249",
-        "Q17123999",
-        "Q17067907",
-        "Q17090390",
-        "Q17049199",
-        "Q18109514",
-        "Q17072467",
-        "Q17052168",
-        "Q18111047",
-        "Q17055586",
-        "Q17088024",
-        "Q17054729",
-        "Q17064439",
-        "Q17070265",
-        "Q17058330",
-        "Q17049480",
-        "Q17068737",
-        "Q17086022",
+        "Q17075643",
         "Q17056424",
-        "Q17075643"
+        "Q17086022",
+        "Q17068737",
+        "Q17049480",
+        "Q17058330",
+        "Q17070265",
+        "Q17064439",
+        "Q17054729",
+        "Q17088024",
+        "Q17055586",
+        "Q18111047",
+        "Q17052168",
+        "Q17072467",
+        "Q18109514",
+        "Q17049199",
+        "Q17090390",
+        "Q17067907",
+        "Q17123999",
+        "Q17049249",
+        "Q20861591"
       ]
     }
   ],

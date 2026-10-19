@@ -46,7 +46,16 @@
         "sourceUrl": "https://city-rails.com/en/chennai-metro-map/",
         "note": "CMRL uses a station-pair matrix with five fare levels ₹10/20/30/40/50, not km bands; approximated by station count. QR/NCMC gets 20% off."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "qr-ncmc",
+          "label": "QR / NCMC (20% off)",
+          "kind": "percent",
+          "value": 20,
+          "group": "card"
+        }
+      ],
+      "whatsapp": "918300086000"
     }
   ],
   "lines": [
@@ -85,41 +94,6 @@
       ]
     },
     {
-      "id": "yellow-line-1",
-      "operator": "cmrl",
-      "name": "Yellow Line (1)",
-      "color": "#f6c200",
-      "stations": [
-        "Q110324106",
-        "Q134412413",
-        "Q134412416",
-        "Q134412417",
-        "Q134412418",
-        "Q134412420",
-        "Q134412421",
-        "Q134043115",
-        "Q134043107",
-        "Q135003335",
-        "Q17075798"
-      ]
-    },
-    {
-      "id": "yellow-line-2",
-      "operator": "cmrl",
-      "name": "Yellow Line (2)",
-      "color": "#f6c200",
-      "stations": [
-        "Q134044498",
-        "Q55624607",
-        "Q134044489",
-        "Q134044480",
-        "Q134044463",
-        "Q112683269",
-        "Q134044448",
-        "Q63442600"
-      ]
-    },
-    {
       "id": "green-line",
       "operator": "cmrl",
       "name": "Green Line",
@@ -153,306 +127,54 @@
         "Q17074640",
         "Q4708199"
       ]
+    },
+    {
+      "id": "yellow-line-1",
+      "operator": "cmrl",
+      "name": "Yellow Line (1)",
+      "color": "#f6c200",
+      "stations": [
+        "Q110324106",
+        "Q134412413",
+        "Q134412416",
+        "Q134412417",
+        "Q134412418",
+        "Q134412420",
+        "Q134412421",
+        "Q134043115",
+        "Q134043107",
+        "Q135003335"
+      ]
+    },
+    {
+      "id": "yellow-line-2",
+      "operator": "cmrl",
+      "name": "Yellow Line (2)",
+      "color": "#f6c200",
+      "stations": [
+        "Q134044498",
+        "Q55624607",
+        "Q134044489",
+        "Q134044480",
+        "Q134044463",
+        "Q112683269",
+        "Q134044448",
+        "Q63442600"
+      ]
+    },
+    {
+      "id": "yellow-line-3",
+      "operator": "cmrl",
+      "name": "Yellow Line (3)",
+      "color": "#f6c200",
+      "stations": [
+        "Q141763763",
+        "Q135003335",
+        "Q17075798"
+      ]
     }
   ],
   "stations": [
-    {
-      "id": "Q4708199",
-      "name": "Alandur",
-      "coord": [
-        80.2015485,
-        13.0042154
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5012859",
-      "name": "CMBT",
-      "coord": [
-        80.20396,
-        13.06853
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5091428",
-      "name": "Chennai Central",
-      "coord": [
-        80.2729073,
-        13.0814279
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5091440",
-      "name": "Chennai International Airport",
-      "coord": [
-        80.1642095,
-        12.9808255
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6435138",
-      "name": "Koyambedu",
-      "coord": [
-        80.1948671,
-        13.0734959
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17074640",
-      "name": "St. Thomas Mount",
-      "coord": [
-        80.19837,
-        12.99504
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q17075798",
-      "name": "Vadapalani",
-      "coord": [
-        80.2120723,
-        13.0507344
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18357501",
-      "name": "Guindy",
-      "coord": [
-        80.2131987,
-        13.0092292
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q18378132",
-      "name": "Ashok Nagar",
-      "coord": [
-        80.2111347,
-        13.0355385
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q19882103",
-      "name": "Arumbakkam",
-      "coord": [
-        80.2117,
-        13.0622
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q19891416",
-      "name": "Ekkattuthangal",
-      "coord": [
-        80.205302,
-        13.017128
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q19893884",
-      "name": "Meenambakkam",
-      "coord": [
-        80.176502,
-        12.9876595
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q19894462",
-      "name": "Nanganallur Road",
-      "coord": [
-        80.1939733,
-        12.9999339
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q20718160",
-      "name": "Thirumangalam",
-      "coord": [
-        80.20159,
-        13.08526
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30623617",
-      "name": "Shenoy Nagar",
-      "coord": [
-        80.22517,
-        13.07881
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30638909",
-      "name": "Anna Nagar Tower",
-      "coord": [
-        80.2087247,
-        13.0849752
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30638918",
-      "name": "Pachaiyappa's College",
-      "coord": [
-        80.2323148,
-        13.0755737
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30638919",
-      "name": "Anna Nagar East",
-      "coord": [
-        80.219518,
-        13.084654
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30638924",
-      "name": "Nehru Park",
-      "coord": [
-        80.2508538,
-        13.0786275
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30638925",
-      "name": "Kilpauk Medical College",
-      "coord": [
-        80.242777777,
-        13.0775
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30638926",
-      "name": "Egmore",
-      "coord": [
-        80.2611065,
-        13.0790586
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q30639073",
-      "name": "Little Mount",
-      "coord": [
-        80.2240194,
-        13.0145539
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q48732079",
-      "name": "Washermanpet",
-      "coord": [
-        80.2805268,
-        13.1070667
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q55602937",
-      "name": "AG-DMS",
-      "coord": [
-        80.2480329,
-        13.0446825
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q55624607",
-      "name": "Nandanam",
-      "coord": [
-        80.2410427,
-        13.0316509
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q55632346",
-      "name": "Saidapet",
-      "coord": [
-        80.228209,
-        13.0237199
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q55634996",
-      "name": "Teynampet",
-      "coord": [
-        80.2464607,
-        13.0371181
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q62005403",
-      "name": "High Court",
-      "coord": [
-        80.2850249,
-        13.0870685
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q62005418",
-      "name": "LIC",
-      "coord": [
-        80.2660489,
-        13.0645232
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q62005430",
-      "name": "Mannadi",
-      "coord": [
-        80.2861601,
-        13.0951659
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q62005539",
-      "name": "Government Estate",
-      "coord": [
-        80.272851,
-        13.069571
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q62005544",
-      "name": "Thousand Lights",
-      "coord": [
-        80.2585173,
-        13.0583556
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q63442600",
-      "name": "Lighthouse",
-      "coord": [
-        80.27972,
-        13.04187
-      ],
-      "aliases": []
-    },
     {
       "id": "Q104856728",
       "name": "Wimco Nagar",
@@ -662,7 +384,7 @@
     },
     {
       "id": "Q134412421",
-      "name": "Iyyapanthangal",
+      "name": "Iyappanthangal",
       "coord": [
         80.13535,
         13.03811
@@ -675,6 +397,312 @@
       "coord": [
         80.15683,
         13.03587
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141763763",
+      "name": "Alapakkam",
+      "coord": [
+        80.1635898,
+        13.0381814
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17074640",
+      "name": "St. Thomas Mount",
+      "coord": [
+        80.19837,
+        12.99504
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q17075798",
+      "name": "Vadapalani",
+      "coord": [
+        80.2120723,
+        13.0507344
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18357501",
+      "name": "Guindy",
+      "coord": [
+        80.2131987,
+        13.0092292
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q18378132",
+      "name": "Ashok Nagar",
+      "coord": [
+        80.2111347,
+        13.0355385
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19882103",
+      "name": "Arumbakkam",
+      "coord": [
+        80.2117,
+        13.0622
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19891416",
+      "name": "Ekkattuthangal",
+      "coord": [
+        80.205302,
+        13.017128
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19893884",
+      "name": "Meenambakkam",
+      "coord": [
+        80.176502,
+        12.9876595
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q19894462",
+      "name": "Nanganallur Road",
+      "coord": [
+        80.1939733,
+        12.9999339
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q20718160",
+      "name": "Thirumangalam",
+      "coord": [
+        80.20159,
+        13.08526
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30623617",
+      "name": "Shenoy Nagar",
+      "coord": [
+        80.22517,
+        13.07881
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30638909",
+      "name": "Anna Nagar Tower",
+      "coord": [
+        80.2087247,
+        13.0849752
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30638918",
+      "name": "Pachaiyappa's College",
+      "coord": [
+        80.2323148,
+        13.0755737
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30638919",
+      "name": "Anna Nagar East",
+      "coord": [
+        80.219518,
+        13.084654
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30638924",
+      "name": "Nehru Park",
+      "coord": [
+        80.2508538,
+        13.0786275
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30638925",
+      "name": "Kilpauk Medical College",
+      "coord": [
+        80.242777777,
+        13.0775
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30638926",
+      "name": "Egmore",
+      "coord": [
+        80.2611065,
+        13.0790586
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q30639073",
+      "name": "Little Mount",
+      "coord": [
+        80.2240194,
+        13.0145539
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q4708199",
+      "name": "Alandur",
+      "coord": [
+        80.2015485,
+        13.0042154
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q48732079",
+      "name": "Washermanpet",
+      "coord": [
+        80.2805268,
+        13.1070667
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5012859",
+      "name": "CMBT",
+      "coord": [
+        80.20396,
+        13.06853
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5091428",
+      "name": "Chennai Central",
+      "coord": [
+        80.2729073,
+        13.0814279
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5091440",
+      "name": "Chennai International Airport",
+      "coord": [
+        80.1642095,
+        12.9808255
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55602937",
+      "name": "AG-DMS",
+      "coord": [
+        80.2480329,
+        13.0446825
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55624607",
+      "name": "Nandanam",
+      "coord": [
+        80.2410427,
+        13.0316509
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55632346",
+      "name": "Saidapet",
+      "coord": [
+        80.228209,
+        13.0237199
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q55634996",
+      "name": "Teynampet",
+      "coord": [
+        80.2464607,
+        13.0371181
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62005403",
+      "name": "High Court",
+      "coord": [
+        80.2850249,
+        13.0870685
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62005418",
+      "name": "LIC",
+      "coord": [
+        80.2660489,
+        13.0645232
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62005430",
+      "name": "Mannadi",
+      "coord": [
+        80.2861601,
+        13.0951659
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62005539",
+      "name": "Government Estate",
+      "coord": [
+        80.272851,
+        13.069571
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q62005544",
+      "name": "Thousand Lights",
+      "coord": [
+        80.2585173,
+        13.0583556
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q63442600",
+      "name": "Lighthouse",
+      "coord": [
+        80.27972,
+        13.04187
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6435138",
+      "name": "Koyambedu",
+      "coord": [
+        80.1948671,
+        13.0734959
       ],
       "aliases": []
     }

@@ -11,7 +11,24 @@ import {
   type MapRef,
 } from "@/components/ui/map";
 
-export type MapPoint = { id: string; name: string; coord: [number, number] };
+export type MapPoint = {
+  id: string;
+  name: string;
+  coord: [number, number];
+  /** True where two or more lines meet, so the map can call it out. */
+  interchange: boolean;
+  /** One colour per line serving the station, deduped. Empty for single-line stops. */
+  lineColors: string[];
+};
+
+/** One ride on one line — the map draws each in that line's own colour. */
+export type RouteSegment = {
+  id: string;
+  color: string;
+  coordinates: [number, number][];
+  /** True for a walking transfer between systems: drawn dashed. */
+  dashed?: boolean;
+};
 
 const INDIA_CENTER: [number, number] = [78.96, 20.59];
 
@@ -22,12 +39,14 @@ const INDIA_CENTER: [number, number] = [78.96, 20.59];
 export function MapView({
   geometry,
   points,
+  segments,
   fromId,
   toId,
   onPick,
 }: {
   geometry: [number, number][];
   points: MapPoint[];
+  segments: RouteSegment[];
   fromId: string | null;
   toId: string | null;
   onPick: (stationId: string) => void;
@@ -50,6 +69,12 @@ export function MapView({
 
   const endpoint = (id: string | null) => id !== null && (id === fromId || id === toId);
   const colorOf = (id: string) => (id === fromId ? "#16a34a" : id === toId ? "#dc2626" : null);
+  const ringOf = (point: MapPoint) => {
+    const colors = [...new Set(point.lineColors)];
+    if (colors.length === 0) return "#64748b";
+    if (colors.length === 1) return colors[0];
+    return `conic-gradient(${colors.join(", ")})`;
+  };
 
   return (
     <Map
@@ -58,9 +83,17 @@ export function MapView({
       zoom={geometry.length > 1 ? 11 : 4.4}
       className="h-full w-full"
     >
-      {geometry.length > 1 && (
-        <MapRoute coordinates={geometry} color="#2563eb" width={5} opacity={0.9} />
-      )}
+      {segments.map((segment) => (
+        <MapRoute
+          key={segment.id}
+          id={`seg-${segment.id}`}
+          coordinates={segment.coordinates}
+          color={segment.color}
+          width={5}
+          opacity={0.9}
+          dashArray={segment.dashed ? [1.5, 1.5] : undefined}
+        />
+      ))}
       {points.map((point) => {
         const color = colorOf(point.id);
         return (
@@ -71,16 +104,28 @@ export function MapView({
             onClick={() => onPick(point.id)}
           >
             <MarkerContent>
-              <span
-                className="block rounded-full border-2 border-white shadow"
-                style={{
-                  width: endpoint(point.id) ? 16 : 10,
-                  height: endpoint(point.id) ? 16 : 10,
-                  background: color ?? "#64748b",
-                }}
-              />
+              {point.interchange && !endpoint(point.id) ? (
+                <span
+                  className="block rounded-full border-2 border-white shadow"
+                  style={{ width: 14, height: 14, background: ringOf(point) }}
+                >
+                  <span className="absolute top-1/2 left-1/2 block size-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-sm" />
+                </span>
+              ) : (
+                <span
+                  className="block rounded-full border-2 border-white shadow"
+                  style={{
+                    width: endpoint(point.id) ? 16 : 10,
+                    height: endpoint(point.id) ? 16 : 10,
+                    background: color ?? (point.interchange ? ringOf(point) : "#64748b"),
+                  }}
+                />
+              )}
             </MarkerContent>
-            <MarkerTooltip>{point.name}</MarkerTooltip>
+            <MarkerTooltip>
+              {point.name}
+              {point.interchange ? " · interchange" : ""}
+            </MarkerTooltip>
           </MapMarker>
         );
       })}

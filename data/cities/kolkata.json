@@ -85,27 +85,6 @@
       ]
     },
     {
-      "id": "purple-line",
-      "operator": "kmrc",
-      "name": "Purple Line",
-      "color": "#6b2a86",
-      "stations": [
-        "Q104612856",
-        "Q30634510",
-        "Q30634511",
-        "Q84716021",
-        "Q85273870",
-        "Q84996197",
-        "Q85069094",
-        "Q85214864",
-        "Q30634513",
-        "Q30645973",
-        "Q30639601",
-        "Q7138060",
-        "Q5399030"
-      ]
-    },
-    {
       "id": "green-line",
       "operator": "kmrc",
       "name": "Green Line",
@@ -145,214 +124,73 @@
       ]
     },
     {
+      "id": "purple-line",
+      "operator": "kmrc",
+      "name": "Purple Line",
+      "color": "#6b2a86",
+      "stations": [
+        "Q104612856",
+        "Q30634510",
+        "Q30634511",
+        "Q84716021",
+        "Q85273870",
+        "Q84996197",
+        "Q85069094",
+        "Q85214864",
+        "Q30634513",
+        "Q30645973",
+        "Q30639601",
+        "Q7138060",
+        "Q5399030"
+      ]
+    },
+    {
       "id": "yellow-line",
       "operator": "kmrc",
       "name": "Yellow Line",
       "color": "#f6c200",
       "stations": [
-        "Q65090394",
-        "Q76741320",
+        "Q14942939",
         "Q31725714",
-        "Q14942939"
+        "Q76741320",
+        "Q65090394"
       ]
     }
   ],
   "stations": [
     {
-      "id": "Q4882396",
-      "name": "Belgachia",
+      "id": "Q104612856",
+      "name": "IIM",
       "coord": [
-        88.386389,
-        22.605833
+        88.301556887,
+        22.451913748
       ],
       "aliases": []
     },
     {
-      "id": "Q5061425",
-      "name": "Central",
+      "id": "Q109524252",
+      "name": "Ritwik Ghatak",
       "coord": [
-        88.358788888,
-        22.572469444
+        88.3965,
+        22.5331
       ],
       "aliases": []
     },
     {
-      "id": "Q5071229",
-      "name": "Chandni Chowk",
+      "id": "Q109968614",
+      "name": "Beliaghata",
       "coord": [
-        88.354137,
-        22.566796
+        88.40838,
+        22.56183
       ],
       "aliases": []
     },
     {
-      "id": "Q5313576",
-      "name": "Dum Dum",
+      "id": "Q130366700",
+      "name": "Nalban",
       "coord": [
-        88.392778,
-        22.621111
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5399030",
-      "name": "Esplanade",
-      "coord": [
-        88.351667,
-        22.564444
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5564298",
-      "name": "Girish Park",
-      "coord": [
-        88.363083,
-        22.587143
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q5565052",
-      "name": "Gitanjali",
-      "coord": [
-        88.3699223,
-        22.469425
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6164578",
-      "name": "Jatin Das Park",
-      "coord": [
-        88.346489,
-        22.524262
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6379214",
-      "name": "Kavi Nazrul",
-      "coord": [
-        88.3806582,
-        22.4642442
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6379216",
-      "name": "Kavi Subhash",
-      "coord": [
-        88.398056,
-        22.471944
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6733119",
-      "name": "Mahanayak Uttam Kumar",
-      "coord": [
-        88.345,
-        22.494722
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6733523",
-      "name": "Mahatma Gandhi Road",
-      "coord": [
-        88.361401,
-        22.580858
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6735340",
-      "name": "Maidan",
-      "coord": [
-        88.348889,
-        22.549444
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6785356",
-      "name": "Masterda Surya Sen",
-      "coord": [
-        88.360871,
-        22.473521
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6998599",
-      "name": "Netaji Bhavan",
-      "coord": [
-        88.346111,
-        22.533333
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q6998636",
-      "name": "Netaji",
-      "coord": [
-        88.3460668,
-        22.4809185
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q7138060",
-      "name": "Park Street",
-      "coord": [
-        88.350278,
-        22.555
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q7278756",
-      "name": "Rabindra Sadan",
-      "coord": [
-        88.347222,
-        22.541389
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q7278757",
-      "name": "Rabindra Sarobar",
-      "coord": [
-        88.345556,
-        22.507222
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q7461685",
-      "name": "Shahid Khudiram",
-      "coord": [
-        88.391667,
-        22.465972
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q7499796",
-      "name": "Shobhabazar Sutanuti",
-      "coord": [
-        88.365285,
-        22.596029
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q7505976",
-      "name": "Shyambazaar",
-      "coord": [
-        88.372586,
-        22.601313
+        88.4211529,
+        22.5732216
       ],
       "aliases": []
     },
@@ -537,11 +375,83 @@
       "aliases": []
     },
     {
+      "id": "Q4882396",
+      "name": "Belgachia",
+      "coord": [
+        88.386389,
+        22.605833
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5061425",
+      "name": "Central",
+      "coord": [
+        88.358788888,
+        22.572469444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5071229",
+      "name": "Chandni Chowk",
+      "coord": [
+        88.354137,
+        22.566796
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5313576",
+      "name": "Dum Dum",
+      "coord": [
+        88.392778,
+        22.621111
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5399030",
+      "name": "Esplanade",
+      "coord": [
+        88.351667,
+        22.564444
+      ],
+      "aliases": []
+    },
+    {
       "id": "Q55632405",
       "name": "Salt Lake Sector-V",
       "coord": [
         88.429822,
         22.581318
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5564298",
+      "name": "Girish Park",
+      "coord": [
+        88.363083,
+        22.587143
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q5565052",
+      "name": "Gitanjali",
+      "coord": [
+        88.3699223,
+        22.469425
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6164578",
+      "name": "Jatin Das Park",
+      "coord": [
+        88.346489,
+        22.524262
       ],
       "aliases": []
     },
@@ -591,6 +501,24 @@
       "aliases": []
     },
     {
+      "id": "Q6379214",
+      "name": "Kavi Nazrul",
+      "coord": [
+        88.3806582,
+        22.4642442
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6379216",
+      "name": "Kavi Subhash",
+      "coord": [
+        88.398056,
+        22.471944
+      ],
+      "aliases": []
+    },
+    {
       "id": "Q65090385",
       "name": "Jyotirindra Nandi",
       "coord": [
@@ -614,6 +542,114 @@
       "coord": [
         88.437472222,
         22.648694444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6733119",
+      "name": "Mahanayak Uttam Kumar",
+      "coord": [
+        88.345,
+        22.494722
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6733523",
+      "name": "Mahatma Gandhi Road",
+      "coord": [
+        88.361401,
+        22.580858
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6735340",
+      "name": "Maidan",
+      "coord": [
+        88.348889,
+        22.549444
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6785356",
+      "name": "Masterda Surya Sen",
+      "coord": [
+        88.360871,
+        22.473521
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6998599",
+      "name": "Netaji Bhavan",
+      "coord": [
+        88.346111,
+        22.533333
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q6998636",
+      "name": "Netaji",
+      "coord": [
+        88.3460668,
+        22.4809185
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7138060",
+      "name": "Park Street",
+      "coord": [
+        88.350278,
+        22.555
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7278756",
+      "name": "Rabindra Sadan",
+      "coord": [
+        88.347222,
+        22.541389
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7278757",
+      "name": "Rabindra Sarobar",
+      "coord": [
+        88.345556,
+        22.507222
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7461685",
+      "name": "Shahid Khudiram",
+      "coord": [
+        88.391667,
+        22.465972
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7499796",
+      "name": "Shobhabazar Sutanuti",
+      "coord": [
+        88.365285,
+        22.596029
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q7505976",
+      "name": "Shyambazaar",
+      "coord": [
+        88.372586,
+        22.601313
       ],
       "aliases": []
     },
@@ -668,42 +704,6 @@
       "coord": [
         88.313339,
         22.487544
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q104612856",
-      "name": "IIM",
-      "coord": [
-        88.301556887,
-        22.451913748
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q109524252",
-      "name": "Ritwik Ghatak",
-      "coord": [
-        88.3965,
-        22.5331
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q109968614",
-      "name": "Beliaghata",
-      "coord": [
-        88.40838,
-        22.56183
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q130366700",
-      "name": "Nalban",
-      "coord": [
-        88.4211529,
-        22.5732216
       ],
       "aliases": []
     }

@@ -38,7 +38,15 @@
         "sourceUrl": "https://www.ndtv.com/india-news/pm-narendra-modi-to-virtually-flag-off-priority-corridor-of-agra-metro-tomorrow-5180637",
         "note": "Priority corridor (6 stations). UPMRC quoted ₹10 ≤1 km, ₹15 ≤2 km, ₹20 for 2–6 km. NCMC 10% off. Will change as the line extends."
       },
-      "discounts": []
+      "discounts": [
+        {
+          "id": "ncmc",
+          "label": "NCMC (10% off)",
+          "kind": "percent",
+          "value": 10,
+          "group": "card"
+        }
+      ]
     }
   ],
   "lines": [

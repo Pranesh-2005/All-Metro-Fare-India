@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import type { MapPoint } from "./map-view";
+import type { MapPoint, RouteSegment } from "./map-view";
 
 /**
  * MapLibre needs a browser, so the map is loaded without SSR and only once the
@@ -19,6 +19,7 @@ const MapView = dynamic(() => import("./map-view").then((mod) => mod.MapView), {
 export function RouteMap(props: {
   geometry: [number, number][];
   points: MapPoint[];
+  segments: RouteSegment[];
   fromId: string | null;
   toId: string | null;
   onPick: (stationId: string) => void;
