@@ -80,9 +80,21 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* Applies the saved theme before paint, so dark users see no flash.
+            The map primitive reads `.dark` / `.light` from <html> directly, so
+            both are kept in sync — removing `.dark` alone would strand it. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'try{var t=localStorage.getItem("theme");var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;var r=document.documentElement.classList;r.toggle("dark",d);r.toggle("light",!d)}catch(e){}',
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

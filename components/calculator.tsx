@@ -1,10 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { ArrowUpDown } from "lucide-react";
+import { CityPicker } from "@/components/city-picker";
 import { FareBreakdown } from "@/components/fare-breakdown";
 import { RouteMap } from "@/components/route-map";
 import type { MapPoint, RouteSegment } from "@/components/map-view";
 import { StationPicker } from "@/components/station-picker";
+import { ThemeToggle } from "@/components/theme-toggle";
 import {
   allDiscounts,
   cityFareVariants,
@@ -13,14 +16,39 @@ import {
 } from "@/lib/discounts";
 import { planTripForCity, type Route } from "@/lib/fare/engine";
 import { minutes, rupees } from "@/lib/format";
+import { changeStationIds, journeySteps } from "@/lib/journey";
 import type { City } from "@/lib/schema";
 
 export function Calculator({ cities }: { cities: City[] }) {
-  const [cityId, setCityId] = useState(cities[0]?.id ?? "");
+  // Delhi NCR is the busiest network, so it is the best first thing to show.
+  const defaultCity = cities.find((c) => c.id === "delhi") ?? cities[0];
+  const [cityId, setCityId] = useState(defaultCity?.id ?? "");
   const [fromId, setFromId] = useState<string | null>(null);
   const [toId, setToId] = useState<string | null>(null);
   const [variantId, setVariantId] = useState<string>("default");
   const [selection, setSelection] = useState<DiscountSelection>({});
+  const [hydrated, setHydrated] = useState(false);
+
+  // Reopen in the city the rider used last time. Runs after mount because
+  // localStorage does not exist on the server.
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("metro-city");
+      if (stored && cities.some((city) => city.id === stored)) setCityId(stored);
+    } catch {
+      // Storage blocked: the default city still works.
+    }
+    setHydrated(true);
+  }, [cities]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    try {
+      localStorage.setItem("metro-city", cityId);
+    } catch {
+      // Storage blocked: nothing to remember.
+    }
+  }, [cityId, hydrated]);
 
   const city = cities.find((c) => c.id === cityId) ?? cities[0];
 
@@ -31,6 +59,11 @@ export function Calculator({ cities }: { cities: City[] }) {
 
   const variants = city ? cityFareVariants(city) : [];
   const discountOptions = city ? allDiscounts(city) : [];
+
+  const changeIds = useMemo(
+    () => (city && plan ? changeStationIds(journeySteps(plan.cheapest, city)) : new Set<string>()),
+    [city, plan],
+  );
 
   const mapPoints = useMemo<MapPoint[]>(() => {
     if (!city) return [];
@@ -44,24 +77,46 @@ export function Calculator({ cities }: { cities: City[] }) {
         name: station.name,
         coord: station.coord,
         interchange: service.interchanges.has(station.id),
+        changeHere: changeIds.has(station.id),
         lineColors: service.colorsOf.get(station.id) ?? [],
       }));
-  }, [city, plan]);
+  }, [city, plan, changeIds]);
 
   const segments = useMemo<RouteSegment[]>(
     () => (city && plan ? segmentsOf(plan.cheapest, city) : []),
     [city, plan],
   );
 
-  const pickStation = (stationId: string) => {
-    if (!fromId || (fromId && toId)) {
+  // Tapping the map fills the empty field first; with both filled it starts a
+  // fresh trip. It never wipes a station the user already picked.
+  const pickOnMap = (stationId: string) => {
+    if (!fromId) {
       setFromId(stationId);
-      setToId(null);
       return;
     }
-    if (stationId === fromId) return;
-    setToId(stationId);
+    if (!toId) {
+      if (stationId !== fromId) setToId(stationId);
+      return;
+    }
+    if (stationId === fromId || stationId === toId) return;
+    setFromId(stationId);
+    setToId(null);
   };
+
+  const swap = () => {
+    setFromId(toId);
+    setToId(fromId);
+  };
+
+  const focusBounds = useMemo<[[number, number], [number, number]] | null>(() => {
+    if (!city || city.stations.length === 0) return null;
+    const lons = city.stations.map((station) => station.coord[0]);
+    const lats = city.stations.map((station) => station.coord[1]);
+    return [
+      [Math.min(...lons), Math.min(...lats)],
+      [Math.max(...lons), Math.max(...lats)],
+    ];
+  }, [city]);
 
   if (!city) {
     return (
@@ -88,71 +143,88 @@ export function Calculator({ cities }: { cities: City[] }) {
   return (
     <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
       <div className="space-y-6">
-        <header className="space-y-1">
-          <h1 className="text-2xl font-semibold tracking-tight">Metro fare, any Indian city</h1>
-          <p className="text-muted-foreground text-sm">
-            Fares are computed from each operator&rsquo;s own published slabs, so a trip that crosses
-            two systems shows two fares.
-          </p>
+        <header className="flex items-start justify-between gap-4">
+          <div className="space-y-1">
+            <h1 className="text-2xl font-semibold tracking-tight">Metro fare, any Indian city</h1>
+            <p className="text-muted-foreground text-sm">
+              Pick where you start and where you go. You&rsquo;ll see the fare, the lines to take,
+              and where to change.
+            </p>
+          </div>
+          <ThemeToggle />
         </header>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="space-y-3">
           {cities.length > 1 && (
-            <div className="sm:col-span-2">
-              <label className="text-muted-foreground mb-1 block text-xs font-medium">City</label>
-              <select
-                className="border-input bg-background h-9 w-full rounded-md border px-3 text-sm"
-                value={cityId}
-                onChange={(event) => {
-                  setCityId(event.target.value);
-                  setFromId(null);
-                  setToId(null);
-                }}
-              >
-                {cities.map((option) => (
-                  <option key={option.id} value={option.id}>
-                    {option.name}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <CityPicker
+              cities={cities}
+              value={cityId}
+              onChange={(id) => {
+                setCityId(id);
+                setFromId(null);
+                setToId(null);
+              }}
+            />
           )}
 
-          <StationPicker
-            label="From"
-            stations={city.stations}
-            value={fromId}
-            onChange={pickStation}
-            placeholder="Origin station"
-          />
-          <StationPicker
-            label="To"
-            stations={city.stations}
-            value={toId}
-            onChange={(id) => id !== fromId && setToId(id)}
-            placeholder="Destination station"
-          />
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2 gap-y-3">
+            <StationPicker
+              label="From"
+              dotColor="#16a34a"
+              stations={city.stations}
+              lines={city.lines}
+              value={fromId}
+              onChange={setFromId}
+              onClear={() => setFromId(null)}
+              placeholder="Origin station"
+            />
+            <button
+              type="button"
+              onClick={swap}
+              disabled={!fromId && !toId}
+              aria-label="Swap origin and destination"
+              title="Swap origin and destination"
+              className="border-input bg-background hover:bg-accent focus-visible:ring-ring row-span-2 flex size-11 items-center justify-center self-center rounded-full border shadow-sm transition active:scale-95 focus-visible:ring-2 focus-visible:outline-none disabled:opacity-40"
+            >
+              <ArrowUpDown className="size-4" aria-hidden="true" />
+            </button>
+            <StationPicker
+              label="To"
+              dotColor="#dc2626"
+              stations={city.stations}
+              lines={city.lines}
+              value={toId}
+              onChange={setToId}
+              onClear={() => setToId(null)}
+              placeholder="Destination station"
+            />
+          </div>
         </div>
 
         {variants.length > 0 && (
           <div>
-            <label className="text-muted-foreground mb-1 block text-xs font-medium">Fare table</label>
+            <label className="text-muted-foreground mb-1 block text-xs font-medium">
+              Ticket type
+            </label>
             <select
-              className="border-input bg-background h-9 w-full rounded-md border px-3 text-sm"
+              className="border-input bg-background h-11 w-full rounded-md border px-3 text-sm"
               value={variantId}
               onChange={(event) => setVariantId(event.target.value)}
             >
-              <option value="default">Standard</option>
+              <option value="default">Standard fare</option>
               {variants.map((variant) => (
                 <option key={variant.id} value={variant.id}>
                   {variant.label}
                 </option>
               ))}
             </select>
+            <p className="text-muted-foreground mt-1 text-xs">
+              Some cities charge differently for this ticket.
+            </p>
           </div>
         )}
 
-        {discountOptions.length > 0 && (
+        {plan && discountOptions.length > 0 && (
           <fieldset className="space-y-2">
             <legend className="text-muted-foreground mb-1 text-xs font-medium">
               Concession (pick one per group)
@@ -165,7 +237,7 @@ export function Calculator({ cities }: { cities: City[] }) {
                     key={discount.id}
                     type="button"
                     aria-pressed={on}
-                    className={`rounded-full border px-3 py-1 text-xs transition ${
+                    className={`rounded-full border px-3 py-1.5 text-sm transition ${
                       on
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-input hover:bg-accent"
@@ -181,13 +253,17 @@ export function Calculator({ cities }: { cities: City[] }) {
         )}
 
         <div className="rounded-lg border p-4">
-          {!fromId || !toId ? (
+          {!fromId ? (
             <p className="text-muted-foreground text-sm">
-              Pick an origin and a destination, or tap a station on the map.
+              Pick where you&rsquo;re starting from, or tap a station on the map.
+            </p>
+          ) : !toId ? (
+            <p className="text-muted-foreground text-sm">
+              Now pick where you&rsquo;re going, or tap a second station on the map.
             </p>
           ) : !plan ? (
             <p className="text-muted-foreground text-sm">
-              No route found between those two stations.
+              No route connects those two stations. Try another pair.
             </p>
           ) : (
             <div className="space-y-4">
@@ -207,15 +283,21 @@ export function Calculator({ cities }: { cities: City[] }) {
         </div>
       </div>
 
-      <div className="h-[420px] overflow-hidden rounded-lg border lg:sticky lg:top-8 lg:h-[calc(100vh-6rem)]">
-        <RouteMap
-          geometry={plan?.cheapest.geometry ?? []}
-          points={mapPoints}
-          segments={segments}
-          fromId={fromId}
-          toId={toId}
-          onPick={pickStation}
-        />
+      <div className="space-y-2 lg:sticky lg:top-8">
+        <div className="h-[420px] overflow-hidden rounded-lg border lg:h-[calc(100vh-8rem)]">
+          <RouteMap
+            geometry={plan?.cheapest.geometry ?? []}
+            points={mapPoints}
+            segments={segments}
+            focusBounds={focusBounds}
+            fromId={fromId}
+            toId={toId}
+            onPick={pickOnMap}
+          />
+        </div>
+        <p className="text-muted-foreground text-xs">
+          Tap two stations on the map, or search above.
+        </p>
       </div>
     </div>
   );
@@ -270,6 +352,13 @@ function segmentsOf(route: Route, city: City): RouteSegment[] {
     const from = coord.get(hop.fromStation);
     const to = coord.get(hop.toStation);
     if (!from || !to) continue;
+    // A same-station change has no distance to draw; it still ends the run so
+    // the next line starts in its own colour.
+    if (!hop.lineId && from[0] === to[0] && from[1] === to[1]) {
+      current = null;
+      currentKey = null;
+      continue;
+    }
     const key = hop.lineId ?? "walk";
     if (!current || currentKey !== key) {
       current = {

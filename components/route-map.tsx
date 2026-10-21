@@ -20,6 +20,7 @@ export function RouteMap(props: {
   geometry: [number, number][];
   points: MapPoint[];
   segments: RouteSegment[];
+  focusBounds: [[number, number], [number, number]] | null;
   fromId: string | null;
   toId: string | null;
   onPick: (stationId: string) => void;
