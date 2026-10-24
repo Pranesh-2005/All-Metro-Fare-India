@@ -234,12 +234,14 @@ function largestComponent(
 }
 
 async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
-  const stationRows = await sparql(
-    `SELECT ?s ?sLabel ?coord ?l WHERE {
-       ?s wdt:P16 wd:${cfg.wikidataNetwork} ; wdt:P625 ?coord ; wdt:P81 ?l .
-       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-     }`,
-  );
+   const stationRows = await sparql(
+     `SELECT ?s ?sLabel ?coord ?l WHERE {
+        ?s wdt:P16 wd:${cfg.wikidataNetwork} ; wdt:P625 ?coord ; wdt:P81 ?l .
+        MINUS { ?s wdt:P5817 wd:Q383119 . }   # building or structure under construction
+        MINUS { ?s wdt:P5817 wd:Q811683 . }    # proposed building or structure
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+      }`,
+   );
   const adjacencyRows = await sparql(
     `SELECT ?s ?adj ?line WHERE {
        ?s wdt:P16 wd:${cfg.wikidataNetwork} .

@@ -42,3 +42,4 @@ next-env.d.ts
 
 # scratch: raw/failed source dumps from data fetching (data/cities/* is the real output)
 /data/raw/
+/.tmp/
