@@ -218,7 +218,8 @@
       "stations": [
         "Q12419759",
         "Q7426116",
-        "Q4207354"
+        "Q4207354",
+        "Q4207366"
       ]
     },
     {
@@ -247,8 +248,7 @@
         "Q7499286",
         "Q28178866",
         "Q7141807",
-        "Q4207354",
-        "Q4207366"
+        "Q4207354"
       ]
     },
     {
@@ -376,15 +376,24 @@
       ]
     },
     {
-      "id": "rapid-metro-gurgaon",
+      "id": "rapid-metro-gurgaon-1",
       "operator": "rapidmetro",
-      "name": "Rapid Metro Gurgaon",
+      "name": "Rapid Metro Gurgaon (1)",
       "color": "#00b7c3",
       "stations": [
         "Q16999809",
         "Q17026075",
         "Q16999885",
         "Q16999711",
+        "Q16999832"
+      ]
+    },
+    {
+      "id": "rapid-metro-gurgaon-2",
+      "operator": "rapidmetro",
+      "name": "Rapid Metro Gurgaon (2)",
+      "color": "#00b7c3",
+      "stations": [
         "Q16999832",
         "Q11307061",
         "Q62024534",
