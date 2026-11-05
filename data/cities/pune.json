@@ -87,9 +87,40 @@
       ]
     },
     {
-      "id": "purple-line",
+      "id": "pink-line-pune-metro",
       "operator": "mahametro-pune",
-      "name": "Purple Line",
+      "name": "Pink Line (Pune metro)",
+      "color": "#e5338c",
+      "stations": [
+        "Q121139876",
+        "Q121139922",
+        "Q141989122",
+        "Q142019589",
+        "Q142019497",
+        "Q142019467",
+        "Q142019387",
+        "Q142019136",
+        "Q142018998",
+        "Q142018889",
+        "Q142010465",
+        "Q142009629",
+        "Q142008919",
+        "Q142007969",
+        "Q142007073",
+        "Q141993948",
+        "Q141993897",
+        "Q141993804",
+        "Q141993708",
+        "Q141993653",
+        "Q141993574",
+        "Q141993503",
+        "Q141988965"
+      ]
+    },
+    {
+      "id": "purple-line-pune-metro",
+      "operator": "mahametro-pune",
+      "name": "Purple Line (Pune metro)",
       "color": "#6b2a86",
       "stations": [
         "Q111197736",
@@ -201,10 +232,10 @@
     },
     {
       "id": "Q121139876",
-      "name": "Civil Court",
+      "name": "District Court Pune",
       "coord": [
-        73.858006202,
-        18.526909261
+        73.8565587,
+        18.5283313
       ],
       "aliases": []
     },
@@ -212,8 +243,8 @@
       "id": "Q121139922",
       "name": "Shivaji Nagar",
       "coord": [
-        73.849543888,
-        18.532715826
+        73.848724,
+        18.530387
       ],
       "aliases": []
     },
@@ -358,6 +389,195 @@
       "coord": [
         73.841531,
         18.562108
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141988965",
+      "name": "Maan",
+      "coord": [
+        73.6880159,
+        18.5792129
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141989122",
+      "name": "Agriculture College",
+      "coord": [
+        73.8414867,
+        18.533006
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993503",
+      "name": "Maan MIDC Circle - Phase 2",
+      "coord": [
+        73.6948179,
+        18.5840185
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993574",
+      "name": "Maan Bus Depot",
+      "coord": [
+        73.7028954,
+        18.5881015
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993653",
+      "name": "Hinjawadi Phase 2 Circle 2",
+      "coord": [
+        73.7092228,
+        18.5941952
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993708",
+      "name": "Hinjawadi Phase 2 Circle 1",
+      "coord": [
+        73.7171607,
+        18.59659
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993804",
+      "name": "Padmabhushan Chowk",
+      "coord": [
+        73.7278263,
+        18.5944867
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993897",
+      "name": "Shree Shiv Chhatrapati Shivaji Maharaj Chowk Hinjawadi",
+      "coord": [
+        73.7373573,
+        18.5923946
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q141993948",
+      "name": "Hinjawadi Phase 1",
+      "coord": [
+        73.7463002,
+        18.5909665
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142007073",
+      "name": "Wakad Chowk",
+      "coord": [
+        73.7575587,
+        18.5902986
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142007969",
+      "name": "Shree Shiv Chhatrapati Sports Complex Mahalunge",
+      "coord": [
+        73.7615418,
+        18.5797092
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142008919",
+      "name": "Mitcon Balewadi",
+      "coord": [
+        73.7660624,
+        18.5750336
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142009629",
+      "name": "R K Laxman Museum Balewadi",
+      "coord": [
+        73.7718487,
+        18.5743428
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142010465",
+      "name": "Balewadi High Street",
+      "coord": [
+        73.7748382,
+        18.570512
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142018889",
+      "name": "Balewadi Phata",
+      "coord": [
+        73.7797665,
+        18.5641859
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142018998",
+      "name": "Baner Gaon",
+      "coord": [
+        73.7905982,
+        18.5591961
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142019136",
+      "name": "Baner Pashan Link Road",
+      "coord": [
+        73.7976669,
+        18.5549554
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142019387",
+      "name": "Aundh",
+      "coord": [
+        73.8082572,
+        18.5503056
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142019467",
+      "name": "Sakal Nagar",
+      "coord": [
+        73.8196654,
+        18.5463251
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142019497",
+      "name": "Savitribai Phule Pune University",
+      "coord": [
+        73.8271729,
+        18.5423466
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q142019589",
+      "name": "Bhosalenagar RBI",
+      "coord": [
+        73.8366919,
+        18.5363707
       ],
       "aliases": []
     }

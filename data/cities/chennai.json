@@ -60,9 +60,9 @@
   ],
   "lines": [
     {
-      "id": "blue-line",
+      "id": "blue-line-chennai-metro",
       "operator": "cmrl",
-      "name": "Blue Line",
+      "name": "Blue Line (Chennai Metro)",
       "color": "#0062cc",
       "stations": [
         "Q110588986",
@@ -94,9 +94,9 @@
       ]
     },
     {
-      "id": "green-line",
+      "id": "green-line-chennai-metro",
       "operator": "cmrl",
-      "name": "Green Line",
+      "name": "Green Line (Chennai Metro)",
       "color": "#00a650",
       "stations": [
         "Q17074640",
@@ -119,9 +119,9 @@
       ]
     },
     {
-      "id": "red-line-2",
+      "id": "red-line-chennai-metro-2",
       "operator": "cmrl",
-      "name": "Red Line (2)",
+      "name": "Red Line (Chennai Metro) (2)",
       "color": "#e2231a",
       "stations": [
         "Q141801052",
@@ -132,9 +132,9 @@
       ]
     },
     {
-      "id": "red-line-3",
+      "id": "red-line-chennai-metro-3",
       "operator": "cmrl",
-      "name": "Red Line (3)",
+      "name": "Red Line (Chennai Metro) (3)",
       "color": "#e2231a",
       "stations": [
         "Q17074640",
@@ -142,9 +142,9 @@
       ]
     },
     {
-      "id": "yellow-line-1",
+      "id": "yellow-line-chennai-metro-1",
       "operator": "cmrl",
-      "name": "Yellow Line (1)",
+      "name": "Yellow Line (Chennai Metro) (1)",
       "color": "#f6c200",
       "stations": [
         "Q110324106",
@@ -160,9 +160,9 @@
       ]
     },
     {
-      "id": "yellow-line-2",
+      "id": "yellow-line-chennai-metro-2",
       "operator": "cmrl",
-      "name": "Yellow Line (2)",
+      "name": "Yellow Line (Chennai Metro) (2)",
       "color": "#f6c200",
       "stations": [
         "Q134044498",
@@ -176,9 +176,9 @@
       ]
     },
     {
-      "id": "yellow-line-3",
+      "id": "yellow-line-chennai-metro-3",
       "operator": "cmrl",
-      "name": "Yellow Line (3)",
+      "name": "Yellow Line (Chennai Metro) (3)",
       "color": "#f6c200",
       "stations": [
         "Q141801694",
@@ -474,8 +474,8 @@
       "id": "Q17075798",
       "name": "Vadapalani",
       "coord": [
-        80.2120723,
-        13.0507344
+        80.2112425,
+        13.0498046
       ],
       "aliases": []
     },
