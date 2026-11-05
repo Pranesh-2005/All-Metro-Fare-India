@@ -87,9 +87,9 @@
       ]
     },
     {
-      "id": "purple-line",
+      "id": "purple-line-pune-metro",
       "operator": "mahametro-pune",
-      "name": "Purple Line",
+      "name": "Purple Line (Pune metro)",
       "color": "#6b2a86",
       "stations": [
         "Q111197736",
@@ -201,10 +201,10 @@
     },
     {
       "id": "Q121139876",
-      "name": "Civil Court",
+      "name": "District Court Pune",
       "coord": [
-        73.858006202,
-        18.526909261
+        73.8565587,
+        18.5283313
       ],
       "aliases": []
     },

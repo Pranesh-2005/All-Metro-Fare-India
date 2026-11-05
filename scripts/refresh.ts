@@ -45,6 +45,7 @@ type CityConfig = {
   whatsapp?: string;
   operators?: unknown[];
   lineOperators?: Record<string, string>;
+  excludedLines?: string[];
   transfers?: unknown[];
 };
 
@@ -233,24 +234,44 @@ function largestComponent(
   return best;
 }
 
+/** SPARQL fragment: keeps ?x only if it is rideable today. Wikidata is stale
+ *  in both directions (Mumbai Line 9 is typed "proposed" yet "in use"; Pune's
+ *  Shivajinagar says "under construction" with a 2023 opening date), so:
+ *   - never: a dissolution date, or an opening date still in the future;
+ *   - open: state "in use", or an opening date already past;
+ *   - else (no evidence either way): open unless flagged under construction /
+ *     proposed / out of service / typed as a proposed station or line.
+ *  ponytail: Wikidata has no "trial run" state, so test-phase sections that
+ *  carry no flag still need `excludedLines` in cities.config.json. */
+const IN_SERVICE = (x: string) => `
+  FILTER NOT EXISTS { ${x} wdt:P576 ?gone }
+  FILTER NOT EXISTS { ${x} wdt:P1619 ?later . FILTER(?later > NOW()) }
+  FILTER (
+    EXISTS { ${x} wdt:P5817 wd:Q55654238 }
+    || EXISTS { ${x} wdt:P1619 ?earlier . FILTER(?earlier <= NOW()) }
+    || ( NOT EXISTS { ${x} wdt:P5817 ?otherState . FILTER(?otherState != wd:Q55654238) }
+         && NOT EXISTS { ${x} wdt:P31 ?proposedType . FILTER(?proposedType IN (wd:Q28109487, wd:Q124834336)) } )
+  )`;
+
 async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
-   const stationRows = await sparql(
-     `SELECT ?s ?sLabel ?coord ?l WHERE {
-        ?s wdt:P16 wd:${cfg.wikidataNetwork} ; wdt:P625 ?coord ; wdt:P81 ?l .
-        MINUS { ?s wdt:P5817 wd:Q383119 . }   # building or structure under construction
-        MINUS { ?s wdt:P5817 wd:Q811683 . }    # proposed building or structure
-        SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-      }`,
-   );
+  const stationRows = await sparql(
+    `SELECT ?s ?sLabel ?coord ?l WHERE {
+       ?s wdt:P16 wd:${cfg.wikidataNetwork} ; wdt:P625 ?coord ; wdt:P81 ?l .
+       ${IN_SERVICE("?s")}
+       SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+     }`,
+  );
   const adjacencyRows = await sparql(
     `SELECT ?s ?adj ?line WHERE {
        ?s wdt:P16 wd:${cfg.wikidataNetwork} .
        ?s p:P197 ?st . ?st ps:P197 ?adj ; pq:P81 ?line .
+       ${IN_SERVICE("?line")}
      }`,
   );
   const lineRows = await sparql(
     `SELECT ?l ?lLabel WHERE {
        ?s wdt:P16 wd:${cfg.wikidataNetwork} ; wdt:P81 ?l .
+       ${IN_SERVICE("?l")}
        SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
      } GROUP BY ?l ?lLabel`,
   );
@@ -267,9 +288,11 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
   }
 
   const lineLabel = new Map(lineRows.map((r) => [qid(r.l.value), r.lLabel?.value ?? "Line"]));
+  const excludedLineSet = new Set(cfg.excludedLines ?? []);
   const edgesByLine = new Map<string, Set<string>>();
   for (const row of adjacencyRows) {
     const a = qid(row.s.value), b = qid(row.adj.value), line = qid(row.line.value);
+    if (excludedLineSet.has(line)) continue;
     if (!stations.has(a) || !stations.has(b)) continue;
     (edgesByLine.get(line) ?? edgesByLine.set(line, new Set()).get(line)!).add([a, b].sort().join("|"));
   }

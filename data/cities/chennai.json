@@ -60,9 +60,9 @@
   ],
   "lines": [
     {
-      "id": "blue-line",
+      "id": "blue-line-chennai-metro",
       "operator": "cmrl",
-      "name": "Blue Line",
+      "name": "Blue Line (Chennai Metro)",
       "color": "#0062cc",
       "stations": [
         "Q110588986",
@@ -94,9 +94,9 @@
       ]
     },
     {
-      "id": "green-line",
+      "id": "green-line-chennai-metro",
       "operator": "cmrl",
-      "name": "Green Line",
+      "name": "Green Line (Chennai Metro)",
       "color": "#00a650",
       "stations": [
         "Q17074640",
@@ -119,32 +119,9 @@
       ]
     },
     {
-      "id": "red-line-2",
+      "id": "yellow-line-chennai-metro",
       "operator": "cmrl",
-      "name": "Red Line (2)",
-      "color": "#e2231a",
-      "stations": [
-        "Q141801052",
-        "Q141763763",
-        "Q141763938",
-        "Q141800323",
-        "Q141801694"
-      ]
-    },
-    {
-      "id": "red-line-3",
-      "operator": "cmrl",
-      "name": "Red Line (3)",
-      "color": "#e2231a",
-      "stations": [
-        "Q17074640",
-        "Q4708199"
-      ]
-    },
-    {
-      "id": "yellow-line-1",
-      "operator": "cmrl",
-      "name": "Yellow Line (1)",
+      "name": "Yellow Line (Chennai Metro)",
       "color": "#f6c200",
       "stations": [
         "Q110324106",
@@ -156,35 +133,6 @@
         "Q134412421",
         "Q134043115",
         "Q134043107",
-        "Q135003335"
-      ]
-    },
-    {
-      "id": "yellow-line-2",
-      "operator": "cmrl",
-      "name": "Yellow Line (2)",
-      "color": "#f6c200",
-      "stations": [
-        "Q134044498",
-        "Q55624607",
-        "Q134044489",
-        "Q134044480",
-        "Q134044463",
-        "Q112683269",
-        "Q134044448",
-        "Q63442600"
-      ]
-    },
-    {
-      "id": "yellow-line-3",
-      "operator": "cmrl",
-      "name": "Yellow Line (3)",
-      "color": "#f6c200",
-      "stations": [
-        "Q141801694",
-        "Q141800323",
-        "Q141763938",
-        "Q141763763",
         "Q135003335",
         "Q17075798"
       ]
@@ -282,15 +230,6 @@
       "aliases": []
     },
     {
-      "id": "Q112683269",
-      "name": "Thirumayilai",
-      "coord": [
-        80.2676,
-        13.0368
-      ],
-      "aliases": []
-    },
-    {
       "id": "Q134043107",
       "name": "Porur Bypass",
       "coord": [
@@ -305,51 +244,6 @@
       "coord": [
         80.14173,
         13.03691
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q134044448",
-      "name": "Kutchery Road",
-      "coord": [
-        80.27276,
-        13.03451
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q134044463",
-      "name": "Alwarpet",
-      "coord": [
-        80.2599,
-        13.0381
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q134044480",
-      "name": "Bharathidasan Road",
-      "coord": [
-        80.2547,
-        13.0354
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q134044489",
-      "name": "Boat Club",
-      "coord": [
-        80.2481,
-        13.0291
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q134044498",
-      "name": "Panagal Park",
-      "coord": [
-        80.23336,
-        13.04076
       ],
       "aliases": []
     },
@@ -413,51 +307,6 @@
       "coord": [
         80.15683,
         13.03587
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q141763763",
-      "name": "Alapakkam",
-      "coord": [
-        80.1635898,
-        13.0381814
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q141763938",
-      "name": "Karambakkam",
-      "coord": [
-        80.1702379,
-        13.0395651
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q141800323",
-      "name": "Valasaravakkam",
-      "coord": [
-        80.1803891,
-        13.0422173
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q141801052",
-      "name": "Mugalivakkam",
-      "coord": [
-        80.1637971,
-        13.0321133
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q141801694",
-      "name": "Alwarthirunagar",
-      "coord": [
-        80.18869,
-        13.0462885
       ],
       "aliases": []
     },
@@ -737,15 +586,6 @@
       "coord": [
         80.2585173,
         13.0583556
-      ],
-      "aliases": []
-    },
-    {
-      "id": "Q63442600",
-      "name": "Lighthouse",
-      "coord": [
-        80.27972,
-        13.04187
       ],
       "aliases": []
     },
