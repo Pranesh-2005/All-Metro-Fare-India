@@ -119,9 +119,9 @@
       ]
     },
     {
-      "id": "yellow-line-chennai-metro",
+      "id": "yellow-line",
       "operator": "cmrl",
-      "name": "Yellow Line (Chennai Metro)",
+      "name": "Yellow Line",
       "color": "#f6c200",
       "stations": [
         "Q110324106",

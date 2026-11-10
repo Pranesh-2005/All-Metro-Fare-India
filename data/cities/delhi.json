@@ -313,9 +313,9 @@
       ]
     },
     {
-      "id": "pink-line",
+      "id": "pink-line-1",
       "operator": "dmrc",
-      "name": "Pink Line",
+      "name": "Pink Line (1)",
       "color": "#e5338c",
       "stations": [
         "Q138646341",
@@ -360,10 +360,19 @@
         "Q28172733",
         "Q11288582",
         "Q28172732",
-        "Q28172749",
-        "Q28172730",
+        "Q28172749"
+      ]
+    },
+    {
+      "id": "pink-line-2",
+      "operator": "dmrc",
+      "name": "Pink Line (2)",
+      "color": "#e5338c",
+      "stations": [
+        "Q28172727",
         "Q28172729",
-        "Q28172727"
+        "Q28172730",
+        "Q28172749"
       ]
     },
     {
