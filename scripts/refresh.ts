@@ -45,6 +45,8 @@ type CityConfig = {
   whatsapp?: string;
   operators?: unknown[];
   lineOperators?: Record<string, string>;
+  /** Pin a line's display name by Wikidata id, so a relabel upstream does not rename it. */
+  lineLabels?: Record<string, string>;
   excludedLines?: string[];
   transfers?: unknown[];
 };
@@ -127,7 +129,9 @@ const byId = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0);
 function chainsOfLine(edges: Set<string>): string[][] {
   const adj = new Map<string, Set<string>>();
   const link = (a: string, b: string) => (adj.get(a) ?? adj.set(a, new Set()).get(a)!).add(b);
-  for (const e of edges) {
+  // Sorted: Wikidata row order is arbitrary and the greedy walk below is
+  // order-sensitive, so unsorted input flips the chain split night to night.
+  for (const e of [...edges].sort()) {
     const [a, b] = e.split("|");
     link(a, b);
     link(b, a);
@@ -302,7 +306,7 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
   [...edgesByLine.keys()]
     .sort((a, b) => edgesByLine.get(b)!.size - edgesByLine.get(a)!.size)
     .forEach((wdLine, index) => {
-      const label = lineLabel.get(wdLine) ?? "Line";
+      const label = cfg.lineLabels?.[wdLine] ?? lineLabel.get(wdLine) ?? "Line";
       const operator = cfg.lineOperators?.[wdLine] ?? cfg.defaultOperator;
       const color = colorFor(label, index);
       const base = slug(label);
