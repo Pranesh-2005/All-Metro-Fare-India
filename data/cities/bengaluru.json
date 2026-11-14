@@ -123,6 +123,20 @@
       ]
     },
     {
+      "id": "pink-line",
+      "operator": "bmrcl",
+      "name": "Pink Line",
+      "color": "#e5338c",
+      "stations": [
+        "Q123914083",
+        "Q123914086",
+        "Q123914085",
+        "Q123914103",
+        "Q122181941",
+        "Q123914102"
+      ]
+    },
+    {
       "id": "purple-line",
       "operator": "bmrcl",
       "name": "Purple Line",
@@ -577,6 +591,51 @@
       "coord": [
         77.58837,
         12.91711
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123914083",
+      "name": "Kalena Agrahara",
+      "coord": [
+        77.59363,
+        12.87158
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123914085",
+      "name": "IIMB",
+      "coord": [
+        77.59954,
+        12.89541
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123914086",
+      "name": "Hulimavu",
+      "coord": [
+        77.59579,
+        12.88108
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123914102",
+      "name": "Suddagunte Palya",
+      "coord": [
+        77.60049,
+        12.92942
+      ],
+      "aliases": []
+    },
+    {
+      "id": "Q123914103",
+      "name": "JP Nagar 4th Phase",
+      "coord": [
+        77.60023,
+        12.90957
       ],
       "aliases": []
     },
