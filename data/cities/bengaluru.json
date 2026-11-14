@@ -605,12 +605,14 @@
     },
     {
       "id": "Q123914085",
-      "name": "IIMB",
+      "name": "Bilekahalli-IIMB",
       "coord": [
         77.59954,
         12.89541
       ],
-      "aliases": []
+      "aliases": [
+        "IIMB"
+      ]
     },
     {
       "id": "Q123914086",
@@ -623,21 +625,26 @@
     },
     {
       "id": "Q123914102",
-      "name": "Suddagunte Palya",
+      "name": "SG Palya",
       "coord": [
         77.60049,
         12.92942
       ],
-      "aliases": []
+      "aliases": [
+        "Suddagunte Palya",
+        "Tavarekere"
+      ]
     },
     {
       "id": "Q123914103",
-      "name": "JP Nagar 4th Phase",
+      "name": "NS Palya-JP Nagar 4th Phase",
       "coord": [
         77.60023,
         12.90957
       ],
-      "aliases": []
+      "aliases": [
+        "JP Nagar 4th Phase"
+      ]
     },
     {
       "id": "Q16904094",

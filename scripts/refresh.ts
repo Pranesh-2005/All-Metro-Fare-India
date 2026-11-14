@@ -47,6 +47,8 @@ type CityConfig = {
   lineOperators?: Record<string, string>;
   /** Pin a line's display name by Wikidata id, so a relabel upstream does not rename it. */
   lineLabels?: Record<string, string>;
+  /** Official station names by Wikidata id, for renames Wikidata has not caught up with. The Wikidata name is kept as a search alias. */
+  stationNames?: Record<string, { name: string; aliases?: string[] }>;
   excludedLines?: string[];
   transfers?: unknown[];
 };
@@ -375,7 +377,12 @@ async function buildCity(cfg: CityConfig, defaultFare: FareRules) {
     operators,
     lines: keptLines,
     stations: keptStations.map(([id, s]) => ({
-      id, name: s.name, coord: [s.lon, s.lat] as [number, number], aliases: [],
+      id,
+      name: cfg.stationNames?.[id]?.name ?? s.name,
+      coord: [s.lon, s.lat] as [number, number],
+      aliases: [...new Set([
+        ...(cfg.stationNames?.[id] ? [s.name, ...(cfg.stationNames[id].aliases ?? [])] : []),
+      ])].filter((a) => a !== (cfg.stationNames?.[id]?.name ?? s.name)).sort(),
     })),
     transfers: keptTransfers,
   };
